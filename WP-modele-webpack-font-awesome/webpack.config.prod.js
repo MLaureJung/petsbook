@@ -61,8 +61,22 @@ let config = {
           }
         },
       },
-    ]
-  },
+            // Images
+            {
+              test: /\.(jpg|jpeg|png|gif|svg)$/,
+              use: {
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]', // Nom du fichier généré
+                  outputPath: 'images/', // Destination du fichier généré dans le répertoire public
+                  publicPath: '../images', // Chemin relatif depuis le fichier CSS vers le dossier des images
+                  esModule: false
+                }
+              }
+            }
+          ]
+        },
+
   plugins: [
     new MiniCSSExtractPlugin({
       filename: 'css/style.css'
