@@ -1,16 +1,39 @@
 @charset 'UTF-8';
 
 // 1. Abstracts
+@import 
+    'abstracts/vars';
 
-// 2. Vendors
-$fa-font-path: '~font-awesome/fonts';
-@import '~font-awesome/scss/font-awesome';
+// 2. Base
+@import 
+    '~font-awesome/scss/font-awesome',
+    'base/base',
+    'base/typo';
 
+// 3. Layout
+@import
+    'layout/buttons',
+    'layout/footer',
+    'layout/header',
+    'layout/links',
+    'layout/posts',
+    'layout/slider';
 
-// 3. Base
+// 4. Components
+@import
+    'components/button',
+    'components/form',
+    'components/icones',
+    'components/link',
+    'components/logo',
+    'components/picture',
+    'components/post';
+    
+// 5. Pages
+@import
+    'pages/page';
 
-// 4. Layout
+// 6. Shame
+@import
+    'shame';
 
-// 5. Components
-
-// 6. Pages
