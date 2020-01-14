@@ -37,6 +37,6 @@
     "jquery": "^3.4.1",
     "jquery.scrollex": "^0.2.1",
     "popper.js": "^1.16.0",
-    "reset": "^0.1.0"
+    "reset-css": "^5.0.1"
   }
 }

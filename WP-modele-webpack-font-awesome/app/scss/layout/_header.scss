@@ -1,0 +1,52 @@
+.header {
+    background-color: #dbdbdb;
+    width: 100vw;
+    padding:0.5% 0;
+   
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+
+        margin: 0 3%;
+
+        &__items__left {
+            display: flex;      
+
+            &__logo {
+                object-fit: cover;
+                object-position: center;
+
+                width: 5rem;
+                height: 5rem;
+
+                margin-right: 2rem;  
+            }
+
+            &__part {
+                display: flex;
+                align-items: center;
+            }
+        }  
+
+        &__items__right {
+            display: flex;
+            height: 100%;
+
+            &__part {
+                display: flex;
+                justify-content: space-between;
+
+                &__link {
+                    margin: 0 1rem;
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint-large) {
+            background-color: #F0F; // à changer hein
+        }
+    }  
+}

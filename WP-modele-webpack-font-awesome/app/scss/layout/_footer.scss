@@ -1,0 +1,32 @@
+.footer{
+    width:100vw;
+    background-color: lightblue;
+    padding:2% 3%;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    &-copyrights {
+        text-align:center;
+    }
+
+    /*&-wrapper {
+        width: 100%;
+    
+        @media (min-width: $breakpoint-large) {
+          width: 60%;
+        }
+      }
+    
+      &-copyrights {
+        width: 100%;
+    
+        @media (min-width: $breakpoint-large) {
+          width: 40%;
+        }
+      }*/
+
+}

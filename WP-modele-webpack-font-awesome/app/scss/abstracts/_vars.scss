@@ -1,1 +1,15 @@
 $fa-font-path: '~font-awesome/fonts';
+
+// Breakpoints
+$breakpoint-large: 992px;
+
+// Définition des couleurs :
+$color-grey: #e9e7e8;
+$color-beige: #fae9db;
+$color-blue: #7accc8;
+$color-green: #7db995; 
+$color-orange: #fdc689; 
+
+// Définition des fonts : 
+$font-main:'Montserrat', sans-serif;
+$font-fallback:'Helvetica', Arial, sans-serif;
