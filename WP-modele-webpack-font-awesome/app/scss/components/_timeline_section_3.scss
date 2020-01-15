@@ -3,7 +3,7 @@
     #element__house__1 {
         background: url('../assets/images/maison.png') no-repeat top center;
         background-size: cover;
-        top: 0x;
+        top: 0px;
         left: 50%;
         margin-left: 350px;
         width: 591px;
@@ -181,13 +181,13 @@
         height: 46px;
     }
     #element__tree__10 {
-    background: url('../assets/images/arbre_3.png') no-repeat top center;
-    background-size: cover;
-    top: 435px;
-    left: 50%;
-    margin-left: 70px;
-    width: 160px;
-    height: 208px;
+        background: url('../assets/images/arbre_3.png') no-repeat top center;
+        background-size: cover;
+        top: 435px;
+        left: 50%;
+        margin-left: 70px;
+        width: 160px;
+        height: 208px;
     }
     #element__flower__56 {
         background: url('../assets/images/fleur_2.png') no-repeat top center;
@@ -248,7 +248,7 @@
         background-size: cover;
         top: 335px;
         left: 50%;
-        margin-left: 210px;
+        margin-left: 180px;
         width: 15px;
         height: 32px;
     }
@@ -260,6 +260,33 @@
         margin-left: 880px;
         width: 40px;
         height: 41px;
+    }
+    #element__flower__62 {
+        background: url('../assets/images/fleur_2.png') no-repeat top center;
+        background-size: cover;
+        top: 50px;
+        left: 50%;
+        margin-left: 65px;
+        width: 15px;
+        height: 32px;
+    }
+    #element__flower__63 {
+        background: url('../assets/images/fleur_4.png') no-repeat top center;
+        background-size: cover;
+        top: 652px;
+        left: 50%;
+        margin-left: 860px;
+        width: 15px;
+        height: 32px;
+    }
+    #element__fence__4{
+        background: url('../assets/images/barriere.png') no-repeat top center;
+        background-size: cover; 
+        top: 280px;
+        left: 50%;
+        margin-left: 205px;
+        width: 249px;
+        height: 74px;
     }
 
 
