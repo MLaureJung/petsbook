@@ -46,34 +46,35 @@
 
   <!--MAIN-->
   <main class="main">
-    <div class ="form-contact">
-      <form action="/my-handling-form-page" method="post" id="register">
-        <div>
-          <label for="mail">Email</label>
-          <input type="email" id="mail" />
+      <form class="form-contact" action="/my-handling-form-page" method="post" id="register">
+        <div class="form-contact-fields">
+          <div class="form-contact-fields__field">
+            <label class="form-contact-fields__label" for="mail">Email</label>
+            <input class="form-contact-fields__input" type="email" id="mail" />
+          </div>
+          <div class="form-contact-fields__field">
+              <label class="form-contact-fields__label" for="name">Nom</label>
+              <input class="form-contact-fields__input" type="text" id="name" />
+          </div>
+          <div class="form-contact-fields__field">
+            <label class="form-contact-fields__label" for="name">Prénom</label>
+            <input class="form-contact-fields__input" type="text" id="name" />
+          </div>
+          <div class="form-contact-fields__field">
+              <label class="form-contact-fields__label" for="msg">Votre message</label>
+              <textarea class="form-contact-fields__input" id="msg"></textarea>
+          </div>
         </div>
         <div>
-            <label for="name">Nom</label>
-            <input type="text" id="name" />
-        </div>
-        <div>
-          <label for="name">Prénom</label>
-          <input type="text" id="name" />
-        </div>
-        <div>
-            <label for="msg">Votre message</label>
-            <textarea id="msg"></textarea>
-        </div>
-        <div>
-          <button type="submit" form="register" value="Submit">Envoyer !</button>
+          <button class="form-contact__button" type="submit" form="register" value="Submit">Envoyer !</button>
         </div>
       </form>
-    </div>
+    
     <div class="contact">
-      <p>PETS-BOOK</p>
-      <p>Adresse</p>
-      <p>Code Postal</p>
-      <p>03.03.03.02.01</p>
+      <p class="contact__info">PETS-BOOK</p>
+      <p class="contact__info">Adresse</p>
+      <p class="contact__info">Code Postal</p>
+      <p class="contact__info">03.03.03.02.01</p>
     </div>
   </main>
   <!--/MAIN-->
