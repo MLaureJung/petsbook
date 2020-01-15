@@ -1,3 +1,6 @@
+// je mets un style général à ma div entourant mes sections ainsi qu'a toutes mes sections. Les sections seront chacune en position relative, et ainsi les illustrations pourront être placées en position absolues sur mes sections.
+//Ensuite j'applique un style sur chaque div (chaque illustration), le placement sur la page, mais aussi un calcul de la width et height au besoin. Seules les illustrations animées ne peuvent pas encore être adaptées en taille ici, elles le seront dans le JS. 
+
 .timeline-glimpse {
     background-color: $color-green;
     overflow-x: hidden;
@@ -9,7 +12,7 @@
             position: absolute; 
         }
         #element__bee__1 {
-            background: url('../assets/images/abeille.png') no-repeat top center;
+            background: url('../assets/images/abeille_2.png') no-repeat top center;
             top: 50px;
             left: 50%;
             margin-left: 100px;
