@@ -1,0 +1,117 @@
+.form__infos__animal{
+    margin-top:5%;
+    color:rgb(71, 63, 63);
+    
+    &__title{
+        font-size: 2rem;
+        text-align: center;
+        border:1px dotted;
+    }
+    &__edit{
+        border:1px dotted;
+        padding-bottom: 3%;
+        .infos__animal__edit__paragraph{
+            //background-color: pink;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;;
+            label{
+                margin-top:1%;
+                text-align: center;
+            }
+            input{
+                width:50%;
+                display: block;
+                text-align: center;
+                margin: auto;
+            }
+            textarea{
+                width:50%;
+                display: block;
+                text-align: center;
+                margin: auto;
+            }
+            .radio{
+                display:flex;
+                margin:auto;
+                justify-content: space-around; 
+                width:50%;
+                border: .5px solid grey;
+                .infos__animal__edit__paragraph__radio{
+                   margin:1%;
+                   width:5%; 
+                }
+            }
+        }
+    }
+
+    .validate{
+        text-align: center;
+        margin:1%;
+        &__botton{
+            margin:.5%;
+            width:100%;
+        }
+
+    }
+}
+    
+
+@media (min-width: $breakpoint-large){
+      
+    .form__infos__animal{
+        margin-top:5%;
+        color:rgb(85, 77, 77);
+        
+        &__title{
+            font-size: 3rem;
+            
+        }
+        &__edit{
+            font-size:1.5rem;
+        
+            .infos__animal__edit__paragraph{
+               
+                label{
+                    margin-top:1%;
+                    text-align: center;
+                }
+                input{
+                    width:50%;
+                    display: block;
+                    text-align: center;
+                    margin: auto;
+                }
+                textarea{
+                    width:50%;
+                    display: block;
+                    text-align: center;
+                    margin: auto;
+                }
+                .radio{
+                    display:flex;
+                    margin:auto;
+                    justify-content: space-around; 
+                    width:50%;
+                    border: .5px solid grey;
+                    .infos__animal__edit__paragraph__radio{
+                       margin:1%;
+                       width:5%; 
+                    }
+                }
+            }
+        }
+    }     
+
+
+    .validate{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        margin:1%;
+        &__botton{
+            margin:.5%;
+            width:100%;
+        }    
+    }    
+}

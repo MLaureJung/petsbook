@@ -122,69 +122,70 @@
           </div>
           <div class="infos__animal__edit__paragraph" >
               <label for="book__edit__sexe" class="infos__animal__edit__paragraph__label">Sexe</label> 
+              <div class="radio">
               <input type="radio" class="infos__animal__edit__paragraph__radio" name="book_edit_castre" id="book_edit_castre">Femelle</input> 
               <input type="radio" class="infos__animal__edit__paragraph__radio" name="book_edit_castre" id="book_edit_castre">Mâle</input>
+            </div>
           </div>
           <div class="infos__animal__edit__paragraph" >
                   <label for="book__edit__poids"class="infos__animal__edit__paragraph__label" >Poids</label> 
                   <input class="infos__animal__edit__paragraph__input" type="number"name="book__edit__poids" id="book_edit_poids"></input> 
               </div>
-          <div class="infos_animal_edit_paragraph" >
+          <div class="infos__animal__edit__paragraph" >
               <label for="book_edit_identification"class="infos__animal__edit__paragraph__label" >Identification</label> 
               <input type="text" name="book_edit_identification" id="book_edit_identification"></input> 
           </div>
-          <div class="infos_animal_edit_paragraph">
+          <div class="infos__animal__edit__paragraph">
               <label for="book_edit_castre" class="infos__animal__edit__paragraph__label">Castré/Stérile</label> 
+              <div class="radio">
               <input type="radio" class="infos__animal__edit__paragraph__radio" name="book_edit_castre" id="book_edit_castre">Oui</input> 
               <input type="radio" class="infos__animal__edit__paragraph__radio" name="book_edit_castre" id="book_edit_castre">Non</input>
+              </div>
           </div>
-          <div class="infos_animal_edit_paragraph" >
-              <label for="book_edit_color"class="infos__animal__edit__paragraph__label" >Couleur de la robe<</label> 
+          <div class="infos__animal__edit__paragraph" >
+              <label for="book_edit_color"class="infos__animal__edit__paragraph__label">Couleur de la robe</label> 
               <input class="infos__animal__edit__paragraph__input" type="number"name="book_edit_color" id="book_edit_color"></input> 
           </div>
-          <div class="infos_animal_edit_paragraph" >
+          <div class="infos__animal__edit__paragraph" >
               <label for="book_edit_signes"class="infos__animal__edit__paragraph__label" >Signes perticulières</label> 
-              <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_signes" id="book_edit_signes" rows="2"  cols="50"></textarea> 
+              <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_signes" id="book_edit_signes"></textarea> 
           </div>
-          <div class="infos_animal_edit_paragraph" >
+          <div class="infos__animal__edit__paragraph" >
                   <label for="book_edit_antecedents"class="infos__animal__edit__paragraph__label" >Antécédents médicaux</label> 
                   <input class="infos__animal__edit__paragraph__input" type="number"name="book_edit_antecedents" id="book_edit_antecedents"></input> 
               </div>
-          <div class="infos_animal_edit_paragraph" >
+          <div class="infos__animal__edit__paragraph" >
               <label for="book_edit_medocs" class="infos__animal__edit__paragraph__label">Prise de médicaments</label> 
               <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_medocs" id="book_edit_medocs" rows="2"  cols="50"></textarea> 
           </div>
-          <div class="infos_animal_edit_paragraph" >
+          <div class="infos__animal__edit__paragraph" >
               <label for="book_edit_last_traitement"class="infos__animal__edit__paragraph__label" >Dernier traitement anti-parasitaire</label> 
               <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_last_traitement" id="book_edit_last_traitement" rows="2"  cols="50"></textarea> 
           </div>
-          <div class="infos_animal_edit_paragraph" >
+          <div class="infos__animal__edit__paragraph" >
                   <label for="book_edit_last_vaccin"class="infos__animal__edit__paragraph__label" >Dernier vaccin</label> 
                   <input class="infos__animal__edit__paragraph__input" type="date" name="book_edit_last_vaccin" id="book_edit_last_vaccin"></input> 
               </div>
-          <div class="infos_animal_edit_paragraph" >
+          <div class="infos__animal__edit__paragraph" >
               <label for="book_edit_info_veto"class="infos__animal__edit__paragraph__label" >Coordonnées du vétérinaire</label> 
-              <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_info_veto" id="book_edit_info_veto" rows="2"  cols="50"></textarea> 
+              <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_info_veto" id="book_edit_info_veto"></textarea> 
           </div>
           <div class="infos__animal__edit__paragraph" >
               <label for="book_edit_rdv"class="infos__animal__edit__paragraph__label" >Prochain rendez-vous vétérinaire</label> 
-              <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_rdv" id="book_edit_rdv" rows="2"  cols="50"></textarea> 
+              <input type="date" class="infos__animal__edit__paragraph__textarea" name="book_edit_rdv" id="book_edit_rdv"></textarea> 
           </div>
-        
         </form>
         <div class="validate">
-
-          <!--bouton infos générales-->
-          <div class="bottom-info validate__general">
-            <a href="" class="validate__general__informations">Infos générales--</a>
+          <div class="validate__botton">
+            <a href="#"><button type="button" class="btn btn-danger">Infos générales</button></a>
           </div>
-            <!--bouton enregistrer--> 
-          <div class="bottom-info validate__register">
-            <a href="" class="validate__general__register">Enregistrer</a>
+       
+          <div class="validate__botton">
+            <a href="#"><button type="button" class="btn btn-danger">Enregistrer</button></a>
           </div>
-            <!--bouton carnet de santé-->
-          <div class="bottom-info validate__book">
-            <a href="" class="validate__general__book">Carnet de santé</a>
+          
+          <div class="validate__botton">
+            <a href="#"><button type="button" class="btn btn-danger">Carnet de santé</button></a>
           </div>
         </div>
       </section>
