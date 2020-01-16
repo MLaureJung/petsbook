@@ -7,15 +7,18 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    //align-items: center;
 
     &__title {
         font-size: $font-size-title-m;
+        align-self: flex-start;
     }
 
     &__text {
         text-align: center;
+        align-self: flex-start;
     }
 
     @media (min-width: $breakpoint-large) {

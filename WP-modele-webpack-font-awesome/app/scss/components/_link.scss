@@ -7,6 +7,8 @@
     color: $color-orange;
     font-weight: bold;
 
+    align-self: flex-end;
+
     &:hover {
         transform: scale(1.1);
         transition: all .2s ease-in-out; 
