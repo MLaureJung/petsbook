@@ -1,0 +1,82 @@
+.top-info{
+    
+    
+    &__user{
+        
+        &__ID-user{
+            color:rgb(109, 104, 104);
+            margin:1rem 0 1rem 0;
+            font-size:$font-size-title-m;
+            
+        }
+        &__profile{
+            border-radius: 50%;
+            
+            }
+        &__edit-profile{
+            
+            font-size:$font-size-text-m;
+           
+           
+            
+        }
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $color-beige;
+        }
+    
+    }
+    .animal{
+        display: flex;
+       flex-wrap: wrap;
+        margin:2rem 0 ;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $color-beige;
+    }
+    @media (min-width: $breakpoint-large)  {
+        .animal{
+         display: flex;
+         justify-content:center;
+        } 
+     }
+     @media (min-width: $breakpoint-large)  {
+    .animal-picture-profile{
+        width: 50%;
+        border:none;
+}
+     }
+
+   .animal-infos{
+       margin-top: 2rem;
+       padding-bottom: 1rem;
+        border-bottom: 1px solid $color-beige;
+   }
+   @media (min-width: $breakpoint-large)  {
+    .animal-infos{
+        width: 50%;
+        border:none;
+    }
+   }  
+   .health-book{
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+     border-bottom: 1px solid $color-beige; 
+   }
+   @media (min-width: $breakpoint-large)  {
+    .health-book{
+        width: 50%;
+        height: 20rem;
+        border:none;
+    }
+   }  
+   .timeline-management{
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+     border-bottom: 1px solid $color-beige; 
+   }
+   @media (min-width: $breakpoint-large)  {
+    .timeline-management{
+        width: 50%;
+        border:none;
+    }
+   }  
+
