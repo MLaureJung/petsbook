@@ -1,0 +1,302 @@
+.photos_profiles{
+    display: flex;
+    flex-direction: column;
+    
+
+    .human__profiles_elements{
+        background-color: $color-blue;
+        
+        
+        .human__profiles{
+            background-color:$color-blue;
+            text-align: center;
+            padding:5%;
+            
+            //height:50vh;
+            &__image{
+                border-radius :50%;
+                border:1px solid gray;
+                padding:1%;
+                overflow: hidden; 
+                width: 50%;
+                object-fit: cover;
+                object-position: center;
+                width:50%;
+                margin:auto;
+            }
+
+            &__name{
+                background-color:$color-blue;
+                padding:5%;
+                text-align: center;
+                font-size: 2rem;
+                color:white;
+
+            }
+        }
+
+    }
+
+    .animals__profiles{
+        
+        display: flex;
+        flex-wrap:wrap;
+        padding:5%;
+        &__all__wrapper{
+            
+            width:50%;
+            &__individual{
+    
+                text-align: center;
+                
+                
+                .animals__profiles__all__wrapper__image{
+                    
+                    border-radius :50%;
+                    border:1px solid grey;
+                    padding:.5%;
+                    overflow: hidden;
+                    width: 60%;
+                    object-fit: cover;
+                    object-position: center;    
+    
+                }
+     
+            }
+            .animals__profiles__all__wrapper__name{
+                height: 50%;
+                color:grey;
+                margin-top: 1%;
+                text-align: center;
+                
+             }
+        }
+
+        @media (min-width: $breakpoint-large){
+
+            flex-direction:row;
+            &__all__wrapper{
+                
+                
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                
+                padding: 1% auto;
+
+                width: 20%;
+        
+                &__individual{
+        
+                    
+                    text-align: center;
+                    width:100%;
+                    
+                    .animals__profiles__all__wrapper__image{
+                        
+                        border-radius :50%;
+                        border:1px solid grey;
+                        padding:.5%;
+                        overflow: hidden;
+                        width: 50%;
+        
+                }
+         
+                }
+                .animals__profiles__all__wrapper__name{
+                    height: 50%;
+                    color:grey;
+                    margin-top: 1%;
+                    
+                 }
+    
+            }
+            
+        }
+
+    }
+    
+
+    
+}
+
+
+
+
+/*
+<section class="photos_profiles">
+
+      <div class="human__profiles_elements">
+
+              <div class='human__profiles'>
+                 <a href="#"><img class='human__profiles__image'style='border-radius :50%;border:1px solid gray;padding:1%; overflow: hidden; width: 20%;'
+                  src="https://source.unsplash.com/700x700/?faces" alt=""></a> 
+              </div>
+              <a href="#"><h4 class='human__profiles__name'>Prénom</h4></a> 
+      </div>
+
+      <div class="animals__profiles">
+          <div class="animals__profiles__all__wrapper">  
+              <div class='animals__profiles__all__wrapper__individual'>
+                      <a href="#"><img class='animals__profiles__all__wrapper__image'
+                      src="https://source.unsplash.com/700x700/?pets" alt=""/></a> 
+              </div>
+              <h5 class='animals__profiles__all__wrapper__name'><a href="#"></a>Animal 1</a></h5>
+          </div>
+
+          <div class="animals__profiles__all__wrapper">  
+                  <div class='animals__profiles__all__wrapper__individual'>
+                      <a href="#"><img class='animals__profiles__all__wrapper__image'
+                          src="https://source.unsplash.com/700x700/?pets" alt=""/></a>
+                  </div>
+                  <h5 class='animals__profiles__all__wrapper__name'><a href="#"></a>Animal 2</a></h5>
+          </div>
+
+          <div class="animals__profiles__all__wrapper">  
+                  <div class='animals__profiles__all__wrapper__individual'>
+                      <a href="#"><img class='animals__profiles__all__wrapper__image'
+                          sđrc="https://source.unsplash.com/700x700/?pets" alt=""/></a>
+                  </div>
+                  <h5 class='animals__profiles__all__wrapper__name'><a href="#"></a>Animal 3</a></h5>
+          </div>
+
+          <div class="animals__profiles__all__wrapper">  
+                  <div class='animals__profiles__all__wrapper__individual'>
+                      <a href="#"><img class='animals__profiles__all__wrapper__image'
+                          src="https://source.unsplash.com/700x700/?pets" alt=""/></a>
+                  </div>
+                  <h5 class='animals__profiles__all__wrapper__name'><a href="#"></a>Animal 4</a></h5>
+          </div>
+
+          <div class="animals__profiles__all__wrapper">  
+                  <div class='animals__profiles__all__wrapper__individual'>
+                      <a href="#"><img class='animals__profiles__all__wrapper__image'
+                          src="https://source.unsplash.com/700x700/?pets" alt=""/></a>
+                  </div>
+                  <h5 class='animals__profiles__all__wrapper__name'><a href="#"></a>Ajouter</a></h5>
+          </div>
+
+      </div>
+             
+  </section>   
+  <div class="main-items"> 
+    <section class="formulaire__pet__infos">
+            <h1>Titre</h1>
+            <div class="formulaire__pet__infos__animal">
+                <h4 class="formulaire__pet__infos__animal__title">Prénom</h4>
+                <p class="formulaire__pet__infos__animal__user">Lorem impsum</p>
+            </div>
+
+            <div class="formulaire__pet__infos__animal">
+                    <h4 class="formulaire__pet__infos__animal__title">Type</h4>
+                    <p class="formulaire__pet__infos__animal__user">Lorem impsum</p>
+            </div>
+
+            <div class="formulaire__pet__infos__animal">
+                    <h4 class="formulaire__pet__infos__animal__title">Age</h4>
+                    <p class="formulaire__pet__infos__animal__user">Lorem impsum</p>
+            </div>
+
+            <div class="formulaire__pet__infos__animal">
+                    <h4 class="formulaire__pet__infos__animal__title">Aime</h4>
+                    <p class="formulaire__pet__infos__animal__user">Lorem impsum</p>
+            </div>
+
+            <div class="formulaire__pet__infos__animal">
+                    <h4 class="formulaire__pet__infos__animal__title">N'aime pas</h4>
+                    <p class="formulaire__pet__infos__animal__user">Lorem impsum</p>
+            </div>
+
+            <div class="formulaire__pet__infos__animal">
+                    <h4 class="formulaire__pet__infos__animal__title">Description</h4>
+                    <p class="formulaire__pet__infos__animal__user">Lorem impsum</p>
+            </div>
+
+            <div class="validate">
+
+              <!--bouton infos générales-->
+              <div class="bottom-info validate__general">
+                <a href="" class="validate__general__informations">Infos générales--</a>
+              </div>
+                <!--bouton enregistrer--> 
+              <div class="bottom-info validate__register">
+                <a href="" class="validate__general__register">Enregistrer</a>
+              </div>
+                <!--bouton carnet de santé-->
+              <div class="bottom-info validate__book">
+                <a href="" class="validate__general__book">Carnet de santé</a>
+              </div>
+            </div>
+    </section>
+
+*/
+
+
+
+  /*
+   @media (min-width: $breakpoint-large) {
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: space-between;
+
+        &__all__wrapper{
+            background-color:red;
+            border: 1px solid;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            
+            padding: 1% auto;
+    
+            &__individual{
+    
+                background-color:$color-blue;
+                text-align: center;
+                
+                .animals__profiles__all__wrapper__image{
+                    
+                    border-radius :50%;
+                    border:1px solid grey;
+                    padding:.5%;
+                    overflow: hidden;
+                    width: 50%;
+    
+            }
+     
+            }
+            .animals__profiles__all__wrapper__name{
+                height: 50%;
+                color:white;
+                margin-top: 1%;
+                
+             }
+
+        }
+       
+    }
+  
+  
+
+
+  //code de Sophie 
+  
+   display:flex;
+   
+    flex-wrap: wrap;
+
+    &__all__wrapper{
+        width:50%;
+
+        &__image {
+            width: 10rem;
+            height: 10rem;
+
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+  
+
+  */
+
