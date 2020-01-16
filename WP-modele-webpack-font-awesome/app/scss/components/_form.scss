@@ -1,0 +1,84 @@
+//Contact form
+.main-items-contact {
+    margin-top: 1rem;
+    text-align: center;
+    font-family: $font-main;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.form-contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-contact-fields{
+
+    align-items: center;
+    text-align: end;
+    
+    &__field{
+        margin-top: 1rem;
+        
+    }
+    &__label{
+        font-size: $font-size-default;
+        
+    }
+    &__input{
+        
+        border-style: none;
+        border: 2px solid;
+        border-radius: 0.3rem;
+        border-color: $color-grey;
+        width: 10rem;
+        
+    }
+}
+.form-contact__button{
+    
+    border-style: none;
+    border: 2px solid;
+    border-radius: 0.3rem;
+    border-color: $color-grey;
+    font-size: $font-size-default;
+    background-color: white;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    &__bloc{
+        display: flex;
+        flex-flow: column;
+        text-align: start;
+        margin-top: 2rem;
+    }
+    &__info{
+        margin-top: 1rem;
+    }
+}
+@media (min-width: $breakpoint-large) {
+    .main-items-contact{
+        flex-direction: row;
+    }
+    .form-contact{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact {
+        width: 50%;
+        
+    }
+    .form-contact__button{
+        margin-bottom: 1rem;
+        margin-left: 7rem;
+    }
+}
