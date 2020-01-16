@@ -1,0 +1,29 @@
+.main-pet-icons {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin: 5% 0;
+
+    &__link {
+        
+        margin-bottom: 5%;
+
+        &:hover {
+            border: 1px solid $color-grey;
+        }
+
+    }
+
+    &__icon {
+        width: 8rem;
+        height: 8rem;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 50%;
+
+    }
+}

@@ -1,0 +1,7 @@
+.main-slide {
+    background-color: $color-blue;
+
+    .carousel-item {
+        z-index: -1;
+    }
+}

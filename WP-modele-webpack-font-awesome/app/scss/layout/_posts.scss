@@ -1,0 +1,10 @@
+.main-timelines {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: $margin-main-large;
+    margin-bottom: 5%;
+
+    color: $color-white;
+}
