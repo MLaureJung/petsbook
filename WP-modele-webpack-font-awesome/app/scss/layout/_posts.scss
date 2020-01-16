@@ -7,4 +7,8 @@
     margin-bottom: 5%;
 
     color: $color-white;
+
+    @media (min-width: $breakpoint-large) {
+        justify-content: space-evenly;
+    }
 }

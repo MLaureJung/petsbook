@@ -1,7 +1,118 @@
 .main-slide {
     background-color: $color-blue;
+    color: $color-white;
+
+    .carousel-inner {
+        height: 100%;
+    }
 
     .carousel-item {
-        z-index: -1;
+        z-index: 0;
+
+        &-bg {
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+
+            // à modifier
+            opacity: 0;
+        }
+
+        &-content {
+            position: absolute;
+            top: 0;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            margin-left: auto;
+            margin-right: auto;
+            
+            height: 100%;
+
+            padding: 2rem;
+
+            &-part {
+
+                &__illu {
+                    width: 20rem;
+                    height: 20rem;
+
+                    border-radius: 50%;
+                }
+
+                &__description {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    /*------------------------------------------------------------*/
+    @media (min-width: $breakpoint-large) {
+        .carousel-inner {
+            height: 80vh;
+        }
+    
+        .carousel-item {
+            z-index: 0;
+    
+            &-bg {
+                height: 80vh;
+                object-fit: cover;
+                object-position: center;
+    
+                // à modifier
+                opacity: 0;
+            }
+    
+            &-content {
+                position: absolute;
+                top: 0;
+    
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+    
+                margin-left: auto;
+                margin-right: auto;
+                
+                height: 100%;
+    
+                padding: 10%;
+    
+                &-part {
+                    width: 50%;
+
+                    display: flex;
+                    justify-content: center;
+                    
+                    &__description {
+                        text-align: left;
+                        width: 50%;
+
+                        &__title {
+                            font-size: $font-size-title-l;
+                            font-weight: bold;
+                        }
+
+                        &__text {
+                            font-size: $font-size-text-m;
+                        }
+                    }
+    
+                    &__illu {
+                        width: 40rem;
+                        height: 40rem;
+    
+                        border-radius: 50%;
+                    }
+
+                }
+            }
+        }
     }
 }

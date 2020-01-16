@@ -16,4 +16,14 @@
     &__text {
         text-align: center;
     }
+
+    @media (min-width: $breakpoint-large) {
+        margin-bottom: 4%;
+
+        width: 45%;
+
+        &__text {
+            margin-bottom: 1.5rem;
+        }
+    }
 }
