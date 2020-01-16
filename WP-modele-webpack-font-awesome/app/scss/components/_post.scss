@@ -1,0 +1,44 @@
+//inscription 
+.user-informations{
+    &__email{
+        flex-direction: column;
+        display: inline-flex;
+        margin-bottom: 0.5em;
+       &__input{
+            background-color: $color-beige;
+           margin:auto;
+           border-radius: 5px;
+           border: none;
+
+       }
+        
+            }
+    &__password{
+        flex-direction: column;
+        display: inline-flex;
+        margin-bottom: 0.5em; 
+        &__input{
+            background-color: $color-beige;
+            margin:auto;
+            border-radius: 5px;
+            border: none;
+        }
+    }
+    &__confirmPassword{
+        flex-direction: column;
+        display: inline-flex;
+        margin-bottom: 0.5em;
+        &__input{
+            background-color: $color-beige;
+            margin:auto;
+            border-radius: 5px;
+            border: none;
+        }
+    }
+    &__cgu{
+        margin-bottom: 0.5em;
+    }
+    &__newsletter{
+        margin-bottom: 0.5em;
+    }
+}
