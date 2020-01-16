@@ -8,6 +8,18 @@
     &__section {
         position: relative;
         height: 700px;
+        &__pic {
+            position: absolute; 
+            max-width: 100%;
+            width: 650px;
+            height: 400px;
+            top: 150px;
+            left: 50%;
+            margin-left: -325px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 67px 10px rgba(0,0,0,0.75);
+        }
+
         &__element {
             position: absolute; 
         }
@@ -34,6 +46,17 @@
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+    .timeline-glimpse__section__pic {
+        opacity: 0;
+        transform: translate3d(0, 100px, 0);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+
+    }
+    .timeline-glimpse__section__pic_animate {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
     .scroll_expand_objects {
         opacity: 0;
         transform : scale(0.5, 0.5);

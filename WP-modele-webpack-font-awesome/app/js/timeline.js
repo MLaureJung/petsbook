@@ -49,6 +49,17 @@ var app = {
             $(this).removeClass('scroll_door_open_animate');  
         }
     }); 
+    // fonction pour l'apparition des photos 
+    $('.timeline-glimpse__section__pic').scrollex({
+        mode: "top",
+        top: "-60vh",
+        enter: function() {
+            $(this).addClass('timeline-glimpse__section__pic_animate');     
+        },
+        leave: function() {
+            $(this).removeClass('timeline-glimpse__section__pic_animate');  
+        }
+    }); 
 
     //marche du raccoon
     $(window).on('scroll', onScroll);
