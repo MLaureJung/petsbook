@@ -10,5 +10,10 @@
 
     @media (min-width: $breakpoint-large) {
         justify-content: space-evenly;
+
+        background-color: $color-beige;
+        border-radius: 50% 20% / 10% 40%;
+
+        padding-top: 2%;
     }
 }
