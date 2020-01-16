@@ -28,6 +28,7 @@ let config = {
   output: {
     path: path.resolve(__dirname, "./public"),
     filename: "js/app.js"
+
   },
   devtool: 'source-map',
   module: {
