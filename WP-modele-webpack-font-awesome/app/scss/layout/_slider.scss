@@ -1,13 +1,17 @@
 .main-slide {
     background-color: $color-blue;
     color: $color-white;
+    border-radius: 0 0 0% 90% / 5% 10%;
 
     .carousel-inner {
         height: 100%;
     }
 
+    .carousel-indicators {
+        margin-bottom: 8%;
+    }
+
     .carousel-item {
-        z-index: 0;
 
         &-bg {
             height: 100vh;
@@ -52,17 +56,20 @@
 
     /*------------------------------------------------------------*/
     @media (min-width: $breakpoint-large) {
+        height: 87vh;
+
         .carousel-inner {
-            height: 80vh;
+            height: 87vh;
+        }
+    
+        .carousel-indicators {
+            margin-bottom: 3%;
         }
     
         .carousel-item {
-            z-index: 0;
     
             &-bg {
-                height: 80vh;
-                object-fit: cover;
-                object-position: center;
+                height: 87vh;
     
                 // à modifier
                 opacity: 0;
@@ -93,6 +100,11 @@
                     &__description {
                         text-align: left;
                         width: 50%;
+
+                        background-color: $color-green ;
+                        border-radius: 50% 60% / 10% 95%;
+
+                        padding: 5% 0;
 
                         &__title {
                             font-size: $font-size-title-l;

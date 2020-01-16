@@ -6,6 +6,12 @@
 
     color: $color-orange;
     font-weight: bold;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all .2s ease-in-out; 
+        color: $color-blue;
+    }
 }
 
 .public-private {
@@ -25,6 +31,12 @@
             color: darken($color-grey, 45);
             font-size: $font-size-text-m;
             font-weight: bold;
+
+            &:hover {
+                transform: scale(1.5);
+                transition: all .2s ease-in-out; 
+                color: $color-blue;
+            }
         }
     }
 
@@ -40,6 +52,11 @@
             color: darken($color-grey, 45);
             font-size: $font-size-text-m;
             font-weight: bold;
+
+            &:hover {
+                transition: all .2s ease-in-out; 
+                color: $color-blue;
+            }
         }
     }
 

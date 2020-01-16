@@ -29,6 +29,11 @@
             margin-top: 0.6rem;
             color: darken($color-grey, 45);
         }
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all .2s ease-in-out; 
+        }
     }
 
 
@@ -49,11 +54,6 @@
                 object-position: center;
         
                 border-radius: 50%;
-        
-                &:hover {
-                    width: 11rem;
-                    height: 11rem;
-                }
             }
         }
     }
