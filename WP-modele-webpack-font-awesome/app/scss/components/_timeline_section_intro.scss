@@ -2,6 +2,10 @@
     background-color: $color-blue;
     position: relative;
     height: 500px;
+    &__text {
+        text-align: center;
+        color: white;
+    }
     &__element {
         position: absolute;
     }
