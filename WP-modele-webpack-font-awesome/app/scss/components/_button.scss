@@ -1,0 +1,32 @@
+//Contact
+.form-contact__button{
+    
+    border-style: none;
+    border: 2px solid;
+    border-radius: 0.3rem;
+    border-color: $color-grey;
+    font-size: $font-size-default;
+    background-color: white;
+}
+@media (min-width: $breakpoint-large) {
+    .form-contact__button{
+        margin-bottom: 1rem;
+        margin-left: 7rem;
+    }
+}
+//Connexion
+.form-connection__button{
+       
+    border-style: none;
+    border: 2px solid;
+    border-radius: 0.3rem;
+    border-color: $color-grey;
+    font-size: $font-size-default;
+    background-color: white;
+    margin: 1rem 0;
+}
+@media (min-width: $breakpoint-large) {
+    .form-contact__button{
+
+    }
+}

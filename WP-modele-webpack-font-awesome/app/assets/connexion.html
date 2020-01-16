@@ -47,25 +47,27 @@
   <!--MAIN-->
   <main class="main">
     <div class="main-items">
-      <form class="form-connection" action="/ma-page-de-traitement" method="post" id="connexion">
-        <div class="form-connection-fields">
-          <div class="form-connection-fields__field">
-              <label class="form-connection-fields__label" for="mail">Email</label>
-              <input class="form-connection-fields__input" type="email" id="mail" name="user_mail">
+      <div class="connection">
+        <form class="form-connection" action="/ma-page-de-traitement" method="post" id="connexion">
+          <div class="form-connection-fields">
+            <div class="form-connection-fields__field">
+                <label class="form-connection-fields__label" for="mail">Email</label>
+                <input class="form-connection-fields__input" type="email" id="mail" name="user_mail">
+            </div>
+            <div class="form-connection-fields__field">
+                <label class="form-connection-fields__label" for="user_password">Mot de passe</label>
+                <input class="form-connection-fields__input" type="password" id="password" name="user_password">
+            </div>
           </div>
-          <div class="form-connection-fields__field">
-              <label class="form-connection-fields__label" for="user_password">Mot de passe</label>
-              <input class="form-connection-fields__input" type="password" id="password" name="user_password">
+          <div class="form-connection__link">
+            <a class="form-connection__a" href="#">Mot de passe oublié</a>
           </div>
-        </div>
-        <div class="form-connection__link">
-          <a class="form-connection__a" href="#">Mot de passe oublié</a>
-        </div>
-        
-        <div>
-          <button class="form-connection__button" type="submit" form="connexion" value="Submit">Connexion</button>
-        </div>
-      </form>
+          
+          <div>
+            <button class="form-connection__button" type="submit" form="connexion" value="Submit">Connexion</button>
+          </div>
+        </form>
+      </div>
     </div>
   </main>
   <!--/MAIN-->
