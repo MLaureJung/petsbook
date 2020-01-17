@@ -4,7 +4,7 @@ var app = {
     init: function() {
       console.log('init');
 
-    
+    // fonction pour les illustrations qui tombent du ciel
     $('.scroll_fallen_objects').scrollex({
         mode: "top",
         top: "-70vh",
@@ -16,18 +16,21 @@ var app = {
         }
     }); 
 
+    // fonction pour les illustrations qui arrivent de la droite
     $('.scroll_right_side_objects').scrollex({
         scroll: function(progress) {
         $(this).css('transform', 'translate3d('+progress*-$(this).data('speed')+'px,0,0)');
         }
     });
 
+    // fonction pour les illustrations qui arrivent de la gauche
     $('.scroll_link_side_objects').scrollex({
         scroll: function(progress) {
         $(this).css('transform', 'translate3d('+progress*$(this).data('speed')+'px,0,0)');
         }
     });
 
+    // fonction pour les illustrations de type "mare" uniquement
     $('.scroll_expand_objects').scrollex({
         mode: "top",
         top: "-70vh",
@@ -39,6 +42,7 @@ var app = {
         }
     }); 
 
+    // fonction pour la fermeture du portail après le passage du raccoon
     $('.scroll_door_open').scrollex({
         mode: "top",
         top: "-40vh",
@@ -49,6 +53,7 @@ var app = {
             $(this).removeClass('scroll_door_open_animate');  
         }
     }); 
+    
     // fonction pour l'apparition des photos 
     $('.timeline-glimpse__section__pic').scrollex({
         mode: "top",
