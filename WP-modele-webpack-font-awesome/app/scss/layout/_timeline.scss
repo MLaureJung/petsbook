@@ -2,6 +2,8 @@
 //Ensuite j'applique un style sur chaque div (chaque illustration), le placement sur la page, mais aussi un calcul de la width et height au besoin. Seules les illustrations animées ne peuvent pas encore être adaptées en taille ici, elles le seront dans le JS. 
 #timeline-glimpse__container {
     position: relative;
+    overflow-x: hidden;
+    width :100vw;
 }
 .timeline-glimpse {
     background-color: $color-green;
