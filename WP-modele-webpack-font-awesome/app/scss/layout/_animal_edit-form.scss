@@ -5,10 +5,10 @@
     &__title{
         font-size: 2rem;
         text-align: center;
-        border:1px dotted;
+        
     }
     &__edit{
-        border:1px dotted;
+        //border:1px dotted;
         padding-bottom: 3%;
         .infos__animal__edit__paragraph{
            
@@ -38,7 +38,7 @@
                 margin:auto;
                 justify-content: space-around; 
                 width:50%;
-                border: .5px solid grey;
+                //borderborder: .5px solid grey;
                 .infos__animal__edit__paragraph__radio{
                    margin:1%;
                    width:5%; 
@@ -109,7 +109,7 @@
                     margin:auto;
                     justify-content: space-around; 
                     width:50%;
-                    border: .5px solid grey;
+                    //border: .5px solid grey;
                     .infos__animal__edit__paragraph__radio{
                        margin:1%;
                        width:5%; 
@@ -119,7 +119,7 @@
         }
     }     
 
-
+    //les buttons à mettre en row
     .validate{
         
         align-items:center;

@@ -5,12 +5,12 @@
     &__title{
         font-size: 2rem;
         text-align: center;
-        border:1px dotted;
+        //border:1px dotted;
 
     }
 
     &__edit{
-        border:1px dotted;
+        //border:1px dotted;
         padding-bottom: 3%;
         .form__pet__infos__animal{
             //background-color: pink;
@@ -32,11 +32,18 @@
     }
 
     .validate{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        //background-color: rgb(0, 255, 115);
         margin:1%;
-        &__botton{
+        width: 100%;
+        &__button{
             margin:.5%;
-            width:100%;
+            width:20%;
+           background-color: rgb(99, 158, 99);
+
         }
 
     }
@@ -75,15 +82,16 @@
         }
     }     
 
-
+ //les buttons à mettre en row
     .validate{
         display: flex;
         flex-direction: row;
         text-align: center;
         margin:1%;
-        &__botton{
+        &__button{
+            background-color: rgb(165, 127, 192);
             margin:.5%;
-            width:100%;
+            width:20%;
         }    
     }    
 }
