@@ -1,0 +1,93 @@
+.form__pet__infos{
+
+    margin-top:5%;
+    color:rgb(71, 63, 63);
+    &__title{
+        font-size: 2rem;
+        text-align: center;
+        border:1px dotted;
+
+    }
+
+    &__edit{
+        border:1px dotted;
+        padding-bottom: 3%;
+        .form__pet__infos__animal{
+            //background-color: pink;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;;
+            &__title{
+                margin-top:1%;
+                text-align: center;
+            }
+            &__user{
+                width:50%;
+                display: block;
+                text-align: center;
+                margin: auto;
+            }
+            
+        }
+    }
+
+    .validate{
+        text-align: center;
+        margin:1%;
+        &__botton{
+            margin:.5%;
+            width:100%;
+        }
+
+    }
+}
+    
+
+@media (min-width: $breakpoint-large){
+      
+    .form__pet__infos{
+        margin-top:5%;
+        color:rgb(85, 77, 77);
+        
+        &__title{
+            font-size: 3rem;
+            
+        }
+        &__edit{
+            
+        
+            .form__pet__infos__animal{
+               
+                &__title{
+                    margin-top:1%;
+                    text-align: center;
+                    font-size: 2rem;
+                }
+                &__user{
+                    width:50%;
+                    display: block;
+                    text-align: center;
+                    margin: auto;
+                    font-size: 1.5rem;
+                }
+               
+            }
+        }
+    }     
+
+
+    .validate{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        margin:1%;
+        &__botton{
+            margin:.5%;
+            width:100%;
+        }    
+    }    
+}
+
+    
+
+
