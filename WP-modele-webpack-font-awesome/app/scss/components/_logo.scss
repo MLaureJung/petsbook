@@ -1,0 +1,15 @@
+//Connexion
+.connection{
+    &__logo{
+        height: 10rem;
+        width: 10rem;
+    }
+}
+@media (min-width: $breakpoint-large) {
+    .connection{
+        &__logo{
+            height: 15rem;
+            width: 15rem;
+        }
+    }
+}
