@@ -73,45 +73,51 @@
 
 //Connexion
 .connection{
-   // display: flex;
-   // justify-content: center;
     margin-top: 1rem;
     text-align: center;
     font-family: $font-main;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    &__logo{
+        height: 15rem;
+        width: 15rem;
+    }
 
 }
 .form-connection{
-    //margin-top: 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 .form-connection-fields{
-    //justify-items: center;
+    
     align-items: center;
-    text-align: end;
+    
     
     &__field{
+        display: flex;
+        flex-direction: column;
         margin-top: 1rem;
     }
     &__label{
         font-size: $font-size-default;
+        margin-top: 0.5rem;
     }
     &__input{
         border-style: none;
         border: 2px solid;
         border-radius: 0.3rem;
         border-color: $color-grey;
-        width: 10rem;
+        width: 30rem;
+        
+        margin-bottom: 1.5;
     }
 }
 @media (min-width: $breakpoint-large) {
     .connection{
-       width: 100vw; //marche pas
+       width: 100%; //marche pas
+       height: 80vh;
     }
 }
