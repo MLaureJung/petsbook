@@ -1,5 +1,52 @@
 
-            //Code Css Div /page account-general ROMARY
+//Code Css Div /page account-general ROMARY
+//inscription 
+.user-informations{
+    &__email{
+        flex-direction: column;
+        display: inline-flex;
+        margin-bottom: 0.5em;
+       &__input{
+            background-color: $color-beige;
+           margin:auto;
+           border-radius: 5px;
+           border: none;
+
+       }
+        
+            }
+    &__password{
+        flex-direction: column;
+        display: inline-flex;
+        margin-bottom: 0.5em; 
+        &__input{
+            background-color: $color-beige;
+            margin:auto;
+            border-radius: 5px;
+            border: none;
+        }
+    }
+    &__confirmPassword{
+        flex-direction: column;
+        display: inline-flex;
+        margin-bottom: 0.5em;
+        &__input{
+            background-color: $color-beige;
+            margin:auto;
+            border-radius: 5px;
+            border: none;
+        }
+    }
+    &__cgu{
+        margin-bottom: 0.5em;
+    }
+    &__newsletter{
+        margin-bottom: 0.5em;
+    }
+}
+
+
+
 
    //div top-info => photo /nom prenom/modifier le profil/  ==>haut de page          
 .top-info{
@@ -195,4 +242,5 @@ padding-bottom: 1rem;
        
 }
 
-            //fin code CSS Romary page account-general
+//fin code CSS Romary page account-general
+

@@ -1,6 +1,27 @@
+
+//inscription
+.user-informations{
+&__signup{
+    display: flex;
+    flex-direction: column;
+    &__submit{
+       
+        margin:2em auto 3em auto;
+        background-color :$color-blue;
+        border-radius: 5px;
+        font-size: $font-size-text-m;
+        padding:0.5rem 0.5rem;
+        border: none;
+        
+       
+    }
+  }
+}
+
 .btn-edit{
     margin:1rem 0;
 }
+
 .btn-see{
     margin: 1rem 0;
 }

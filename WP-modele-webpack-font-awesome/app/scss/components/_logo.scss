@@ -1,0 +1,13 @@
+
+//logo page inscription
+.top__background{
+        width: 50%;
+        height: 50%;
+}
+@media (min-width: $breakpoint-large)  {
+        .top__background{ 
+                width: 20%;
+                height:20%;
+        }
+
+}
