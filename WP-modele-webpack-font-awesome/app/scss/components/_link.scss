@@ -1,0 +1,147 @@
+
+//connexion
+.form-connection__link{
+    margin-top: 3rem;
+}
+
+        //Css liens et faux buttons page account General Romary
+
+// lien modifier mon profile haut de page
+.top-info__user__edit-profile{
+    color:$color-blue;
+    font-size:$font-size-text-m;
+    
+}
+@media (min-width: $breakpoint-large)
+{
+    .top-info__user__edit-profile{
+    color:white;
+    
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color:$color-beige;
+    }
+
+}
+    }
+  
+//liens mon animal haut de pages avec icones (icones ds scss icones)
+.add-animal__add
+{
+color:$color-blue;
+&:hover {
+    transform: scale(1.5);
+    transition: all .2s ease-in-out; 
+    color:$color-beige ;
+        }
+//lien pour ajouter un animal (haut de page)
+        &__link {
+        color:$color-blue;
+        &:hover {
+            transform: scale(1.5);
+            transition: all .2s ease-in-out; 
+            color:$color-beige;
+                }
+                }
+}
+@media (min-width: $breakpoint-large)
+{
+    .add-animal__add{
+        color:$color-beige;
+        &:hover {
+            transform: scale(1.5);
+            transition: all .2s ease-in-out; 
+            color:white ;
+        }
+        &__link{
+            color:$color-beige;
+            &:hover {
+                transform: scale(1.5);
+                transition: all .2s ease-in-out; 
+                color:white;
+            }
+        }
+
+}
+
+}
+// .edit=liens editer (2 boxes) bas de page
+.edit
+{
+padding:0.5rem 1rem;
+border-radius:5px;
+background-color: $color-green;
+color: $color-beige;
+&:hover {
+    transform: scale(1.5);
+    transition: all .2s ease-in-out; 
+    color: $color-blue;
+        }
+    
+}
+
+// .see=liens voire (boxes) bas de page
+.see
+{
+    padding:0.5rem 1rem;
+    border-radius:5px;
+    background-color:$color-orange;
+    color:white;
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color: $color-blue;
+            }
+}
+
+//.edit-timeline=lien pour editer la timeline ( derniere box bas de page)
+.edit-timeline
+{
+    padding:0.5rem 1rem;
+    border-radius:5px;
+    background-color: $color-green;
+    color:white;
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color: $color-blue;
+            }
+}
+@media (min-width: $breakpoint-large)
+{
+    .edit-timeline  {
+        margin-left: 7rem;
+       
+                    }
+}
+//.see-timeline=lien pour voire la timeline ( derniere box bas de page)
+.see-timeline
+{
+    padding:0.5rem 1rem;
+    border-radius:5px;
+    background-color:$color-blue;
+    color:white;
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color: $color-blue;
+            }
+}
+@media (min-width: $breakpoint-large)
+{
+    .see-timeline{
+        margin-left: 7rem;
+       
+        
+                }
+}
+
+.add-animal__icone-animal__pic__single{
+    border-radius: 50%;
+}
+
+
+        //fin du code Romary
+    
+
