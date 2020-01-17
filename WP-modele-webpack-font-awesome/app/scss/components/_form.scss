@@ -58,6 +58,8 @@
 @media (min-width: $breakpoint-large) {
     .main-items-contact{
         flex-direction: row;
+        width: 100%;
+        height: 80vh;
     }
     .form-contact{
         width: 50%;
@@ -117,7 +119,7 @@
 }
 @media (min-width: $breakpoint-large) {
     .connection{
-       width: 100%; //marche pas
+       width: 100%;
        height: 80vh;
     }
 }
