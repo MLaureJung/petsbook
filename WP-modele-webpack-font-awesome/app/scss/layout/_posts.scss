@@ -1,0 +1,124 @@
+// Homepage
+.main-timelines {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: $margin-main-large;
+    margin-bottom: 5%;
+
+    color: $color-white;
+
+    @media (min-width: $breakpoint-large) {
+        justify-content: space-evenly;
+
+        background-color: $color-beige;
+        border-radius: 50% 20% / 10% 40%;
+
+        padding-top: 2%;
+    }
+}
+
+.timeline-edit {
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        height: 30vh;
+        width: 100%;
+
+        background-color: $color-orange;
+        color: $color-white;
+
+        &__button {
+            padding: .5rem 1rem;
+            background-color: $color-white;
+            border-radius: 5px;
+
+            font-weight: bold;
+            color: $color-orange;
+        }
+
+        &__text {
+            font-weight: bold;
+            font-size: $font-size-text-l;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        margin: 8% 0;
+    }
+
+    @media (min-width: $breakpoint-large) {
+
+        &__items {
+            margin: 3% auto;
+            width: 80%;
+
+            align-items: center;
+        }
+    }
+}
+
+
+//page inscription:
+.top{
+    text-align: center;
+    margin:2em 0 ;
+
+
+}
+.user-informations{
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+    margin:auto;
+            
+            
+            
+
+   
+    
+}
+
+.top-info{
+        text-align: center;
+        
+
+       
+}
+.main-items{
+    text-align: center;
+   
+
+}
+@media (min-width: $breakpoint-large)  {
+    .main-items{
+        display: flex;
+       flex-wrap: wrap;
+    }
+
+}
+.health-book{
+    text-align: center;
+}
+.timeline-management{
+    text-align: center;
+}
+
