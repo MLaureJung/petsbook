@@ -17,3 +17,59 @@
         padding-top: 2%;
     }
 }
+
+.timeline-edit {
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        height: 30vh;
+        width: 100%;
+
+        background-color: $color-orange;
+        color: $color-white;
+
+        &__button {
+            padding: .5rem 1rem;
+            background-color: $color-white;
+            border-radius: 5px;
+
+            font-weight: bold;
+            color: $color-orange;
+        }
+
+        &__text {
+            font-weight: bold;
+            font-size: $font-size-text-l;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        margin: 8% 0;
+    }
+
+    @media (min-width: $breakpoint-large) {
+
+        &__items {
+            margin: 3% auto;
+            width: 80%;
+
+            align-items: center;
+        }
+    }
+}
