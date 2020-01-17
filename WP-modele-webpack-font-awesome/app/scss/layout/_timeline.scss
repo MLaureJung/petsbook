@@ -18,15 +18,9 @@
         display: none;
         filter: brightness(150%);
         height: 48px;
-        opacity: 1;
         position: fixed;
         right: 1%;
         width: 48px;
-    }
-
-    #returnOnTop:hover {
-        filter: alpha(opacity = 100); 
-        opacity: 1;
     }
 }
 .timeline-glimpse {
@@ -38,7 +32,7 @@
         height: 700px;
         &__pic {
             position: absolute; 
-            max-width: 100%;
+            max-width: 90%;
             width: 650px;
             height: 400px;
             top: 150px;
@@ -164,5 +158,18 @@
 	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
 	40% {transform: translateY(-30px);}
 	60% {transform: translateY(-15px);}
+}
+
+@media screen and (max-width: 992px) {
+    .timeline-glimpse__section__pic {
+        height: 250px;
+        left: 5%;
+        margin-left: 0;
+    }
+    #timeline-glimpse__container {
+        #returnOnTop {
+            right: -100%;
+        }
+    }
 }
   
