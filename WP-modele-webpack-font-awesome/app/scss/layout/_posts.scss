@@ -1,3 +1,4 @@
+
 //page inscription:
 .top{
     text-align: center;
@@ -18,3 +19,29 @@
    
     
 }
+
+.top-info{
+        text-align: center;
+        
+
+       
+}
+.main-items{
+    text-align: center;
+   
+
+}
+@media (min-width: $breakpoint-large)  {
+    .main-items{
+        display: flex;
+       flex-wrap: wrap;
+    }
+
+}
+.health-book{
+    text-align: center;
+}
+.timeline-management{
+    text-align: center;
+}
+
