@@ -1,0 +1,50 @@
+.add-animal
+{
+   
+
+    &__icone-animal{
+         margin:3rem 0 1rem 0; 
+        &__pic{
+            width: 30%;
+            height: 30%;
+            border-radius: 50%;
+        }
+        &:hover {
+            transform: scale(1.1);
+            transition: all .2s ease-in-out; 
+        }
+
+    }
+
+    
+
+}
+@media (min-width: $breakpoint-large){
+    .add-animal{
+        &__icone-animal{
+            margin:3rem 0 1rem 0; 
+           &__pic{
+               width: 50%;
+               height: 50%;
+               border-radius: 50%;
+           }
+           &:hover {
+               transform: scale(1.1);
+               transition: all .2s ease-in-out; 
+           }
+   
+       }
+
+    }
+}
+@media (min-width: $breakpoint-large){
+    .icone-animal__pic__{
+        margin-left: 4rem;
+        margin-top: 2rem;
+    }
+}
+
+   
+    
+
+
