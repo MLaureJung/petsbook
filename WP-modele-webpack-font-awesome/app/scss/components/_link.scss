@@ -1,3 +1,105 @@
+//Homepage
+.main-timelines__item__button {
+    background-color: $color-white;
+    border-radius: 5px;
+
+    padding: 0.5rem 1rem;
+
+    color: $color-orange;
+    font-weight: bold;
+
+    align-self: flex-end;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all .2s ease-in-out; 
+        color: $color-blue;
+    }
+}
+
+.public-private {
+    display: flex;
+    justify-content: center;
+
+    margin: 4% 0;
+
+    &__public {
+        width: 50%;
+        text-align: center;
+        margin: 1.5%;
+        padding: 0 2rem;
+        border-right: 1px solid darken($color-grey, 45);
+
+        &__title {
+            color: darken($color-grey, 45);
+            font-size: $font-size-text-m;
+            font-weight: bold;
+
+            &:hover {
+                transform: scale(1.5);
+                transition: all .2s ease-in-out; 
+                color: $color-blue;
+            }
+        }
+    }
+
+    &__private {
+        width: 50%;
+        text-align: center;
+        margin: 1.5%;
+        padding: 0 2rem;
+
+        align-self: center;
+
+        &__title {
+            color: darken($color-grey, 45);
+            font-size: $font-size-text-m;
+            font-weight: bold;
+
+            &:hover {
+                transition: all .2s ease-in-out; 
+                color: $color-blue;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-large) {
+        margin: 2% 0;
+        margin-top: 2%;
+
+        &__public {
+            width: 50%;
+            text-align: right;
+            margin: 1.5%;
+            margin-right: 0;
+            padding: 0 2rem;
+            border-right: 1px solid darken($color-grey, 45);
+    
+            &__title {
+                color: darken($color-grey, 45);
+                font-size: $font-size-title-m;
+                font-weight: bold;
+            }
+        }
+    
+        &__private {
+            width: 50%;
+            text-align: left;
+            margin: 1.5%;
+            margin-left: 0;
+            padding: 0 2rem;
+    
+            align-self: center;
+    
+            &__title {
+                color: darken($color-grey, 45);
+                font-size: $font-size-title-m;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 
 //connexion
 .form-connection__link{
