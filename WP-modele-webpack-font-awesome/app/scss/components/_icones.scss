@@ -30,27 +30,7 @@
             margin-top: 0.6rem;
             color: darken($color-grey, 45);
         }
-
-// Health book
-.add-animal
-{
-   
-
-    &__icone-animal{
-         margin:3rem 0 1rem 0; 
-        &__pic{
-            width: 30%;
-            height: 30%;
-            border-radius: 50%;
-        }
-
-        &:hover {
-            transform: scale(1.1);
-            transition: all .2s ease-in-out; 
-        }
-
     }
-
 
     @media (min-width: $breakpoint-large) {
         width: 70%;
@@ -70,16 +50,34 @@
         
                 border-radius: 50%;
             }
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all .2s ease-in-out; 
+            }
         }
     }
 }
 
+// Health book
+.add-animal {
+   
 
+    &__icone-animal{
+         margin:3rem 0 1rem 0; 
+        &__pic{
+            width: 30%;
+            height: 30%;
+            border-radius: 50%;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all .2s ease-in-out; 
+        }
     }
-
-    
-
 }
+
 @media (min-width: $breakpoint-large){
     .add-animal{
         &__icone-animal{
