@@ -1,3 +1,4 @@
+// Homepage
 .main-timelines {
     display: flex;
     justify-content: center;
@@ -73,3 +74,51 @@
         }
     }
 }
+
+
+//page inscription:
+.top{
+    text-align: center;
+    margin:2em 0 ;
+
+
+}
+.user-informations{
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+    margin:auto;
+            
+            
+            
+
+   
+    
+}
+
+.top-info{
+        text-align: center;
+        
+
+       
+}
+.main-items{
+    text-align: center;
+   
+
+}
+@media (min-width: $breakpoint-large)  {
+    .main-items{
+        display: flex;
+       flex-wrap: wrap;
+    }
+
+}
+.health-book{
+    text-align: center;
+}
+.timeline-management{
+    text-align: center;
+}
+
