@@ -21,7 +21,8 @@
     'layout/header',
     'layout/links',
     'layout/posts',
-    'layout/slider';
+    'layout/slider',
+    'layout/timeline';
 
 // 4. Components
 @import
@@ -31,7 +32,13 @@
     'components/link',
     'components/logo',
     'components/picture',
-    'components/post';
+    'components/post',
+    'components/timeline_section_1',
+    'components/timeline_section_2',
+    'components/timeline_section_3',
+    'components/timeline_section_4',
+    'components/timeline_section_intro';
+
     
 // 5. Pages
 @import

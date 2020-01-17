@@ -28,6 +28,7 @@ let config = {
   output: {
     path: path.resolve(__dirname, "./public"),
     filename: "js/app.js"
+
   },
   devtool: 'source-map',
   module: {
@@ -79,6 +80,20 @@ let config = {
           }
         },
       },
+
+       // Images
+       {
+        test: /\.(jpg|jpeg|png|gif|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]', // Nom du fichier généré
+            outputPath: 'images/', // Destination du fichier généré dans le répertoire public
+            publicPath: '../images', // Chemin relatif depuis le fichier CSS vers le dossier des images
+            esModule: false
+          }
+        }
+      }
     ]
   },
   // Configuration du serveur de développement qui rechargera automatiquement les contenus lors d'un changement
