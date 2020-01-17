@@ -11,7 +11,7 @@
         border:1px dotted;
         padding-bottom: 3%;
         .infos__animal__edit__paragraph{
-            //background-color: pink;
+           
             display:flex;
             flex-direction:column;
             justify-content: center;;
@@ -24,6 +24,8 @@
                 display: block;
                 text-align: center;
                 margin: auto;
+            
+    
             }
             textarea{
                 width:50%;
@@ -46,14 +48,28 @@
     }
 
     .validate{
-        text-align: center;
+        align-items:center;
+        display: flex;
+        flex-direction: column;
         margin:1%;
-        &__botton{
+        &__button{
             margin:.5%;
-            width:100%;
+            width:20%;
+            padding:.2%;
+            background-color: orange;
+            color:white;
+            height: 2rem;
+            &:hover {
+                transform: scale(1.5);
+                transition: all .2s ease-in-out; 
+                color: $color-blue;
+            }
+
         }
 
     }
+
+    
 }
     
 
@@ -105,13 +121,28 @@
 
 
     .validate{
-        display: flex;
-        flex-direction: row;
-        text-align: center;
+        
+        align-items:center;
+        margin: auto;
+        width: 100%;
+       
         margin:1%;
-        &__botton{
+        &__button{
+            flex-direction:row;
+            text-align: center;
+            margin: auto;
             margin:.5%;
-            width:100%;
-        }    
+            width:20%;
+            padding:.2%;
+            background-color: orange;
+            color:white;
+            height: 2.5rem;
+            &:hover {
+                transform: scale(1.5);
+                transition: all .2s ease-in-out; 
+                color: $color-blue;
+            }
+        }
+            
     }    
 }
