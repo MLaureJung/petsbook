@@ -5,7 +5,7 @@
         
         &__ID-user{
             color:rgb(109, 104, 104);
-            margin:1rem 0 1rem 0;
+            margin:2rem 0 3rem 0;
             font-size:$font-size-title-m;
             
         }
@@ -14,34 +14,64 @@
             
             }
         &__edit-profile{
-            
+            color:$color-blue;
             font-size:$font-size-text-m;
+            
+
            
            
             
         }
         padding-bottom: 2rem;
-        border-bottom: 1px solid $color-beige;
+        
         }
     
     }
+    @media (min-width: $breakpoint-large)  {
+    .top-info{
+        background-color: $color-blue;
+        padding-top: 5rem;
+        border-bottom-left-radius:30%;
+        &__user__edit-profile{
+            color:$color-beige;
+        }
+        
+    }
+}
     .animal{
-        display: flex;
+        
        flex-wrap: wrap;
         margin:2rem 0 ;
         padding-bottom: 2rem;
         border-bottom: 1px solid $color-beige;
+        
     }
     @media (min-width: $breakpoint-large)  {
         .animal{
          display: flex;
          justify-content:center;
+         background-color: $color-blue;
+         border-bottom-left-radius:35%;
+         border-top-right-radius:30%;
+         padding-bottom: 3rem;
+         justify-content: space-around;
+         
+
+         
+         
+         
+         
         } 
      }
      @media (min-width: $breakpoint-large)  {
     .animal-picture-profile{
-        width: 50%;
+        width: 40vw;
+        height: 50vh;
         border:none;
+        padding: 2rem 0 2.5rem 0;
+        margin-bottom: 5rem;
+        background-color: $color-orange;
+         
 }
      }
 
@@ -49,11 +79,23 @@
        margin-top: 2rem;
        padding-bottom: 1rem;
         border-bottom: 1px solid $color-beige;
+        
+        
+
    }
+   .animal-infos li{
+       line-height: 2.5rem;
+   }
+   
    @media (min-width: $breakpoint-large)  {
     .animal-infos{
         width: 50%;
         border:none;
+        background-color: $color-grey;
+        margin:-1rem 0 0 3rem;
+        padding-top: 2rem;
+        
+       
     }
    }  
    .health-book{
@@ -61,11 +103,22 @@
     padding-bottom: 1rem;
      border-bottom: 1px solid $color-beige; 
    }
+   .health-book li {
+    line-height: 3rem;
+   }
    @media (min-width: $breakpoint-large)  {
     .health-book{
-        width: 50%;
-        height: 20rem;
+        width: 45%;
+        height: 50vh;
         border:none;
+        padding-right: 6rem;
+        margin-top: 3rem;
+        background-color: $color-grey;
+        
+        padding-top: 3rem;
+       
+       
+       
     }
    }  
    .timeline-management{
@@ -76,7 +129,17 @@
    @media (min-width: $breakpoint-large)  {
     .timeline-management{
         width: 50%;
+        height:50vh;
         border:none;
-    }
-   }  
+        padding-right:10rem;
+        margin-top: 3rem;
+        padding-top: 2.5rem;
+        background-color: $color-orange;
+        margin-left: 2.5rem;
+       
+        margin-bottom: 5rem;
 
+       
+    }
+   } 
+  

@@ -2,23 +2,91 @@
     padding:0.5rem 1rem;
     border-radius:5px;
     background-color: $color-green;
-    color:white;
+    color: $color-beige;
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color: $color-blue;
+    }
+    
 }
+
 .see{
     padding:0.5rem 1rem;
     border-radius:5px;
     background-color:$color-orange;
     color:white;
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color: $color-blue;
+    }
 }
 .edit-timeline{
     padding:0.5rem 1rem;
     border-radius:5px;
     background-color: $color-green;
     color:white;
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color: $color-blue;
+    }
 }
 .see-timeline{
     padding:0.5rem 1rem;
     border-radius:5px;
-    background-color:$color-orange;
+    background-color:$color-blue;
     color:white;
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color: $color-blue;
+    }
+}
+.add-animal__add{
+    color:$color-blue;
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color:$color-beige ;
+    }
+    &__link{
+        color:$color-blue;
+        &:hover {
+            transform: scale(1.5);
+            transition: all .2s ease-in-out; 
+            color:$color-beige;
+        }
+    }
+}
+@media (min-width: $breakpoint-large){
+    .add-animal__add{
+        color:$color-beige;
+        &:hover {
+            transform: scale(1.5);
+            transition: all .2s ease-in-out; 
+            color:white ;
+        }
+        &__link{
+            color:$color-beige;
+            &:hover {
+                transform: scale(1.5);
+                transition: all .2s ease-in-out; 
+                color:white;
+            }
+        }
+    }
+
+    }
+
+
+.top-info__user__edit-profile{
+    color:white;
+    &:hover {
+        transform: scale(1.5);
+        transition: all .2s ease-in-out; 
+        color:$color-beige;
+    }
+
 }
