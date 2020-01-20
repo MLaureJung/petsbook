@@ -1,7 +1,7 @@
 /vendor
 /wp
 /wp-config.php
-/content/plugins/*
+!/content/plugins/*
 /content/themes/*
 !/content/themes/petsbook
 /content/languages
