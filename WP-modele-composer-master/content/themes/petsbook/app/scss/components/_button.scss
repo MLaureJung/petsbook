@@ -1,0 +1,59 @@
+//Contact
+.form-contact__button{
+    
+    border-style: none;
+    border: 2px solid;
+    border-radius: 0.3rem;
+    border-color: $color-grey;
+    font-size: $font-size-default;
+    background-color: white;
+}
+@media (min-width: $breakpoint-large) {
+    .form-contact__button{
+        margin-bottom: 1rem;
+        margin-left: 7rem;
+    }
+}
+//Connexion
+.form-connection__button{
+       
+    border-style: none;
+    border: 2px solid;
+    border-radius: 0.3rem;
+    border-color: $color-grey;
+    font-size: $font-size-default;
+    background-color: white;
+    margin: 1rem 0;
+}
+@media (min-width: $breakpoint-large) {
+    .form-contact__button{
+
+    }
+}
+
+//inscription
+.user-informations{
+&__signup{
+    display: flex;
+    flex-direction: column;
+    &__submit{
+       
+        margin:2em auto 3em auto;
+        background-color :$color-blue;
+        border-radius: 5px;
+        font-size: $font-size-text-m;
+        padding:0.5rem 0.5rem;
+        border: none;
+        
+       
+    }
+  }
+}
+
+.btn-edit{
+    margin:1rem 0;
+}
+
+.btn-see{
+    margin: 1rem 0;
+}

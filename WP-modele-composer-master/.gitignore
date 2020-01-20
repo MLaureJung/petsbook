@@ -1,8 +1,0 @@
-/vendor
-/wp
-/wp-config.php
-/content/plugins/*
-/content/themes/*
-/content/languages
-/content/upgrade
-/content/uploads
