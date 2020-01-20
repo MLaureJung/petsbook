@@ -13,7 +13,7 @@
     <nav class="header-nav">
       <div class="header-nav__items__left">
         <!--logo-->
-       <a href="#"><img class="header-nav__items__left__logo" src="images/logo-fond-transparent.png" alt=""></a>
+       <a href="#"><img class="header-nav__items__left__logo" src="<?= get_theme_file_uri('public/images/logo-fond-transparent.png')?> " alt=""></a>
         <!--/logo-->
 
         <!--items_links left-->
