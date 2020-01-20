@@ -1,6 +1,7 @@
 /vendor
 /wp
 /wp-config.php
+/.htacces
 !/content/plugins/*
 /content/themes/*
 !/content/themes/petsboo
