@@ -1,0 +1,75 @@
+.header {
+    background-color: transparent;
+    width: 100vw;
+    padding:0.5% 0;
+    position: absolute;
+    z-index: 100;
+   
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+
+        margin: 0 3%;
+
+        &__items__left {
+            display: flex;      
+
+            &__logo {
+                object-fit: cover;
+                object-position: center;
+
+                width: 5rem;
+                height: 5rem;
+
+                margin-right: 2rem;  
+            }
+
+            &__part {
+                display: flex;
+                align-items: center;
+
+                &__link {
+                    color: $color-white;
+
+                    &:hover {
+                        color: $color-beige;
+                        transition: all .2s ease-in-out; 
+                    }
+                }
+            }
+        }  
+
+        &__items__right {
+            display: flex;
+            height: 100%;
+
+            &__part {
+                display: flex;
+                justify-content: space-between;
+                color: $color-white;
+
+                &:hover {
+                    color: $color-beige;
+                    transition: all .2s ease-in-out; 
+                }
+
+                &__link {
+                    margin: 0 1rem;
+                    color: $color-white;
+
+                    &:hover {
+                        color: $color-beige;
+                        transition: all .2s ease-in-out; 
+                    }
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint-large) {
+            
+        }
+    }  
+}

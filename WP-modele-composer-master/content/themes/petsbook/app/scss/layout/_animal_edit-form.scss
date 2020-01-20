@@ -1,0 +1,148 @@
+.form__infos__animal{
+    margin-top:5%;
+    color:rgb(71, 63, 63);
+    
+    &__title{
+        font-size: 2rem;
+        text-align: center;
+        
+    }
+    &__edit{
+        //border:1px dotted;
+        padding-bottom: 3%;
+        .infos__animal__edit__paragraph{
+           
+            display:flex;
+            flex-direction:column;
+            justify-content: center;;
+            label{
+                margin-top:1%;
+                text-align: center;
+            }
+            input{
+                width:50%;
+                display: block;
+                text-align: center;
+                margin: auto;
+            
+    
+            }
+            textarea{
+                width:50%;
+                display: block;
+                text-align: center;
+                margin: auto;
+            }
+            .radio{
+                display:flex;
+                margin:auto;
+                justify-content: space-around; 
+                width:50%;
+                //borderborder: .5px solid grey;
+                .infos__animal__edit__paragraph__radio{
+                   margin:1%;
+                   width:5%; 
+                }
+            }
+        }
+    }
+
+    .validate{
+        align-items:center;
+        display: flex;
+        flex-direction: column;
+        margin:1%;
+        &__button{
+            margin:.5%;
+            width:20%;
+            padding:.2%;
+            background-color: orange;
+            color:white;
+            height: 2rem;
+            &:hover {
+                transform: scale(1.5);
+                transition: all .2s ease-in-out; 
+                color: $color-blue;
+            }
+
+        }
+
+    }
+
+    
+}
+    
+
+@media (min-width: $breakpoint-large){
+      
+    .form__infos__animal{
+        margin-top:5%;
+        color:rgb(85, 77, 77);
+        
+        &__title{
+            font-size: 3rem;
+            
+        }
+        &__edit{
+            font-size:2rem;
+        
+            .infos__animal__edit__paragraph{
+               
+                label{
+                    margin-top:1%;
+                    text-align: center;
+                }
+                input{
+                    width:50%;
+                    display: block;
+                    text-align: center;
+                    margin: auto;
+                }
+                textarea{
+                    width:50%;
+                    display: block;
+                    text-align: center;
+                    margin: auto;
+                }
+                .radio{
+                    display:flex;
+                    margin:auto;
+                    justify-content: space-around; 
+                    width:50%;
+                    //border: .5px solid grey;
+                    .infos__animal__edit__paragraph__radio{
+                       margin:1%;
+                       width:5%; 
+                    }
+                }
+            }
+        }
+    }     
+
+    //les buttons à mettre en row
+    .validate{
+        
+        align-items:center;
+        margin: auto;
+        width: 100%;
+       
+        margin:1%;
+        &__button{
+            flex-direction:row;
+            text-align: center;
+            margin: auto;
+            margin:.5%;
+            width:20%;
+            padding:.2%;
+            background-color: orange;
+            color:white;
+            height: 2.5rem;
+            &:hover {
+                transform: scale(1.5);
+                transition: all .2s ease-in-out; 
+                color: $color-blue;
+            }
+        }
+            
+    }    
+}

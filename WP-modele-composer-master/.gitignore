@@ -3,7 +3,7 @@
 /wp-config.php
 /content/plugins/*
 /content/themes/*
-!/content/theme/petsbook
+!/content/themes/petsbook
 /content/languages
 /content/upgrade
 /content/uploads
