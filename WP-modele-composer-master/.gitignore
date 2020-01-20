@@ -2,7 +2,8 @@
 /wp
 /wp-config.php
 /content/plugins/*
-/content/themes/petsbook/*
+/content/themes/*
+!/content/theme/petsbook
 /content/languages
 /content/upgrade
 /content/uploads
