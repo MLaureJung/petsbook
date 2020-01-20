@@ -1,8 +1,0 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /wave/APEO/projet-pets-book/WP-modele-composer-master/
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /wave/APEO/projet-pets-book/WP-modele-composer-master/index.php [L]
-</IfModule>
