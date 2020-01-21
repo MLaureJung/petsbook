@@ -171,14 +171,16 @@ color:$color-blue;
 // .edit=liens editer (2 boxes) bas de page
 .edit
 {
-padding:0.5rem 1rem;
-border-radius:5px;
-background-color: $color-green;
-color: $color-beige;
+    padding:0.5rem 1rem;
+    border-radius:5px;
+    background-color: darken($color-grey, 25);
+    color: $color-white;
 &:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
     transition: all .2s ease-in-out; 
-    color: $color-blue;
+    color: $color-orange;
+    background-color: $color-white;
+
         }
     
 }
@@ -186,14 +188,17 @@ color: $color-beige;
 // .see=liens voire (boxes) bas de page
 .see
 {
+   
     padding:0.5rem 1rem;
     border-radius:5px;
-    background-color:$color-orange;
-    color:white;
+    background-color: darken($color-grey, 25);
+    color: $color-white;
     &:hover {
-        transform: scale(1.5);
+        transform: scale(1.1);
         transition: all .2s ease-in-out; 
-        color: $color-blue;
+        color: $color-orange;
+        background-color:$color-white;
+
             }
 }
 
@@ -202,18 +207,19 @@ color: $color-beige;
 {
     padding:0.5rem 1rem;
     border-radius:5px;
-    background-color: $color-green;
-    color:white;
+    background-color: darken($color-grey, 25);
+    color: $color-white;
     &:hover {
-        transform: scale(1.5);
+        transform: scale(1.1);
         transition: all .2s ease-in-out; 
-        color: $color-blue;
+        color: $color-orange;
+        background-color: $color-white;
             }
 }
 @media (min-width: $breakpoint-large)
 {
     .edit-timeline  {
-        margin-left: 7rem;
+        // margin-left: 7rem;
        
                     }
 }
@@ -222,18 +228,20 @@ color: $color-beige;
 {
     padding:0.5rem 1rem;
     border-radius:5px;
-    background-color:$color-blue;
-    color:white;
+    background-color: darken($color-grey, 25);
+    color: $color-white;
+
     &:hover {
-        transform: scale(1.5);
+        transform: scale(1.1);
         transition: all .2s ease-in-out; 
-        color: $color-blue;
+        color: $color-orange;
+        background-color: $color-white;
             }
 }
 @media (min-width: $breakpoint-large)
 {
     .see-timeline{
-        margin-left: 7rem;
+        // margin-left: 7rem;
        
         
                 }
