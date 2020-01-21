@@ -19,11 +19,13 @@
        
     border-style: none;
     border: 2px solid;
-    border-radius: 0.3rem;
+    border-radius: 5px;
     border-color: $color-grey;
-    font-size: $font-size-default;
-    background-color: white;
+    font-size: $font-size-text-m;
+    background-color :$color-blue;
     margin: 1rem 0;
+    padding:0.5rem 0.5rem;
+    color: $color-white;
 }
 @media (min-width: $breakpoint-large) {
     .form-contact__button{
