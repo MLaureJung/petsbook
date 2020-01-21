@@ -20,9 +20,8 @@
     border-style: none;
     border: 2px solid;
     border-radius: 5px;
-    border-color: $color-grey;
     font-size: $font-size-text-m;
-    background-color :$color-blue;
+    background-color :darken($color-grey, 25);
     margin: 1rem 0;
     padding:0.5rem 0.5rem;
     color: $color-white;
@@ -41,7 +40,7 @@
     &__submit{
        
         margin:2em auto 3em auto;
-        background-color :$color-blue;
+        background-color :darken($color-grey, 25);
         border-radius: 5px;
         font-size: $font-size-text-m;
         padding:0.5rem 0.5rem;

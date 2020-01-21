@@ -102,6 +102,15 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+   
+}
+
+.form-connection__a {
+    text-decoration: none!important;
+    color: black;
+    text-decoration: underline!important;
+    font-size: .8em;
+    
 }
 .form-connection-fields{
     
@@ -116,6 +125,7 @@
     &__label{
         font-size: $font-size-default;
         margin-top: 0.5rem;
+        
     }
     &__input{
         border-style: none;
@@ -135,7 +145,7 @@
     }
     .form-connection-fields{
         &__input{
-            width: 30rem;
+            width: 20rem;
         }
     }    
 }
