@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="main-items">
       <div class="main-items-contact">
-        <img class="main-items-contact__timbre" src="images/timbre.png">
+        <img class="main-items-contact__timbre" src="<?= get_theme_file_uri('public/images/timbre.png') ?>">
         <form class="form-contact" action="/my-handling-form-page" method="post" id="register">
           <div class="form-contact-fields">
             <div class="form-contact-fields__field">
