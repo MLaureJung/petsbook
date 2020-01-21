@@ -3,8 +3,9 @@
 t'es sur index
 
     <!--Carousel-->
-    <section class="main-slide">
 
+    <section class="main-slide">
+  
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -63,6 +64,7 @@ t'es sur index
                 </div>
               </div>
         </div>
+
 
         <!--Next/Previous-->
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
