@@ -14,6 +14,7 @@ class petsbook
     public function __construct()
     {
         add_action('init', [$this, 'petsbook_register_cpt_animal']);
+        add_action('init', [$this, 'petsbook_register_taxonomies']);
     }
 public function petsbook_register_cpt_animal()
 {
@@ -56,11 +57,33 @@ public function petsbook_register_cpt_animal()
 
     register_post_type('animal', $args);
     }
+
+    public function petsbook_register_taxonomies()
+    {
+
+        // On créé une taxonomie pour relier nos projets par clients
+        // https://developer.wordpress.org/reference/functions/register_taxonomy/
+
+        register_taxonomy(
+            'animal-type',
+            'animal',
+            [
+                'label' => 'type-animal',
+                'public' => true,
+                'hierarchical' => false,
+                'show_admin_column' => true,
+                'rewrite' => [
+                    'slug' => 'type-animal'
+                ]
+            ]
+        );
+    }
     public function petsbook_activate()
     {
         // à l'activation du plugin...
         // on execute la méthode qui construit les CPT
         $this->petsbook_register_cpt_animal();
+        $this->petsbook_register_taxonomies();
     }
     public function petsbook_deactivate()
     {
