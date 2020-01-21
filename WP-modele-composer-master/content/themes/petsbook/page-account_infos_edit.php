@@ -1,59 +1,59 @@
 <?php get_header(); ?>
- <!-- Section pet profile-->
- <section class="photos_profiles">
+<!-- Section pet profile-->
+<section class="photos_profiles">
 
-<div class="human__profiles_elements">
+  <div class="human__profiles_elements">
 
-        <div class='human__profiles'>
-            <a href="#"><img class='human__profiles__image'
-            src="https://source.unsplash.com/700x700/?faces" alt=""></a> 
-        </div>
-        <h4 class='human__profiles__name'>Prénom</h4>
-</div>
-
-<div class="animals__profiles">
-  <div class="animals__profiles__all__wrapper">                  
-      <a href="#">
-        <img class='animals__profiles__all__wrapper__image'
-      src="https://source.unsplash.com/700x700/?pets" alt="">   
-        <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-      </a>               
+          <div class='human__profiles'>
+              <a href="#"><img class='human__profiles__image'
+              src="https://source.unsplash.com/700x700/?faces" alt=""></a> 
+          </div>
+          <h4 class='human__profiles__name'>Prénom</h4>
   </div>
 
-  <div class="animals__profiles__all__wrapper">  
-      <a href="#" class='animals__profiles__all__wrapper__individual__link'>
-        <img class='animals__profiles__all__wrapper__image'
-      src="https://source.unsplash.com/700x700/?pets" alt=""/>   
-        <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-      </a>
-  </div>
+  <div class="animals__profiles">
+    <div class="animals__profiles__all__wrapper">                  
+        <a href="#">
+          <img class='animals__profiles__all__wrapper__image'
+        src="https://source.unsplash.com/700x700/?pets" alt="">   
+          <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
+        </a>               
+    </div>
 
-  <div class="animals__profiles__all__wrapper">  
-      <a href="#">
-        <img class='animals__profiles__all__wrapper__image'
-      src="https://source.unsplash.com/700x700/?pets" alt=""/>   
-        <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-      </a>         
-  </div>
+    <div class="animals__profiles__all__wrapper">  
+        <a href="#" class='animals__profiles__all__wrapper__individual__link'>
+          <img class='animals__profiles__all__wrapper__image'
+        src="https://source.unsplash.com/700x700/?pets" alt=""/>   
+          <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
+        </a>
+    </div>
 
-  <div class="animals__profiles__all__wrapper">             
-      <a href="#">
-        <img class='animals__profiles__all__wrapper__image'
-      src="https://source.unsplash.com/700x700/?pets" alt=""/>   
-        <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-      </a>       
-  </div>
+    <div class="animals__profiles__all__wrapper">  
+        <a href="#">
+          <img class='animals__profiles__all__wrapper__image'
+        src="https://source.unsplash.com/700x700/?pets" alt=""/>   
+          <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
+        </a>         
+    </div>
 
-  <div class="animals__profiles__all__wrapper">  
-      <a href="#"><!--
-        <img class='animals__profiles__all__wrapper__image'
-      src="https://source.unsplash.com/700x700/?pets" alt=""/>--> 
-        <i class="fa fa-plus " aria-hidden="true"></i>
-        
-      </a>
-  </div>
+    <div class="animals__profiles__all__wrapper">             
+        <a href="#">
+          <img class='animals__profiles__all__wrapper__image'
+        src="https://source.unsplash.com/700x700/?pets" alt=""/>   
+          <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
+        </a>       
+    </div>
 
-</div>
+    <div class="animals__profiles__all__wrapper">  
+        <a href="#"><!--
+          <img class='animals__profiles__all__wrapper__image'
+        src="https://source.unsplash.com/700x700/?pets" alt=""/>--> 
+          <i class="fa fa-plus " aria-hidden="true"></i>
+          
+        </a>
+    </div>
+
+  </div>
 </section>   
 <!-- /Section pet profile-->
 

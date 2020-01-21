@@ -82,46 +82,46 @@ je suis logged in
 <!--/Carousel-->
 
 <div class="main-items-l">
-<!--Pet Icons-->
-<section class="main-pet-icons">
-  <div class="main-pet-icons__icon">
-    <a href="#" class="main-pet-icons__link">
-      <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="main-pet-icons__icon__img">
-      <p class="main-pet-icons__icon__type">Chat</p>
-    </a>
-    
-  </div>
+  <!--Pet Icons-->
+  <section class="main-pet-icons">
+    <div class="main-pet-icons__icon">
+      <a href="#" class="main-pet-icons__link">
+        <img src="<?= get_theme_file_uri('public/images/Icone_chat.png') ?>" alt="" class="main-pet-icons__icon__img">
+        <p class="main-pet-icons__icon__type">Chat</p>
+      </a>
+      
+    </div>
 
-  <div class="main-pet-icons__icon">
-    <a href="#" class="main-pet-icons__link">
-      <img src="https://source.unsplash.com/user/detpho/nOlrlCUNvVg/200x200" alt="" class="main-pet-icons__icon__img">
-      <p class="main-pet-icons__icon__type">Chien</p>
-    </a>
-  </div>
+    <div class="main-pet-icons__icon">
+      <a href="#" class="main-pet-icons__link">
+        <img src="<?= get_theme_file_uri('public/images/Icone_chien.png') ?>" alt="" class="main-pet-icons__icon__img">
+        <p class="main-pet-icons__icon__type">Chien</p>
+      </a>
+    </div>
 
-  <div class="main-pet-icons__icon">
-    <a href="#" class="main-pet-icons__link">
-      <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="main-pet-icons__icon__img">
-      <p class="main-pet-icons__icon__type">Oiseau</p>
-    </a>
-  </div>
+    <div class="main-pet-icons__icon">
+      <a href="#" class="main-pet-icons__link">
+        <img src="<?= get_theme_file_uri('public/images/Icone_oiseau.png') ?>" alt="" class="main-pet-icons__icon__img">
+        <p class="main-pet-icons__icon__type">Oiseau</p>
+      </a>
+    </div>
 
-  <div class="main-pet-icons__icon">
-    <a href="#" class="main-pet-icons__link">
-      <img src="https://source.unsplash.com/user/detpho/nOlrlCUNvVg/200x200" alt="" class="main-pet-icons__icon__img">
-      <p class="main-pet-icons__icon__type">Rongeur</p>
-    </a>
-  </div>
+    <div class="main-pet-icons__icon">
+      <a href="#" class="main-pet-icons__link">
+        <img src="<?= get_theme_file_uri('public/images/Icone_rodent.png') ?>" alt="" class="main-pet-icons__icon__img">
+        <p class="main-pet-icons__icon__type">Rongeur</p>
+      </a>
+    </div>
 
-  <div class="main-pet-icons__icon">
-    <a href="#" class="main-pet-icons__link">
-      <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="main-pet-icons__icon__img">
-      <p class="main-pet-icons__icon__type">NAC</p>
-    </a>
-  </div>
+    <div class="main-pet-icons__icon">
+      <a href="#" class="main-pet-icons__link">
+        <img src="<?= get_theme_file_uri('public/images/Icone_nac.png') ?>" alt="" class="main-pet-icons__icon__img">
+        <p class="main-pet-icons__icon__type">NAC</p>
+      </a>
+    </div>
 
-</section>
-<!--/Pet Icons-->
+  </section>
+  <!--/Pet Icons-->
 
 <!--Public_Private-->
 <section class="public-private">
