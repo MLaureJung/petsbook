@@ -19,6 +19,7 @@
     }
 }
 
+// Timeline edit Page
 .timeline-edit {
 
     &-wrapper {
@@ -95,22 +96,58 @@
         text-align: center;  
 }
 
-.main-items{
-    text-align: center;
-   
+// Account general
+.account-general {
 
-}
-@media (min-width: $breakpoint-large)  {
-    .main-items{
+    &-animal-wrapper {
+        width: 100%;
         display: flex;
-       flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: auto; 
+        justify-content: space-evenly;
     }
 
+    @media (min-width: $breakpoint-large) {
+
+        &-block {
+            width: 48%;
+            height: 500px;
+
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
-.health-book{
-    text-align: center;
+
+.animal-infos__list {
+    
+    text-align: center !important;
+    color: darken($color-grey, 25);
+    font-weight: bold;
+
 }
-.timeline-management{
-    text-align: center;
+
+.animal-infos__title {
+    color: darken($color-grey, 25);
+}
+
+.health-book {
+    &__title {
+        h3 {
+        color: darken($color-grey, 25);
+        font-weight: bold;
+        }
+        
+    }
+    ul {
+        text-align: center !important;
+        color: darken($color-grey, 25);
+        font-weight: bold;
+    }
+
 }
 
