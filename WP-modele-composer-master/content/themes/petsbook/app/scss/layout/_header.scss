@@ -5,7 +5,7 @@
     position: absolute;
     z-index: 100;
    
-
+    /*-----------------------------------*/
     &-nav {
         display: flex;
         justify-content: space-between;
@@ -14,6 +14,7 @@
 
         margin: 0 3%;
 
+        /*-----------------------------------*/
         &__items__left {
             display: flex;      
 
@@ -42,6 +43,7 @@
             }
         }  
 
+        /*-----------------------------------*/
         &__items__right {
             display: flex;
             height: 100%;
@@ -68,8 +70,48 @@
             }
         }
 
+        /*-----------------------------------*/
         @media (min-width: $breakpoint-large) {
             
         }
     }  
+}
+
+/*----------------------------------------------------*/
+.second-header {
+    position: static;
+    background-color: $color-grey;
+    
+    /*-----------------------------------*/
+    // Left links
+    .header-nav__items__right__part__link {
+        color: darken($color-grey, 40);
+
+        &:hover {
+            color: darken($color-white, 65);
+            transition: all .2s ease-in-out; 
+        }
+    }
+
+    /*-----------------------------------*/
+    // Right links
+    .header-nav__items__left__part__link {
+        color: darken($color-grey, 40);
+
+        &:hover {
+            color: darken($color-white, 65);
+            transition: all .2s ease-in-out; 
+        }
+    }
+
+    /*-----------------------------------*/
+    // Burger Menu
+    .header-nav__items__right__part {
+        color: darken($color-grey, 40);
+
+        &:hover {
+            color: darken($color-white, 65);
+            transition: all .2s ease-in-out; 
+        }
+    }
 }
