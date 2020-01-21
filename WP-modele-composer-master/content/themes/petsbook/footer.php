@@ -16,12 +16,27 @@
       </form>
       <!--/newsletter-->
       <div class="footer-archives">
-        <ul class="footer-archives__list">
-          <li><a href="" class="footer-archives__list__link">Contact</a></li>
+        <ul class="footer-archives__list">   
+         
+          <!--<li><a href="" class="footer-archives__list__link">Contact</a></li>
           <li><a href="" class="footer-archives__list__link">Equipe</a></li>
           <li><a href="" class="footer-archives__list__link">Accueil</a></li>
-          <li><a href="" class="footer-archives__list__link">Mentions légales</a></li>
+          <li><a href="" class="footer-archives__list__link">Mentions légales</a></li> -->
+ 
+          <?php wp_nav_menu( 
+                  array(
+                  'theme_location' => 'footer-nav',
+                  //'container' => 'li', 
+                  'menu_class' => 'footer-archives__list',  
+                  ) 
+              );  ?>
+
         </ul>
+
+        <?php
+
+?>
+
       </div>
     </div>
 
