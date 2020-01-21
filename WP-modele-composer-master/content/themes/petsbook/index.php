@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-t'es sur index
-
     <!--Carousel-->
     <section class="main-slide">
 
