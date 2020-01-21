@@ -1,5 +1,7 @@
 <?php get_header(); ?>
     <!--Carousel-->
+    <?php get_template_part('template-parts/carousel-index'); ?>
+    <!--
     <section class="main-slide">
 
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -11,13 +13,13 @@
 
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="15000">
-            <!--A modifier-->
+            <!--A modifier
             <img class="carousel-item-bg" src="https://source.unsplash.com/user/detpho/nOlrlCUNvVg/1920x3000" class="d-block w-100" alt="...">
 
             <div class="carousel-item-content">
 
               <div class="carousel-item-content-part">
-                <img class="carousel-item-content-part__illu" src="images/Illu-3.png" class="d-block w-100" alt="...">
+                <img class="carousel-item-content-part__illu" src="./projet-pets-book/WP-modele-composer-master/content/themes/petsbook/public/images/Illu-3.png" class="d-block w-100" alt="...">
               </div>
 
               <div class="carousel-item-content-part__description">
@@ -28,7 +30,7 @@
           </div>
           
           <div class="carousel-item" data-interval="15000">
-            <!--A modifier-->
+            <!--A modifier
             <img class="carousel-item-bg" src="https://source.unsplash.com/user/detpho/nOlrlCUNvVg/1920x3000" class="d-block w-100" alt="...">
 
             <div class="carousel-item-content">
@@ -45,7 +47,7 @@
           </div>
 
           <div class="carousel-item" data-interval="15000">
-            <!--A modifier-->
+            <!--A modifier
             <img class="carousel-item-bg" src="https://source.unsplash.com/user/detpho/nOlrlCUNvVg/1920x3000" class="d-block w-100" alt="...">
 
             <div class="carousel-item-content">
@@ -61,7 +63,7 @@
               </div>
         </div>
 
-        <!--Next/Previous-->
+        <!--Next/Previous
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -71,7 +73,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-        <!--/Next/Previous-->
+        <!--/Next/Previous
       </div>
 
     </section>
