@@ -3,7 +3,10 @@
     <section class="top-info">
                 <div class="top-info__user">
                     <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="top-info__user__profile">
-                    <p class="top-info__user__ID-user">Prenom Nom</p> 
+                    <p class="top-info__user__ID-user">
+                        <?php $current_user = wp_get_current_user(); 
+                        echo $current_user->first_name . " " . $current_user->last_name; ?>
+                    </p> 
                     <a href="#" class="top-info__user__edit-profile">Modifier mon profile</a>
                 </div>
                 <div class="animal">  

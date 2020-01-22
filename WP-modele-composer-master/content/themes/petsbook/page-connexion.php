@@ -3,15 +3,16 @@
 <div class="main-items">
       <div class="connection">
         <img class="connection__logo" src="<?= get_theme_file_uri('public/images/logo-fond-transparent.png') ?>" alt="">
-        <form class="form-connection" action="/ma-page-de-traitement" method="post" id="connexion">
+        <form class="form-connection" action="#" method="post" enctype="multipart/form-data" id="connexion">
+        <input type="hidden" name="submit_connexion" value=""/>
           <div class="form-connection-fields">
             <div class="form-connection-fields__field">
-                <label class="form-connection-fields__label" for="mail">Email</label>
-                <input class="form-connection-fields__input" type="email" id="mail" name="user_mail">
+                <label class="form-connection-fields__label" for="mail">Email*</label>
+                <input class="form-connection-fields__input" type="text" id="mail" name="user_mail">
             </div>
             <div class="form-connection-fields__field">
-                <label class="form-connection-fields__label" for="user_password">Mot de passe</label>
-                <input class="form-connection-fields__input" type="password" id="password" name="user_password">
+                <label class="form-connection-fields__label" for="user_password">Mot de passe*</label>
+                <input class="form-connection-fields__input" type="password" id="password" name="user_pass">
             </div>
           </div>
           <div class="form-connection__link">
@@ -19,7 +20,7 @@
           </div>
           
           <div>
-            <button class="form-connection__button" type="submit" form="connexion" value="Submit">Je me connecte</button>
+            <input class="form-connection__button" type="submit"  value="Je me connecte"/>
           </div>
         </form>
       </div>
