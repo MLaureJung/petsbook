@@ -4,7 +4,8 @@ if (!function_exists('petsbook_setup')) {
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
         register_nav_menus([
-            'header-nav' => 'Menu du header',
+            'header-nav-left' => 'Menu du header left',
+            'header-nav-right' => 'Menu du header right',
             'footer-nav' => 'Menu du footer'
         ]);
     }
