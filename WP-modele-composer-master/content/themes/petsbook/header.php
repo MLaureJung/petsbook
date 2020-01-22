@@ -23,15 +23,35 @@
 
       <div class="collapse navbar-collapse header-nav" id="navbarNav">
         <div class="header-nav__items__left">
+          <!-- 
           <a class="nav-link header-nav__items__left__part__link" href="#">Accueil</a>
-          <a class="nav-link header-nav__items__left__part__link" href="#">Mes animaux</a>
+          <a class="nav-link header-nav__items__left__part__link" href="#">Mes animaux</a> 
+          -->
+
+          <?php wp_nav_menu( 
+                  array(
+                  'theme_location' => 'header-nav-left',
+                  'container' => 'a', 
+                  'menu_class' => 'header-nav__items__left',  
+                  ) 
+              );  ?>
         </div>
 
         <div class="header-nav__items__right">
+         <!-- 
           <a href="#" class="nav-link  header-nav__items__right__part__link">Inscription</a>
           <a href="#" class="nav-link  header-nav__items__right__part__link">Connexion</a>
           <a href="#" class="nav-link  header-nav__items__right__part__link">Mon compte</a>
-          <a href="#" class="nav-link  header-nav__items__right__part__link">Deconnexion</a>
+          <a href="#" class="nav-link  header-nav__items__right__part__link">Deconnexion</a> 
+          -->
+
+          <?php wp_nav_menu( 
+                  array(
+                  'theme_location' => 'header-nav-right',
+                  'container' => 'a', 
+                  'menu_class' => 'header-nav__items__right',  
+                  ) 
+              );  ?>
         </div>
       </div>
     </nav>
