@@ -52,7 +52,9 @@ public function petsbook_register_cpt_animal()
             'excerpt',
             'thumbnail',
             'custom-fields'
-        ]
+        ],
+        'show_in_rest' => true
+        
     ];
 
     register_post_type('animal', $args);
@@ -64,19 +66,43 @@ public function petsbook_register_cpt_animal()
         // On créé une taxonomie pour relier nos projets par clients
         // https://developer.wordpress.org/reference/functions/register_taxonomy/
 
-        register_taxonomy(
-            'animal-type',
-            'animal',
-            [
-                'label' => 'type-animal',
+        
+
+            $labels=[
+            'name'                       => 'Types d \'animaux',
+            'singular_name'              => 'Type',
+            'menu_name'                  => 'Types',
+            'all_items'                  => 'Tous les types',
+            'new_item_name'              => 'Nouveau type',
+            'add_new_item'               => 'Ajouter un type',
+            'update_item'                => 'Mettre à jour un type',
+            'edit_item'                  => 'Editer un type',
+            'view_item'                  => 'Voir tous les types',
+            'separate_items_with_commas' => 'Séparer les type avec une virgule',
+            'add_or_remove_items'        => 'Ajouter une supprimer un type',
+            'choose_from_most_used'      => 'Choisir parmis les types les plus utilisés',
+            'popular_items'              => 'Types populaires',
+            'search_items'               => 'Rechercher un type',
+            'not_found'                  => 'Aucun type trouvé',
+            'items_list'                 => 'Lister les types',
+            'items_list_navigation'      => 'Lister les types',
+            ];
+
+
+            $args = [
+                'labels' => $labels,
                 'public' => true,
                 'hierarchical' => false,
                 'show_admin_column' => true,
                 'rewrite' => [
                     'slug' => 'type-animal'
-                ]
-            ]
-        );
+                ],
+                'show_in_rest' => true    
+            ];
+               
+            register_taxonomy( 'animal-type',
+            'animal', $args);   
+        
     }
     public function petsbook_activate()
     {
