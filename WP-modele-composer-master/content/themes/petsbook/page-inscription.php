@@ -4,33 +4,33 @@
             </div>
 
             <div class="main-items">
-      <form action="" methode="post" enctype="multipart/form-data" class="user-informations">
-        <input type="hidden" name="action" value="submit_inscription"/>
+      <form action="#" method="post" enctype="multipart/form-data" class="user-informations">
+        <input type="hidden" name="submit_inscription" value=""/>
           <div class="user-informations__email">
-              <label for="" >Nom</label> 
+              <label for="" >Nom*</label> 
                 <input type="text" name="user__lastname" class="user-informations__email__input">
               </div>
               <div class="user-informations__email">
-                <label for=""> Prénom</label> 
+                <label for=""> Prénom*</label> 
                   <input type="text"  name="user__name" class="user-informations__email__input">
               </div>
               <div class="user-informations__email">
-                <label for=""> Email</label> 
+                <label for=""> Email*</label> 
                   <input type="text" name="user__email"  class="user-informations__email__input">
               </div>
 
               <div class="user-informations__password">
-                <label for="user-informations__password__input" >Mot de passe</label>  
-                  <input type="text" name="user__password" class="user-informations__password__input">
+                <label for="user-informations__password__input" >Mot de passe*</label>  
+                  <input type="password" name="user__password" class="user-informations__password__input">
               </div>
               
               <div class="user-informations__confirmPassword">
-                <label for="user-informations__confirmPassword__input">Confirmation du mot de passe</label>  
-                  <input type="text" name="user__confirm__password" class="user-informations__confirmPassword__input">
+                <label for="user-informations__confirmPassword__input">Confirmation du mot de passe*</label>  
+                  <input type="password" name="user__confirm__password" class="user-informations__confirmPassword__input">
               </div>
 
               <div class="user-informations__cgu">
-                  <input type="checkbox" name="user__cgu" class="user-informations__cgu__input"> J'accepte les règles d'utilisation du site 
+                  <input type="checkbox" name="user__cgu" class="user-informations__cgu__input"> J'accepte les règles d'utilisation du site*
               </div>
 
               <div class="user-informations__newsletter">
