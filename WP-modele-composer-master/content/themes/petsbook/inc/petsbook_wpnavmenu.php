@@ -17,12 +17,28 @@ function header_nav_left()
     echo $menu2;
 }
 
-// header right
-function header_nav_right()
+// header right connect
+function header_nav_right_connect()
 {
     $menu2 = wp_nav_menu( 
         array(
-        'theme_location' => 'header-nav-right',
+        'theme_location' => 'header-nav-right-connect',
+        'container' => 'nav', 
+        'menu_class' => 'header-nav__items__right', 
+        'echo' => false, 
+        ) 
+    );  
+    $menu2 = str_replace('menu-item', 'nav-link header-nav__items__left__part__link', $menu2);
+    $menu2 = str_replace(' href', ' class="nav-link header-nav__items__left__part__link" href', $menu2);
+    echo $menu2;
+}
+
+// header right deconnect
+function header_nav_right_deconnect()
+{
+    $menu2 = wp_nav_menu( 
+        array(
+        'theme_location' => 'header-nav-right-deconnect',
         'container' => 'nav', 
         'menu_class' => 'header-nav__items__right', 
         'echo' => false, 

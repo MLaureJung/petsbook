@@ -27,7 +27,8 @@
         </div>
 
         <div class="header-nav__items__right">
-          <?php header_nav_right()?>
+          <?php header_nav_right_connect()?>
+          <?php header_nav_right_deconnect()?>
         </div>
       </div>
     </nav>
