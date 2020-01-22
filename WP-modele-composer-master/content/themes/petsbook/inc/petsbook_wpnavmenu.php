@@ -1,20 +1,36 @@
 <?php
 if (!function_exists('petsbook_wpnavmenu')):
 
-// Header left
-function header_nav_left()
+// Header left connect
+function header_nav_left_connect()
 {
-    $menu2 = wp_nav_menu( 
+    $menu3 = wp_nav_menu( 
         array(
-        'theme_location' => 'header-nav-left',
+        'theme_location' => 'header-nav-left-connect',
         'container' => 'nav', 
         'menu_class' => 'header-nav__items__left',  
         'echo' => false,
         ) 
     ); 
-    $menu2 = str_replace('menu-item', 'nav-link header-nav__items__left__part__link', $menu2);
-    $menu2 = str_replace(' href', ' class="nav-link header-nav__items__left__part__link" href', $menu2);
-    echo $menu2;
+    $menu3 = str_replace('menu-item', 'nav-link header-nav__items__left__part__link', $menu3);
+    $menu3 = str_replace(' href', ' class="nav-link header-nav__items__left__part__link" href', $menu3);
+    echo $menu3;
+}
+
+// Header left deconnect
+function header_nav_left_deconnect()
+{
+    $menu3 = wp_nav_menu( 
+        array(
+        'theme_location' => 'header-nav-left-deconnect',
+        'container' => 'nav', 
+        'menu_class' => 'header-nav__items__left',  
+        'echo' => false,
+        ) 
+    ); 
+    $menu3 = str_replace('menu-item', 'nav-link header-nav__items__left__part__link', $menu3);
+    $menu3 = str_replace(' href', ' class="nav-link header-nav__items__left__part__link" href', $menu3);
+    echo $menu3;
 }
 
 // header right connect
@@ -28,8 +44,8 @@ function header_nav_right_connect()
         'echo' => false, 
         ) 
     );  
-    $menu2 = str_replace('menu-item', 'nav-link header-nav__items__left__part__link', $menu2);
-    $menu2 = str_replace(' href', ' class="nav-link header-nav__items__left__part__link" href', $menu2);
+    $menu2 = str_replace('menu-item', 'nav-link header-nav__items__right__part__link', $menu2);
+    $menu2 = str_replace(' href', ' class="nav-link header-nav__items__right__part__link" href', $menu2);
     echo $menu2;
 }
 
@@ -44,8 +60,8 @@ function header_nav_right_deconnect()
         'echo' => false, 
         ) 
     );  
-    $menu2 = str_replace('menu-item', 'nav-link header-nav__items__left__part__link', $menu2);
-    $menu2 = str_replace(' href', ' class="nav-link header-nav__items__left__part__link" href', $menu2);
+    $menu2 = str_replace('menu-item', 'nav-link header-nav__items__right__part__link', $menu2);
+    $menu2 = str_replace(' href', ' class="nav-link header-nav__items__right__part__link" href', $menu2);
     echo $menu2;
 }
 

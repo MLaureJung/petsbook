@@ -15,7 +15,9 @@
       <a href="#"><img class="header-nav__items__left__logo navbar-brand" src="<?= get_theme_file_uri('public/images/logo-fond-transparent.png') ?>" alt=""></a>
 
       <div class="right-element">
-        <a href="#" class="header-nav__items__right__part__link"><i class="fa fa-bell" aria-hidden="true"></i></a>
+        <?php if(is_user_logged_in()): ?>
+          <a href="#" class="header-nav__items__right__part__link"><i class="fa fa-bell" aria-hidden="true"></i></a>
+        <?php endif; ?>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
@@ -23,12 +25,20 @@
 
       <div class="collapse navbar-collapse header-nav" id="navbarNav">
         <div class="header-nav__items__left">
-          <?php header_nav_left()?>
+        <?php if(is_user_logged_in()): ?>
+          <?php header_nav_left_connect()?>
+        <?php else: ?>
+          <?php header_nav_left_deconnect()?>
+        <?php endif; ?>
         </div>
 
         <div class="header-nav__items__right">
-          <?php header_nav_right_connect()?>
-          <?php header_nav_right_deconnect()?>
+        <?php if(is_user_logged_in()): ?>
+          <?php header_nav_right_connect();?>
+          <a href="<?= wp_logout_url( home_url()); ?>" class="nav-link  header-nav__items__right__part__link">Deconnexion</a>
+        <?php else: ?>
+          <?php header_nav_right_deconnect()?>        
+        <?php endif; ?>
         </div>
       </div>
     </nav>
