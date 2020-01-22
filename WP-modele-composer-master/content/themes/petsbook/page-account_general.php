@@ -7,14 +7,14 @@
                         <?php $current_user = wp_get_current_user(); 
                         echo $current_user->first_name . " " . $current_user->last_name; ?>
                     </p> 
-                    <a href="#" class="top-info__user__edit-profile">Modifier mon profile</a>
+                    <a href="<?php echo site_url('/account_user_info/')?>" class="top-info__user__edit-profile">Modifier mon profile</a>
                 </div>
                 <div class="animal">  
                     <div class="add-animal">
                         <div class="add-animal__icone-animal">
                             <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="add-animal__icone-animal__pic">
                         </div>
-                            <a href="#" class="add-animal__add">Mon animal</a>
+                            <a href="# " class="add-animal__add">Mon animal</a>
                     </div>
                     <div class="add-animal">
                         <div class="add-animal__icone-animal">
@@ -42,7 +42,7 @@
                     <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="add-animal__icone-animal__pic">
                 </div>
 
-                    <a href="#" class="add-animal__add__link"><i class="fa fa-plus" aria-hidden="true"></i>Ajouter un animal</a>
+                    <a href="<?php echo site_url('/account_infos_edit/')?>" class="add-animal__add__link"><i class="fa fa-plus" aria-hidden="true"></i></a>
             </div>
             </div>
    </section>
@@ -66,10 +66,10 @@
 
                     <div class="account-general__buttons">
                     <div class="btn-edit">
-                        <a href="#" class="edit">Editer</a>
+                        <a href="<?php echo site_url('/account_infos_edit/')?>" class="edit">Editer</a>
                     </div> 
                     <div class="btn-see">
-                      <a href="#" class="see">Voir</a>
+                      <a href="<?php echo site_url('/pet_infos_glimpse/')?>" class="see">Voir</a>
                     </div>  
                     </div> 
 
@@ -88,10 +88,10 @@
 
                     <div class="account-general__buttons">
                       <div class="btn-edit">
-                          <a href="#" class="edit">Editer</a>
+                          <a href="<?php echo site_url('/account_book_edit/')?>" class="edit">Editer</a>
                       </div> 
                       <div class="btn-see">
-                        <a href="#" class="see">Voir</a>
+                        <a href="<?php echo site_url('/pet_book_glimpse/')?>" class="see">Voir</a>
                       </div> 
                     </div>
                     
@@ -102,10 +102,10 @@
 
               <div class="account-general__buttons">
                 <div class="btn-edit">
-                    <a href="#" class="edit-timeline">Editer la timeline</a>
+                    <a href="<?php echo site_url('/account_timeline_edit/')?>" class="edit-timeline">Editer la timeline</a>
                 </div> 
                 <div class="btn-see">
-                  <a href="#" class="see-timeline">Voir la timeline</a>
+                  <a href="<?php echo site_url('/pet_timeline_glimpse/')?>" class="see-timeline">Voir la timeline</a>
                 </div>
               </div> 
 
