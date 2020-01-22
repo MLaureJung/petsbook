@@ -33,8 +33,9 @@
         <div class="header-nav__items__right">
         <?php if(is_user_logged_in()): ?>
           <?php header_nav_right_connect();?>
+          <a href="<?= wp_logout_url( home_url()); ?>" class="nav-link  header-nav__items__right__part__link">Deconnexion</a>
         <?php else: ?>
-          <?php header_nav_right_deconnect()?>
+          <?php header_nav_right_deconnect()?>        
         <?php endif; ?>
         </div>
       </div>
