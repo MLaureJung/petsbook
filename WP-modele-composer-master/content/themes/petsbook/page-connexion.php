@@ -2,7 +2,7 @@
 
 <div class="main-items">
       <div class="connection">
-        <img class="connection__logo" src="images/logo-fond-transparent.png" alt="">
+        <img class="connection__logo" src="<?= get_theme_file_uri('public/images/logo-fond-transparent.png') ?>" alt="">
         <form class="form-connection" action="/ma-page-de-traitement" method="post" id="connexion">
           <div class="form-connection-fields">
             <div class="form-connection-fields__field">
@@ -22,7 +22,7 @@
             <button class="form-connection__button" type="submit" form="connexion" value="Submit">Je me connecte</button>
           </div>
         </form>
-      </div>đ
+      </div>
     </div>
 
 <?php get_footer(); ?>
