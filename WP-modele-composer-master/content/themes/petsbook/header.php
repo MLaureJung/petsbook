@@ -23,12 +23,19 @@
 
       <div class="collapse navbar-collapse header-nav" id="navbarNav">
         <div class="header-nav__items__left">
-          <?php header_nav_left()?>
+        <?php if(is_user_logged_in()): ?>
+          <?php header_nav_left_connect()?>
+        <?php else: ?>
+          <?php header_nav_left_deconnect()?>
+        <?php endif; ?>
         </div>
 
         <div class="header-nav__items__right">
-          <?php header_nav_right_connect()?>
+        <?php if(is_user_logged_in()): ?>
+          <?php header_nav_right_connect();?>
+        <?php else: ?>
           <?php header_nav_right_deconnect()?>
+        <?php endif; ?>
         </div>
       </div>
     </nav>
