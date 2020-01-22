@@ -60,3 +60,31 @@
 .btn-see{
     margin: 1rem 0;
 }
+
+.timeline-edit__header__button {
+    border: none;
+}
+
+.input-file::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .input-file::before {
+    content: 'Parcourir...';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid $color-white;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 10pt;
+  }
+  .input-file:hover::before{
+    background-color: $color-white;
+    color: $color-orange;
+  }
+  .input-file:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
