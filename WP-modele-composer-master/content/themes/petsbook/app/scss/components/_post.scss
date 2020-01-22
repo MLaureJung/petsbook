@@ -27,7 +27,7 @@
         padding: 2%;
         margin-bottom: 4%;
 
-        width: 30%;
+        width: 466.55px;
 
         &__text {
             margin-bottom: 1.5rem;
@@ -64,6 +64,11 @@
 
         &__link {
             color: $color-white;
+
+            &:hover {
+                color: $color-grey;
+                transition: all .3s ease-in-out; 
+            }
         }
     }
 
@@ -89,25 +94,24 @@
     }
 
     @media (min-width: $breakpoint-large) {
-        width: 24%;
-        height: 50%;
+        width: calc(100%/4.19);
+        height: calc(196.923px*2);
 
-        margin-right: .5rem;
+        margin-right: 1.5%;
         
         &:nth-child(4n) {
             margin-right: 0;
         }
 
         &__img {
-            height: 20rem;
+            height: 196.923px;
         }
 
         &__text {
-            height: 10rem;
+            height: 39%;
         }
     }
 }
-
 
 //Code Css Div /page account-general ROMARY
 //inscription 

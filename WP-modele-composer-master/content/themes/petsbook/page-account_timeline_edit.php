@@ -5,7 +5,7 @@
       <div class="timeline-edit-wrapper">
         <div class="timeline-edit__header">
           <p class="timeline-edit__header__text">L'histoire commence ici ...</p>
-          <a href="#" class="timeline-edit__header__button">Ajouter</a>
+          <a href="#" class="timeline-edit__header__button">Commencer</a>
         </div>
         <!--Items-->
         <div class="timeline-edit__items">
@@ -74,6 +74,10 @@
 
                 <textarea name="timeline-edit__item__text" id="timeline-edit__item__text" cols="30" rows="10" class="timeline-edit__item__text" placeholder="Description ..."></textarea>
             </div>
+            
+            <a href="#" class="timeline-edit__item add-icon">
+              <i class="fa fa-plus-circle " aria-hidden="true"></i>
+            </a>
         </div>
         <!--/Items-->
       </div>
