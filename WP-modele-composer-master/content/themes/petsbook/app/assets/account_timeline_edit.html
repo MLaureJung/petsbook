@@ -50,7 +50,11 @@
       <div class="timeline-edit-wrapper">
         <div class="timeline-edit__header">
           <p class="timeline-edit__header__text">L'histoire commence ici ...</p>
-          <a href="#" class="timeline-edit__header__button">Commencer</a>
+          <form method="POST" action="#" enctype="multipart/form-data">
+            <input id="file" name="image-timeline" class="input-file" type="file" multiple>
+            <input type="submit" class="timeline-edit__header__button" value="Ajouter à la timeline">
+          </form>
+          
         </div>
         <!--Items-->
         <div class="timeline-edit__items">

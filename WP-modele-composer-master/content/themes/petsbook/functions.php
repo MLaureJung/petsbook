@@ -9,3 +9,5 @@ require ('inc/petsbook_wpnavmenu.php');
 require ('inc/submit_inscription.php');
 
 require ('inc/submit_connexion.php');
+
+require ('inc/submit_photos_timeline.php');
