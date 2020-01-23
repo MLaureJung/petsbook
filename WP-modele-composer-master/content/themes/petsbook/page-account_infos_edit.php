@@ -62,7 +62,15 @@
 <section class="form__infos__animal">
   <h1 class="form__infos__animal__title" >Titre</h1>
   
-  <form action="#" method='post' class="form__infos__animal__edit infos-pet-edit">
+
+  <form action="" method='post' class="form__infos__animal__edit infos-pet-edit" enctype="multipart/form-data">
+  
+    <input type="hidden" name="submit_ajout_animal" value=""/>
+    
+    <div class="infos__animal__edit__paragraph" > 
+        <label for="file"class="infos__animal__edit__paragraph__label">Photo de l'animal</label> 
+        <input id="file" name="ajout-image-animal" class="input-file" type="file"> 
+    </div>
 
     <div class="infos__animal__edit__paragraph" > 
         <label for="book__edit__name"class="infos__animal__edit__paragraph__label">Prénom</label> 
@@ -102,17 +110,18 @@
       <label for="info_edit_description" class="infos__animal__edit__paragraph__label" >Description</label> 
       <textarea class="infos__animal__edit__paragraph__textarea" name="info_edit_description" id="info_edit_description"></textarea> 
     </div>
-  </form>
+    
 
   <div class="validate">
    
       <a href="#"class="validate__button">Infos générales</a>
 
-      <a href="#" class="validate__button">Enregistrer</a>
+      <input type="submit" value="Enregistrer" class="validate__button"/>
    
       <a href="#" class="validate__button">Carnet de santé</a>
     
   </div>
+  </form>
 </section>
 </div>
 </div>
