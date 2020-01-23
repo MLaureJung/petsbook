@@ -15,10 +15,12 @@
                 <input class="form-connection-fields__input" type="password" id="password" name="user_pass">
             </div>
           </div>
+          <!-- "Mot de passe oublié" - nous n'avons pas pour l'instant d'option d'envoi
           <div class="form-connection__link">
             <a class="form-connection__a" href="#">Mot de passe oublié</a>
           </div>
-          
+          -->
+
           <div>
             <input class="form-connection__button" type="submit"  value="Je me connecte"/>
           </div>

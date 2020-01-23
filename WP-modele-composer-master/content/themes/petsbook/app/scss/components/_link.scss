@@ -106,27 +106,17 @@
     margin-top: 3rem;
 }
 
-//Css liens et faux buttons page account General Romary
-
+// ACCOUNT_GENERAL page
 // lien modifier mon profile haut de page
 .top-info__user__edit-profile{
-    color:$color-blue;
-    font-size:$font-size-text-m;
-    
-}
-@media (min-width: $breakpoint-large)
-{
-    .top-info__user__edit-profile{
-    color:white;
-    
+    color:$color-white;
+    font-size:$font-size-default; 
+
     &:hover {
-        transform: scale(1.5);
         transition: all .2s ease-in-out; 
         color:$color-beige;
-    }
-
+    }  
 }
-    }
   
 //liens mon animal haut de pages avec icones (icones ds scss icones)
 .add-animal__add
@@ -147,6 +137,7 @@ color:$color-blue;
             }
         }
 }
+
 @media (min-width: $breakpoint-large)
 {
     .add-animal__add{
@@ -164,10 +155,9 @@ color:$color-blue;
                 color:white;
             }
         }
-
+    }
 }
 
-}
 // .edit=liens editer (2 boxes) bas de page
 .edit
 {
@@ -176,29 +166,54 @@ color:$color-blue;
     background-color: darken($color-grey, 25);
     color: $color-white;
 
+    background-color: darken($color-grey, 25);
+    color: $color-white;
+
     &:hover {
         transform: scale(1.1);
         transition: all .2s ease-in-out; 
-        color: $color-orange;
+        background-color: darken($color-grey, 25);
+        color: $color-white;
+    }
+
+    @media (min-width: $breakpoint-large) {
         background-color: $color-white;
+        color: darken($color-grey, 25);
+
+        &:hover {
+            color: darken($color-grey, 25);
+            background-color: $color-white;
+        }
     }
 }
 
 // .see=liens voire (boxes) bas de page
 .see
 {
-   
     padding:0.5rem 1rem;
     border-radius:5px;
     background-color: darken($color-grey, 25);
     color: $color-white;
+
+    background-color: darken($color-grey, 25);
+    color: $color-white;
+
     &:hover {
         transform: scale(1.1);
         transition: all .2s ease-in-out; 
-        color: $color-orange;
-        background-color:$color-white;
+        background-color: darken($color-grey, 25);
+        color: $color-white;
+    }
 
-            }
+    @media (min-width: $breakpoint-large) {
+        background-color: $color-white;
+        color: darken($color-grey, 25);
+
+        &:hover {
+            color: darken($color-grey, 25);
+            background-color: $color-white;
+        }
+    }
 }
 
 //.edit-timeline=lien pour editer la timeline ( derniere box bas de page)
@@ -208,43 +223,55 @@ color:$color-blue;
     border-radius:5px;
     background-color: darken($color-grey, 25);
     color: $color-white;
-    &:hover {
-        transform: scale(1.1);
-        transition: all .2s ease-in-out; 
-        color: $color-orange;
-        background-color: $color-white;
-            }
-}
-@media (min-width: $breakpoint-large)
-{
-    .edit-timeline  {
-        // margin-left: 7rem;
-       
-                    }
-}
-//.see-timeline=lien pour voire la timeline ( derniere box bas de page)
-.see-timeline
-{
-    padding:0.5rem 1rem;
-    border-radius:5px;
+
     background-color: darken($color-grey, 25);
     color: $color-white;
 
     &:hover {
         transform: scale(1.1);
         transition: all .2s ease-in-out; 
-        color: $color-orange;
+        background-color: darken($color-grey, 25);
+        color: $color-white;
+    }
+
+    @media (min-width: $breakpoint-large) {
         background-color: $color-white;
-            }
+        color: darken($color-grey, 25);
+
+        &:hover {
+            color: darken($color-grey, 25);
+            background-color: $color-white;
+        }
+    }
 }
-@media (min-width: $breakpoint-large)
+
+//.see-timeline=lien pour voire la timeline ( derniere box bas de page)
+.see-timeline
 {
-    .see-timeline{
-        // margin-left: 7rem;
-       
-        
-                }
+    padding:0.5rem 1rem;
+    border-radius:5px;
+
+    background-color: darken($color-grey, 25);
+    color: $color-white;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all .2s ease-in-out; 
+        background-color: darken($color-grey, 25);
+        color: $color-white;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        background-color: $color-white;
+        color: darken($color-grey, 25);
+
+        &:hover {
+            color: darken($color-grey, 25);
+            background-color: $color-white;
+        }
+    }
 }
+
 
 .add-animal__icone-animal__pic__single{
     border-radius: 50%;

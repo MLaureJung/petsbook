@@ -227,9 +227,8 @@
 // Div des 4 grandes Box du bas de pages
 // Animal infos Section
 .animal-infos{
-    // margin-top: 2rem;
-    // padding-bottom: 1rem;
     border-bottom: 1px solid $color-beige;
+    padding: 2rem;
 }
 
 .animal-infos li{
@@ -237,39 +236,40 @@
 }
 
 @media (min-width: $breakpoint-large)  {
-.animal-infos{
-    // width: 48%;
-    border:none;
-    background-color: $color-grey;
-    // margin:0 0 0 3rem;
-    // padding-top: 5rem;  
-}
+    .animal-infos{
+        border:none;
+        background-color: $color-grey;
+    }
 }
 
 // Bottom infos Section
 @media (min-width: $breakpoint-large)  {
     .animal-picture-profile{
-        // width: 100%;
-        // height: 100%;
         border:none;
-        // margin-bottom: 5rem;
         
         background-color: $color-orange; 
     }
 }
 
+.bottom-infos {
+    height: 12rem;
+}
+
 @media (min-width: $breakpoint-large) {
     .bottom-infos {
-        // width: 48%;
         background-color: $color-orange;
+        height: 500px;
     }
 }  
 
 // Health book Section
 .health-book{
-    // margin-top: 2rem;
-    // padding-bottom: 1rem;
     border-bottom: 1px solid $color-beige; 
+    padding: 2rem;
+
+    &__title {
+        text-align: center;
+    }
 }
 
 .health-book li {
@@ -278,49 +278,40 @@
 
 @media (min-width: $breakpoint-large)  {
     .health-book{
-        // width: 48%;
-        // height: 500px;
         border:none;
         
-        // margin-top: 3rem;
         background-color: $color-grey;
-        
-        // padding-top: 6rem;
-        // margin-bottom: 3rem;
     }
 }  
 
 // Timelime-management Section
 .timeline-management{
-    // margin-top: 2rem;
-    // padding-bottom: 1rem;
     border-bottom: 1px solid $color-beige; 
+    padding: 2rem;
 
     &__pic{
         border-radius: 50%;
+        width: 15rem;
+        height: 15rem;
     }
 }
 
 @media (min-width: $breakpoint-large)  {
-    .timeline-management{
-        // width: 48%;
-        // height:500px;
-        border:none;
-        // padding-right:7rem;
-        // margin-top: 3rem;
-        // padding-top: 1.5rem;
-        background-color: $color-orange;
-        // margin-left: 3rem;
 
-        &__pic{
-            // margin-left: 7rem;
-        }
+    .timeline-management{
+        border:none;
+
+        background-color: $color-orange;
+
         &__buttons{
-            // margin-top: 3rem;
-            // margin-left:0.5rem;
             justify-content: space-between;
             display: flex;
             flex-direction: column;
+        }
+
+        &__pic {
+            width: 18rem;
+            height: 18rem;
         }
     }
 } 
@@ -336,21 +327,40 @@
     .user-info{
     padding:7rem 15rem 4rem 15rem ;
     
+    
     }
+    
 }
 
 @media (min-width: $breakpoint-large)  {
 .main-items__main-text{
-    background-color: $color-orange;
+    background-color: $color-beige;
     border-top-right-radius:20% ;
     border-bottom-left-radius:15%;
     border-top-left-radius:3%;
     border-bottom-right-radius:3%;
     margin-bottom: 3rem;
+    padding-bottom: 4rem;
+    width: 60%;
+    margin: auto;
+    
+        &__title{
+            
+           
+            color: $color-white;
+        }
+}
+}
+@media (min-width: $breakpoint-large)  {
+.main-items__first{
+    background-color: $color-green;
    
+    width: 80%;
+    margin: auto;
+}
 }
        
-}
+
 
 //fin code CSS Romary page account-general
 

@@ -156,6 +156,38 @@
     }
 }
 
+.form__pet__infos__animal {
+    margin-bottom: 1.5rem;
+
+    &__title{
+        display: flex;
+        justify-content: center;
+
+        font-size: $font-size-text-m;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &__user{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+.user_infos {
+
+    .form__pet__infos__animal__title {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.user_infos-wrapper {
+    margin-top: 5%;
+}
+
+
     
 
 

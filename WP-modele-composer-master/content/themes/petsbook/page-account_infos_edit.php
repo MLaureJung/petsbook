@@ -114,11 +114,13 @@
 
   <div class="validate">
    
+
       <a href="#"class="validate__button">Infos générales</a>
 
       <input type="submit" value="Enregistrer" class="validate__button"/>
    
       <a href="#" class="validate__button">Carnet de santé</a>
+
     
   </div>
   </form>
