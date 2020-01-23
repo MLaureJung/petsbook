@@ -10,41 +10,33 @@
         src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt=""></a> 
     </div>
         <h4 class='human__profiles__name'><?php $current_user = wp_get_current_user(); echo $current_user->first_name . " " . $current_user->last_name; ?></h4>  
-        <a href="<?php echo site_url('/account_user_info/')?>" class="top-info__user__edit-profile">Modifier mon profile</a>          
+        <a href="<?php echo site_url('/account_user_info/')?>" class="top-info__user__edit-profile">Modifier mon profil</a>          
     </div>
 
-    <div class="animals__profiles">
-        <div class="animals__profiles__all__wrapper">                  
-            <a href="#">
-            <img class='animals__profiles__all__wrapper__image'
-            src="https://source.unsplash.com/700x700/?pets" alt="">   
-            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-            </a>               
-        </div>
+    
+        <div class="animals__profiles">
 
-        <div class="animals__profiles__all__wrapper">  
-            <a href="#" class='animals__profiles__all__wrapper__individual__link'>
-            <img class='animals__profiles__all__wrapper__image'
-            src="https://source.unsplash.com/700x700/?pets" alt=""/>   
-            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-            </a>
-        </div>
+        <?php 
 
-        <div class="animals__profiles__all__wrapper">  
-            <a href="#">
-            <img class='animals__profiles__all__wrapper__image'
-            src="https://source.unsplash.com/700x700/?pets" alt=""/>   
-            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-            </a>         
-        </div>
+    $wp_query = new WP_Query(
+        array(
+            'post_type' => 'animal',
+            'posts_per_page' => 6,
+            
+        )
+    ) ?>
 
-        <div class="animals__profiles__all__wrapper">             
-            <a href="#">
-            <img class='animals__profiles__all__wrapper__image'
-            src="https://source.unsplash.com/700x700/?pets" alt=""/>   
-            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-            </a>       
-        </div>
+    <?php while ($wp_query->have_posts()): $wp_query->the_post(); ?>
+            <div class="animals__profiles__all__wrapper">                  
+                <a href="?pet=<?= get_the_ID(); ?>">
+                <img class='animals__profiles__all__wrapper__image'
+                src="<?= get_the_post_thumbnail_url(); ?>" />   
+                <p class='animals__profiles__all__wrapper__name'><?php the_title(); ?></p>
+                </a>               
+            </div>
+    <?php endwhile; wp_reset_query(); ?>
+
+             
 
         <div class="animals__profiles__all__wrapper">  
             <a href="<?php echo site_url('/account_infos_edit/')?>"><!--
@@ -61,7 +53,7 @@
 
    <div class="main-items">
      <div class="account-general-animal-wrapper">
-          <section class="bottom-infos account-general-block" style="background-image: url('https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/'); background-size:cover; background-position:center center;">
+          <section class="bottom-infos account-general-block" style="background-image: url('<?= get_the_post_thumbnail_url($_GET['pet']); ?>'); background-size:cover; background-position:center center;">
 
           </section>
 
@@ -110,14 +102,14 @@
             </section>
 
             <section class="timeline-management account-general-block">
-                <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="timeline-management__pic">
+                <div style="background-image: url('<?= get_the_post_thumbnail_url($_GET['pet']); ?>'); background-size:cover; background-position:center center; width: 200px; height: 200px;" class="timeline-management__pic"></div>
 
               <div class="account-general__buttons">
                 <div class="btn-edit">
-                    <a href="<?php echo site_url('/account_timeline_edit/')?>" class="edit-timeline">Editer la timeline</a>
+                    <a href="<?php the_permalink(76);?>?pet=<?= $_GET['pet']; ?>" class="edit-timeline">Editer la timeline</a>
                 </div> 
                 <div class="btn-see">
-                  <a href="<?php echo site_url('/pet_timeline_glimpse/')?>" class="see-timeline">Voir la timeline</a>
+                  <a href="<?= get_permalink($_GET['pet']); ?>" class="see-timeline">Voir la timeline</a>
                 </div>
               </div> 
 
