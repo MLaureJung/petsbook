@@ -94,9 +94,9 @@
         </div>
 
         <div class="validate">    
-                <a href="#"class="validate__button">Infos générales</a>
-                <a href="#" class="validate__button">Enregistrer</a>
-                <a href="#" class="validate__button">Carnet de santé</a>
+                <a href="<?php echo site_url('/pet_book_glimpse/')?>"class="validate__button">Infos de l'animal</a>
+                <input type="submit" class="validate__button" value="Enregistrer">
+                <a href="<?php echo site_url('/account_general/')?>" class="validate__button">Infos générales</a>           
         </div>
         </div>
         </section>
