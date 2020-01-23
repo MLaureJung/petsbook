@@ -21,7 +21,7 @@
     $wp_query = new WP_Query(
         array(
             'post_type' => 'animal',
-            'posts_per_page' => 6,
+            'author__in' => $current_user->ID // pour que sur l'account général de chacun on ne voit que ses propres animaux
             
         )
     ) ?>
@@ -37,7 +37,7 @@
     <?php endwhile; wp_reset_query(); ?>
 
              
-
+        
         <div class="animals__profiles__all__wrapper">  
             <a href="<?php echo site_url('/account_infos_edit/')?>"><!--
             <img class='animals__profiles__all__wrapper__image'
@@ -50,7 +50,7 @@
         
 </section> 
 <!-- /Section pet profile-->  
-
+<?php if (isset($_GET['pet'])){  ?>
    <div class="main-items">
      <div class="account-general-animal-wrapper">
           <section class="bottom-infos account-general-block" style="background-image: url('<?= get_the_post_thumbnail_url($_GET['pet']); ?>'); background-size:cover; background-position:center center;">
@@ -116,6 +116,7 @@
             </section>
           </div>
    </div>
+<?php } ?>
    
   </main>
 <?php get_footer(); ?>
