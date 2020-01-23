@@ -20,6 +20,7 @@
             <a class="form-connection__a" href="#">Mot de passe oublié</a>
           </div>
           -->
+
           <div>
             <input class="form-connection__button" type="submit"  value="Je me connecte"/>
           </div>
