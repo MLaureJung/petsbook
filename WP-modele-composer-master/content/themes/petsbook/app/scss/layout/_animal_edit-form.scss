@@ -115,6 +115,7 @@
         display: flex;
         flex-direction: column;
         align-items:center;
+        justify-content:center;
 
         margin:1%;
         &__button{
@@ -133,6 +134,12 @@
 
         }
 
+    }
+
+    .validate-account_user_info {
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
     }
 }
     
@@ -238,7 +245,12 @@
             &__button{
                 width: 20%;
             }   
-        } 
+        }
+
+        .validate-account_user_info {
+            flex-direction:row;
+            justify-content:center;
+        }
     }     
     
     .book-edit__general-infos {
