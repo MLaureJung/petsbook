@@ -1,51 +1,63 @@
 <?php get_header(); ?>
 <main class="main">
-    <section class="top-info">
-                <div class="top-info__user">
-                    <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="top-info__user__profile">
-                    <p class="top-info__user__ID-user">
-                        <?php $current_user = wp_get_current_user(); 
-                        echo $current_user->first_name . " " . $current_user->last_name; ?>
-                    </p> 
-                    <a href="<?php echo site_url('/account_user_info/')?>" class="top-info__user__edit-profile">Modifier mon profile</a>
-                </div>
-                <div class="animal">  
-                    <div class="add-animal">
-                        <div class="add-animal__icone-animal">
-                            <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="add-animal__icone-animal__pic">
-                        </div>
-                            <a href="# " class="add-animal__add">Mon animal</a>
-                    </div>
-                    <div class="add-animal">
-                        <div class="add-animal__icone-animal">
-                            <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="add-animal__icone-animal__pic">
-                        </div>
-                            <a href="#" class="add-animal__add">Mon animal</a>
-                    </div>
-                    <div class="add-animal">
-                        <div class="add-animal__icone-animal">
-                            <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="add-animal__icone-animal__pic">
-                        </div>
-                            <a href="#" class="add-animal__add">Mon animal</a>
-                    </div>
-                    <div class="add-animal">
-                        <div class="add-animal__icone-animal">
-                            <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="add-animal__icone-animal__pic">
-                        </div>
-                            <a href="#" class="add-animal__add">Mon animal</a>
-                    </div>
-            
-            
-            
-            <div class="add-animal">
-                <div class="add-animal__icone-animal">
-                    <img src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt="" class="add-animal__icone-animal__pic">
-                </div>
 
-                    <a href="<?php echo site_url('/account_infos_edit/')?>" class="add-animal__add__link"><i class="fa fa-plus" aria-hidden="true"></i></a>
-            </div>
-            </div>
-   </section>
+<!-- Section pet profile-->
+<section class="photos_profiles">
+
+    <div class="human__profiles_elements">  
+    <div class='human__profiles'>
+        <a href="#"><img class='human__profiles__image'
+        src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt=""></a> 
+    </div>
+        <h4 class='human__profiles__name'><?php $current_user = wp_get_current_user(); echo $current_user->first_name . " " . $current_user->last_name; ?></h4>  
+        <a href="<?php echo site_url('/account_user_info/')?>" class="top-info__user__edit-profile">Modifier mon profile</a>          
+    </div>
+
+    <div class="animals__profiles">
+        <div class="animals__profiles__all__wrapper">                  
+            <a href="#">
+            <img class='animals__profiles__all__wrapper__image'
+            src="https://source.unsplash.com/700x700/?pets" alt="">   
+            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
+            </a>               
+        </div>
+
+        <div class="animals__profiles__all__wrapper">  
+            <a href="#" class='animals__profiles__all__wrapper__individual__link'>
+            <img class='animals__profiles__all__wrapper__image'
+            src="https://source.unsplash.com/700x700/?pets" alt=""/>   
+            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
+            </a>
+        </div>
+
+        <div class="animals__profiles__all__wrapper">  
+            <a href="#">
+            <img class='animals__profiles__all__wrapper__image'
+            src="https://source.unsplash.com/700x700/?pets" alt=""/>   
+            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
+            </a>         
+        </div>
+
+        <div class="animals__profiles__all__wrapper">             
+            <a href="#">
+            <img class='animals__profiles__all__wrapper__image'
+            src="https://source.unsplash.com/700x700/?pets" alt=""/>   
+            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
+            </a>       
+        </div>
+
+        <div class="animals__profiles__all__wrapper">  
+            <a href="<?php echo site_url('/account_infos_edit/')?>"><!--
+            <img class='animals__profiles__all__wrapper__image'
+            src="https://source.unsplash.com/700x700/?pets" alt=""/>--> 
+            <i class="fa fa-plus " aria-hidden="true"></i>
+            </a>
+        </div>
+
+    </div>
+        
+</section> 
+<!-- /Section pet profile-->  
 
    <div class="main-items">
      <div class="account-general-animal-wrapper">
