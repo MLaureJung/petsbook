@@ -327,21 +327,40 @@
     .user-info{
     padding:7rem 15rem 4rem 15rem ;
     
+    
     }
+    
 }
 
 @media (min-width: $breakpoint-large)  {
 .main-items__main-text{
-    background-color: $color-orange;
+    background-color: $color-beige;
     border-top-right-radius:20% ;
     border-bottom-left-radius:15%;
     border-top-left-radius:3%;
     border-bottom-right-radius:3%;
     margin-bottom: 3rem;
+    padding-bottom: 4rem;
+    width: 60%;
+    margin: auto;
+    
+        &__title{
+            
+           
+            color: $color-white;
+        }
+}
+}
+@media (min-width: $breakpoint-large)  {
+.main-items__first{
+    background-color: $color-green;
    
+    width: 80%;
+    margin: auto;
+}
 }
        
-}
+
 
 //fin code CSS Romary page account-general
 

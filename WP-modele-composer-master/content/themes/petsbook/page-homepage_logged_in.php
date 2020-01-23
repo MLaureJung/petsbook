@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-je suis logged in
+
   <!--Carousel-->
   <?php get_template_part('template-parts/carousel-index'); ?>
   <!--
