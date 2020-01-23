@@ -1,8 +1,9 @@
 /vendor
 /wp
 /wp-config.php
-/content/plugins/*
+!/content/plugins/*
 /content/themes/*
+!/content/themes/petsbook
 /content/languages
 /content/upgrade
 /content/uploads
