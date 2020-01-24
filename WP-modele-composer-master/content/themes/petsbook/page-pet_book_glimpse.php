@@ -7,50 +7,12 @@
         <a href="#"><img class='human__profiles__image'
         src="https://source.unsplash.com/700x700/?faces" alt=""></a> 
     </div>
-    <h4 class='human__profiles__name'>Prénom</h4>            
+    <h4 class='human__profiles__name'><?php $current_user = wp_get_current_user(); echo $current_user->first_name . " " . $current_user->last_name; ?></h4>            
   </div>
 
   <!--Pet profile-->
   <div class="animals__profiles">
-      <div class="animals__profiles__all__wrapper">                  
-          <a href="#">
-            <img class='animals__profiles__all__wrapper__image'
-          src="https://source.unsplash.com/700x700/?pets" alt="">   
-            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-          </a>               
-      </div>
-
-      <div class="animals__profiles__all__wrapper">  
-          <a href="#" class='animals__profiles__all__wrapper__individual__link'>
-            <img class='animals__profiles__all__wrapper__image'
-          src="https://source.unsplash.com/700x700/?pets" alt=""/>   
-            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-          </a>
-      </div>
-
-      <div class="animals__profiles__all__wrapper">  
-          <a href="#">
-            <img class='animals__profiles__all__wrapper__image'
-          src="https://source.unsplash.com/700x700/?pets" alt=""/>   
-            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-          </a>         
-      </div>
-
-      <div class="animals__profiles__all__wrapper">             
-          <a href="#">
-            <img class='animals__profiles__all__wrapper__image'
-          src="https://source.unsplash.com/700x700/?pets" alt=""/>   
-            <p class='animals__profiles__all__wrapper__name'>Animal 1</p>
-          </a>       
-      </div>
-
-      <div class="animals__profiles__all__wrapper">  
-          <a href="#"><!--
-            <img class='animals__profiles__all__wrapper__image'
-          src="https://source.unsplash.com/700x700/?pets" alt=""/>--> 
-            <i class="fa fa-plus " aria-hidden="true"></i>
-          </a>
-      </div>
+  <?php get_template_part('template-parts/account_affichage_mes_animaux'); ?>
 
   </div>
   <!--/Pet profile-->
@@ -143,10 +105,9 @@
               </div>
             </div>
           </div>
-        <div class="validate">    
-        <a href="<?php echo site_url('/pet_book_glimpse/')?>"class="validate__button">Infos de l'animal</a>
-        <input type="submit" class="validate__button" value="Enregistrer">
-        <a href="<?php echo site_url('/account_general/')?>" class="validate__button">Infos générales</a>
+        <div class="validate" style="justify-content:center;">    
+        
+        <a href="<?= get_permalink(69);?>?pet=<?= $_GET['pet']; ?>" class="validate__button">Infos générales</a>
         </div>
                 
         </section>
