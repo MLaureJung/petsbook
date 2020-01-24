@@ -4,10 +4,10 @@
     <div class="main-items-l">
       <div class="timeline-edit-wrapper">
         <div class="timeline-edit__header">
-          <p class="timeline-edit__header__text">L'histoire commence ici ...</p>
+          <p class="timeline-edit__header__text">Ajoutez des photos à votre timeline !</p>
           <form method="POST" action="#" enctype="multipart/form-data">
           <input type="hidden" name="submit_photos_timeline" value=""/>
-            <input id="file" name="image-timeline" class="input-file" type="file" multiple>
+            <input id="file" name="image-timeline[]" class="input-file" type="file" multiple>
             <input type="submit" class="timeline-edit__header__button" value="Ajouter à la timeline">
           </form>
           
