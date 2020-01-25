@@ -112,17 +112,58 @@
         </div>
 
         <div class="main-pet-icons__icon">
-          <a href="#" class="main-pet-icons__link">
+          <a href="?type=nac" class="main-pet-icons__link">
             <img src="<?= get_theme_file_uri('public/images/Icone_nac.png') ?>" alt="" class="main-pet-icons__icon__img">
             <p class="main-pet-icons__icon__type">NAC</p>
           </a>
         </div>
+
+        <?php
+          // Définition de la taxonomie ciblée
+          $tax = 'animal-type';
+          // Récupération de la liste des termes de la taxonomie 'animal-type' | 'hide_empty' => false, permet de visualiser tous les termes même s'ils ont un total de post de 0
+          $terms = get_terms($tax,array('hide_empty' => false)); 
+          //var_dump($terms);
+        
+          foreach($terms as $term):
+          //var_dump($term->term_id);
+
+          $args = [
+            'post_type' => 'animal',
+            'tax_query' => [
+              [
+                'taxonomy' => $tax,
+                'terms' => [
+                  $term->term_id,
+                ]
+              ]
+            ]
+          ];
+
+          $petType_wpQuery = new WP_Query($args);
+
+        ?>
+        <?php 
+          // On stocke dans une variable la récupération du champs 'term_thumbnail' crée via ACF dans le BO, on précise le terme
+          $term_thumbnail = get_field('term_thumbnail', $term);
+
+          var_dump(get_term_link($term, $tax));
+        ?>
+        <?php //if($petType_wpQuery->have_posts()) : while($petType_wpQuery->have_posts()) : $petType_wpQuery->the_post(); ?>
+          <div class="main-pet-icons__icon">
+            <a href="?type=nac" class="main-pet-icons__link">
+              <img src="<?= $term_thumbnail['url']; ?>" alt="" class="main-pet-icons__icon__img">
+              <p class="main-pet-icons__icon__type"><?= $term->name ?></p>
+            </a>
+          </div>
+        <?php /*endwhile; endif;*/ endforeach;?>
 
       </section>
       <!--/Pet Icons-->
 
       <!--Timelines-->
       <section class="main-timelines">
+
         <div class="main-timelines__item">
           <img src="https://source.unsplash.com/user/jayceexie/bfhQkbnV61E/300x300" alt="" class="main-timelines__item__img">
           <h3 class="main-timelines__item__title">Lorem</h3>
