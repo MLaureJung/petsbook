@@ -81,7 +81,7 @@
 
     <div class="main-items">
       <!--Pet Icons-->
-      <section class="main-pet-icons">
+      <section class="main-pet-icons"><!--
         <div class="main-pet-icons__icon">
           <a href="#" class="main-pet-icons__link">
             <img src="<?= get_theme_file_uri('public/images/Icone_chat.png') ?>" alt="" class="main-pet-icons__icon__img">
@@ -116,7 +116,7 @@
             <img src="<?= get_theme_file_uri('public/images/Icone_nac.png') ?>" alt="" class="main-pet-icons__icon__img">
             <p class="main-pet-icons__icon__type">NAC</p>
           </a>
-        </div>
+        </div>-->
 
         <?php
           // Définition de la taxonomie ciblée
@@ -128,35 +128,19 @@
           foreach($terms as $term):
           //var_dump($term->term_id);
 
-          $args = [
-            'post_type' => 'animal',
-            'tax_query' => [
-              [
-                'taxonomy' => $tax,
-                'terms' => [
-                  $term->term_id,
-                ]
-              ]
-            ]
-          ];
-
-          $petType_wpQuery = new WP_Query($args);
-
-        ?>
-        <?php 
           // On stocke dans une variable la récupération du champs 'term_thumbnail' crée via ACF dans le BO, on précise le terme
           $term_thumbnail = get_field('term_thumbnail', $term);
 
-          var_dump(get_term_link($term, $tax));
+          //var_dump(get_term_link($term, $tax));
         ?>
-        <?php //if($petType_wpQuery->have_posts()) : while($petType_wpQuery->have_posts()) : $petType_wpQuery->the_post(); ?>
+        
           <div class="main-pet-icons__icon">
-            <a href="?type=nac" class="main-pet-icons__link">
+            <a href="?type=<?= $term->term_id ?>" class="main-pet-icons__link">
               <img src="<?= $term_thumbnail['url']; ?>" alt="" class="main-pet-icons__icon__img">
               <p class="main-pet-icons__icon__type"><?= $term->name ?></p>
             </a>
           </div>
-        <?php /*endwhile; endif;*/ endforeach;?>
+        <?php endforeach;?>
 
       </section>
       <!--/Pet Icons-->
@@ -164,6 +148,39 @@
       <!--Timelines-->
       <section class="main-timelines">
 
+      <?php 
+
+        // Si le '?type= rien' avec $_GET['type'] alors on montre tous les posts du CPT animal | on pourrait l'appeler 'toto' tant que le href du dessus a le même nom ça marche
+        // Sinon on récupère l'id du animal-type et on restreint l'affichage selon l'id du type selectionné 
+        if ($_GET['type'] == '') {
+          $args = [
+            'post_type' => 'animal',
+            'post_per_page' => 6,
+          ];
+        }
+
+        else {
+          $args = [
+            'post_type' => 'animal',
+            'post_status' => 'publish',
+            'post_per_page' => 6,
+            'tax_query' => 
+            [
+              [
+                'taxonomy' => $tax,
+                'terms' => $_GET['type'],
+              ]
+            ]
+          ];
+        }
+        
+        $petType_wpQuery = new WP_Query($args);
+      ?>
+
+      <?php if($petType_wpQuery->have_posts()) : while($petType_wpQuery->have_posts()) : $petType_wpQuery->the_post(); ?>
+        <?php get_template_part('template-parts/homepage/timeline-posts') ?>
+      <?php endwhile; endif; wp_reset_query(); ?>
+        <!--
         <div class="main-timelines__item">
           <img src="https://source.unsplash.com/user/jayceexie/bfhQkbnV61E/300x300" alt="" class="main-timelines__item__img">
           <h3 class="main-timelines__item__title">Lorem</h3>
@@ -204,7 +221,7 @@
           <h3 class="main-timelines__item__title">Lorem</h3>
           <p class="main-timelines__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, possimus.</p>
           <a href="" class="main-timelines__item__button">Voir</a>
-        </div>
+        </div>-->
       </section>
     </div>
 <?php get_footer(); ?>
