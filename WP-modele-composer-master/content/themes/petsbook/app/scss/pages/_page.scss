@@ -17,14 +17,30 @@
             object-position: center;
 
             margin-top: 10%;
-        }
+    }
         
     &__title{
             text-align: center;
             color: $color-white;
 
             margin-top: 2rem;
+    }
+    
+    p {
+        color: $color-white;
+
+        a {
+            color: darken($color-grey, 40);
+
+            &:hover {
+                color: darken($color-white, 65);
+                transition: all .2s ease-in-out; 
+            }
         }
+        
+    }
+
+
 
     @media (min-width: $breakpoint-large) {
 

@@ -37,6 +37,7 @@
             height: 100%;
 
             padding: 2rem;
+            margin-top: 10%;
 
             &-part {
 
@@ -56,10 +57,10 @@
 
     /*------------------------------------------------------------*/
     @media (min-width: $breakpoint-large) {
-        height: 45rem;
+        height: 50rem;
 
         .carousel-inner {
-            height: 45rem;
+            height: 50rem;
         }
     
         .carousel-indicators {
@@ -90,6 +91,7 @@
                 height: 100%;
     
                 padding: 10%;
+                margin-top: 3rem;
     
                 &-part {
                     width: 50%;
