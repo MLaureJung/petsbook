@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_POST['submit_ajout_animal'])) {
     // Je récup les données du formulaire en POST
     $prenom=$_POST['book__edit__name'];
@@ -20,8 +21,10 @@ if (isset($_POST['submit_ajout_animal'])) {
         update_field('aime', $aime, $id);
         update_field('naime_pas', $naime_pas, $id);
         update_field('age', $age, $id);
- 
-        wp_set_object_terms($id, $type, 'animal-type', true);
+
+        
+
+         wp_set_object_terms($id, $type, 'animal-type');
 
         
 
