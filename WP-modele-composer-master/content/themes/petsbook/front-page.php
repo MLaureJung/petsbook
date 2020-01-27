@@ -81,42 +81,7 @@
 
     <div class="main-items">
       <!--Pet Icons-->
-      <section class="main-pet-icons"><!--
-        <div class="main-pet-icons__icon">
-          <a href="#" class="main-pet-icons__link">
-            <img src="<?= get_theme_file_uri('public/images/Icone_chat.png') ?>" alt="" class="main-pet-icons__icon__img">
-            <p class="main-pet-icons__icon__type">Chat</p>
-          </a>
-          
-        </div>
-
-        <div class="main-pet-icons__icon">
-          <a href="#" class="main-pet-icons__link">
-            <img src="<?= get_theme_file_uri('public/images/Icone_chien.png') ?>" alt="" class="main-pet-icons__icon__img">
-            <p class="main-pet-icons__icon__type">Chien</p>
-          </a>
-        </div>
-
-        <div class="main-pet-icons__icon">
-          <a href="#" class="main-pet-icons__link">
-            <img src="<?= get_theme_file_uri('public/images/Icone_oiseau.png') ?>" alt="" class="main-pet-icons__icon__img">
-            <p class="main-pet-icons__icon__type">Oiseau</p>
-          </a>
-        </div>
-
-        <div class="main-pet-icons__icon">
-          <a href="#" class="main-pet-icons__link">
-            <img src="<?= get_theme_file_uri('public/images/Icone_rodent.png') ?>" alt="" class="main-pet-icons__icon__img">
-            <p class="main-pet-icons__icon__type">Rongeur</p>
-          </a>
-        </div>
-
-        <div class="main-pet-icons__icon">
-          <a href="?type=nac" class="main-pet-icons__link">
-            <img src="<?= get_theme_file_uri('public/images/Icone_nac.png') ?>" alt="" class="main-pet-icons__icon__img">
-            <p class="main-pet-icons__icon__type">NAC</p>
-          </a>
-        </div>-->
+      <section class="main-pet-icons">
 
         <?php
           // Définition de la taxonomie ciblée
@@ -152,7 +117,7 @@
 
         // Si le '?type= rien' avec $_GET['type'] alors on montre tous les posts du CPT animal | on pourrait l'appeler 'toto' tant que le href du dessus a le même nom ça marche
         // Sinon on récupère l'id du animal-type et on restreint l'affichage selon l'id du type selectionné 
-        if ($_GET['type'] == '') {
+        if (empty($_GET['type'])) {
           $args = [
             'post_type' => 'animal',
             'post_per_page' => 6,
@@ -180,48 +145,7 @@
       <?php if($petType_wpQuery->have_posts()) : while($petType_wpQuery->have_posts()) : $petType_wpQuery->the_post(); ?>
         <?php get_template_part('template-parts/homepage/timeline-posts') ?>
       <?php endwhile; endif; wp_reset_query(); ?>
-        <!--
-        <div class="main-timelines__item">
-          <img src="https://source.unsplash.com/user/jayceexie/bfhQkbnV61E/300x300" alt="" class="main-timelines__item__img">
-          <h3 class="main-timelines__item__title">Lorem</h3>
-          <p class="main-timelines__item__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, officia. Dignissimos ab beatae quasi. Necessitatibus, deleniti fuga! Cum dolor ratione cupiditate minima aut perspiciatis quod molestias, voluptatem vitae reprehenderit distinctio!</p>
-          <a href="" class="main-timelines__item__button">Voir</a>
-        </div>
 
-        <div class="main-timelines__item">
-          <img src="https://source.unsplash.com/user/detpho/nOlrlCUNvVg/300x300" alt="" class="main-timelines__item__img">
-          <h3 class="main-timelines__item__title">Lorem</h3>
-          <p class="main-timelines__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, possimus.</p>
-          <a href="" class="main-timelines__item__button">Voir</a>
-        </div>
-        
-        <div class="main-timelines__item">
-          <img src="https://source.unsplash.com/user/jayceexie/bfhQkbnV61E/300x300" alt="" class="main-timelines__item__img">
-          <h3 class="main-timelines__item__title">Lorem</h3>
-          <p class="main-timelines__item__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, officia. Dignissimos ab beatae quasi. Necessitatibus, deleniti fuga! Cum dolor ratione cupiditate minima aut perspiciatis quod molestias, voluptatem vitae reprehenderit distinctio!</p>
-          <a href="" class="main-timelines__item__button">Voir</a>
-        </div>
-
-        <div class="main-timelines__item">
-          <img src="https://source.unsplash.com/user/detpho/nOlrlCUNvVg/300x300" alt="" class="main-timelines__item__img">
-          <h3 class="main-timelines__item__title">Lorem</h3>
-          <p class="main-timelines__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, possimus.</p>
-          <a href="" class="main-timelines__item__button">Voir</a>
-        </div>
-
-        <div class="main-timelines__item">
-          <img src="https://source.unsplash.com/user/jayceexie/bfhQkbnV61E/300x300" alt="" class="main-timelines__item__img">
-          <h3 class="main-timelines__item__title">Lorem</h3>
-          <p class="main-timelines__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, possimus.</p>
-          <a href="" class="main-timelines__item__button">Voir</a>
-        </div>
-
-        <div class="main-timelines__item">
-          <img src="https://source.unsplash.com/user/detpho/nOlrlCUNvVg/300x300" alt="" class="main-timelines__item__img">
-          <h3 class="main-timelines__item__title">Lorem</h3>
-          <p class="main-timelines__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, possimus.</p>
-          <a href="" class="main-timelines__item__button">Voir</a>
-        </div>-->
       </section>
     </div>
 <?php get_footer(); ?>
