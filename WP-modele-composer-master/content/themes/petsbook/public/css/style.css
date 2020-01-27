@@ -9717,7 +9717,9 @@ h1, h2, h3, h4, h5 {
       flex-direction: row;
       justify-content: space-between; }
       .form__infos__animal .validate__button {
+
         width: 20%; }
+
     .form__infos__animal .validate-account_user_info {
       flex-direction: row;
       justify-content: center; }
@@ -9937,10 +9939,12 @@ h1, h2, h3, h4, h5 {
         margin-bottom: 0; } }
 
 .header {
+
   background-color: transparent;
   width: 100vw;
   padding: 0.5% 0;
   position: absolute;
+
   z-index: 100;
   /*-----------------------------------*/ }
   .header-nav {
@@ -10047,7 +10051,9 @@ h1, h2, h3, h4, h5 {
 /*----------------------------------------------------*/
 .second-header {
   position: static;
+
   background-color: #e9e7e8;
+
   /*-----------------------------------*/
   /*-----------------------------------*/
   /*-----------------------------------*/ }
@@ -10677,12 +10683,14 @@ h1, h2, h3, h4, h5 {
     transform: scale(1.1);
     transition: all .2s ease-in-out;
     color: #fdc689; }
+
   .main-timelines__item__button-container {
     width: 100%;
     text-align: center; }
     .main-timelines__item__button-container:hover {
       transform: scale(1.1);
       transition: all .2s ease-in-out; }
+
 
 .public-private {
   display: flex;
@@ -11005,6 +11013,7 @@ h1, h2, h3, h4, h5 {
   flex-wrap: wrap; }
   .main-timelines__item__title {
     font-size: 2rem;
+
     align-self: flex-start;
     width: 100%;
     text-align: center; }
@@ -11013,6 +11022,7 @@ h1, h2, h3, h4, h5 {
     align-self: flex-start;
     width: 100%;
     text-align: center; }
+
   @media (min-width: 992px) {
     .main-timelines__item {
       padding: 2%;

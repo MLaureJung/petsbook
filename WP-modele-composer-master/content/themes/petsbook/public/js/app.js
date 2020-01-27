@@ -63,7 +63,9 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
+
 /******/ 	var hotCurrentHash = "fe24ccbebac958916258";
+
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -5496,6 +5498,7 @@ $(app.init);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* jquery.scrollex v0.2.1 | (c) n33 | n33.co @n33co | MIT */
 
 (function($) {
@@ -5818,6 +5821,7 @@ $(app.init);
 		return $this;
 
 	};
+
 
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
