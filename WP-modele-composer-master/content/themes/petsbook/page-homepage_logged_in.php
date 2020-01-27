@@ -44,19 +44,22 @@
   <!--/Pet Icons-->
 
 <!--Public_Private-->
+<!--LIEN QUI NE SERVENT PLUS
 <section class="public-private">
   <div class="public-private__public">
     <a href="#" class="public-private__public__title">Chez les autres</a>
   </div>
   
   <div class="public-private__private">
-    <a href="#" class="public-private__private__title">Chez moi</a>
+    <a href="<?php echo site_url('/account_general/')?>" class="public-private__private__title">Chez moi</a>
   </div>
-</section>
+</section>-->
 <!--/Public_Private-->
 
 <!--Timelines-->
+
 <section class="main-timelines">
+  <!--
   <div class="main-timelines__item">
     <img src="https://source.unsplash.com/user/jayceexie/bfhQkbnV61E/300x300" alt="" class="main-timelines__item__img">
     <h3 class="main-timelines__item__title">Lorem</h3>
@@ -98,7 +101,41 @@
     <p class="main-timelines__item__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, possimus.</p>
     <a href="" class="main-timelines__item__button">Voir</a>
   </div>
+  -->
+  <?php 
+
+// Si le '?type= rien' avec $_GET['type'] alors on montre tous les posts du CPT animal | on pourrait l'appeler 'toto' tant que le href du dessus a le même nom ça marche
+// Sinon on récupère l'id du animal-type et on restreint l'affichage selon l'id du type selectionné 
+if (empty($_GET['type'])) {
+  $args = [
+    'post_type' => 'animal',
+    'posts_per_page' => 6,
+  ];
+}
+
+else {
+  $args = [
+    'post_type' => 'animal',
+    'post_status' => 'publish',
+    'post_per_page' => 6,
+    'tax_query' => 
+    [
+      [
+        'taxonomy' => $tax,
+        'terms' => $_GET['type'],
+      ]
+    ]
+  ];
+}
+
+$petType_wpQuery = new WP_Query($args);
+?>
+
+<?php if($petType_wpQuery->have_posts()) : while($petType_wpQuery->have_posts()) : $petType_wpQuery->the_post(); ?>
+<?php get_template_part('template-parts/homepage/timeline-posts') ?>
+<?php endwhile; endif; wp_reset_query(); ?>
 </section>
+
 <!--/Timelines-->
 </div>
 <?php get_footer(); ?>
