@@ -103,4 +103,6 @@
 </div>
 </div>
 
+<?php // var_dump(wp_set_object_terms(275, 'Toto', 'animal-type')); ?>
+
 <?php get_footer(); ?>
