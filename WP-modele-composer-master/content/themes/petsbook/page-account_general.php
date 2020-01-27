@@ -16,30 +16,11 @@
     
         <div class="animals__profiles">
 
-        <?php 
+        <?php get_template_part('template-parts/account_affichage_mes_animaux'); ?>
 
-    $wp_query = new WP_Query(
-        array(
-            'post_type' => 'animal',
-            'author__in' => $current_user->ID // pour que sur l'account général de chacun on ne voit que ses propres animaux
-            
-        )
-    ) ?>
-
-    <?php while ($wp_query->have_posts()): $wp_query->the_post(); ?>
-            <div class="animals__profiles__all__wrapper">                  
-                <a href="?pet=<?= get_the_ID(); ?>">
-                <img class='animals__profiles__all__wrapper__image'
-                src="<?= get_the_post_thumbnail_url(); ?>" />   
-                <p class='animals__profiles__all__wrapper__name'><?php the_title(); ?></p>
-                </a>               
-            </div>
-    <?php endwhile; wp_reset_query(); ?>
-
-             
         
         <div class="animals__profiles__all__wrapper">  
-            <a href="<?php echo site_url('/account_infos_edit/')?>"><!--
+            <a href="<?= get_permalink(70)?>"><!--
             <img class='animals__profiles__all__wrapper__image'
             src="https://source.unsplash.com/700x700/?pets" alt=""/>--> 
             <i class="fa fa-plus " aria-hidden="true"></i>
@@ -61,20 +42,26 @@
                   <label for="animal-infos__title" class="animal-infos__title">
                     <h3>Informations</h3></label>
                         <ul class="animal-infos__list">
-                            <li>Nom</li>
-                            <li>Age</li>
-                            <li>Sexe</li>
-                            <li>Numero de puce</li>
-                            <li>Poids</li>
+                            <li><?= get_the_title($_GET['pet']); ?></li>
+                            
+                            <!--https://wordpress.stackexchange.com/questions/8284/get-the-term-list-without-links-in-3-1-->
+                            <?php
+                            $terms = get_the_term_list( $_GET['pet'], 'animal-type' );
+                             $terms = strip_tags( $terms );
+                             echo $terms;?></li>
+                             <li><?php $post_object = get_post( $_GET['pet'] );
+                            echo $post_object->post_content; ?></li>
+                            <li><?= get_field('age', $_GET['pet']); ?> ans</li>
+                            <li>Aime : <?= get_field('aime', $_GET['pet']); ?></li>
+                            <li>N'aime pas : <?= get_field('naime_pas', $_GET['pet']); ?></li>
+                            
                         </ul>
 
                     <div class="account-general__buttons">
                     <div class="btn-edit">
-                        <a href="<?php echo site_url('/account_infos_edit/')?>" class="edit">Editer</a>
+                        <a href="<?= get_permalink(70);?>?pet=<?= $_GET['pet'];?>" class="edit">Editer</a>
                     </div> 
-                    <div class="btn-see">
-                      <a href="<?php echo site_url('/pet_infos_glimpse/')?>" class="see">Voir</a>
-                    </div>  
+                   
                     </div> 
 
                 </div>
@@ -92,10 +79,10 @@
 
                     <div class="account-general__buttons">
                       <div class="btn-edit">
-                          <a href="<?php echo site_url('/account_book_edit/')?>" class="edit">Editer</a>
+                          <a href="<?= get_permalink(67)?>?pet=<?= $_GET['pet'];?>" class="edit">Editer</a>
                       </div> 
                       <div class="btn-see">
-                        <a href="<?php echo site_url('/pet_book_glimpse/')?>" class="see">Voir</a>
+                        <a href="<?= get_permalink(72)?>?pet=<?= $_GET['pet'];?>" class="see">Voir</a>
                       </div> 
                     </div>
                     

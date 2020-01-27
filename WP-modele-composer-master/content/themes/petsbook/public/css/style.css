@@ -9717,7 +9717,10 @@ h1, h2, h3, h4, h5 {
       flex-direction: row;
       justify-content: space-between; }
       .form__infos__animal .validate__button {
-        width: 20%; }
+
+        width: 28%;
+        font-size: 15px; }
+
     .form__infos__animal .validate-account_user_info {
       flex-direction: row;
       justify-content: center; }
@@ -9937,10 +9940,12 @@ h1, h2, h3, h4, h5 {
         margin-bottom: 0; } }
 
 .header {
-  background-color: #7accc8;
+
+  background-color: transparent;
   width: 100vw;
   padding: 0.5% 0;
-  position: relative;
+  position: absolute;
+
   z-index: 100;
   /*-----------------------------------*/ }
   .header-nav {
@@ -10047,7 +10052,9 @@ h1, h2, h3, h4, h5 {
 /*----------------------------------------------------*/
 .second-header {
   position: static;
-  background-color: #7accc8;
+
+  background-color: #e9e7e8;
+
   /*-----------------------------------*/
   /*-----------------------------------*/
   /*-----------------------------------*/ }
