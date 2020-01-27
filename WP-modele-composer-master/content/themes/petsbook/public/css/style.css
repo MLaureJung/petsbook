@@ -9718,8 +9718,7 @@ h1, h2, h3, h4, h5 {
       justify-content: space-between; }
       .form__infos__animal .validate__button {
 
-        width: 28%;
-        font-size: 15px; }
+        width: 20%; }
 
     .form__infos__animal .validate-account_user_info {
       flex-direction: row;
@@ -10685,6 +10684,14 @@ h1, h2, h3, h4, h5 {
     transition: all .2s ease-in-out;
     color: #fdc689; }
 
+  .main-timelines__item__button-container {
+    width: 100%;
+    text-align: center; }
+    .main-timelines__item__button-container:hover {
+      transform: scale(1.1);
+      transition: all .2s ease-in-out; }
+
+
 .public-private {
   display: flex;
   justify-content: center;
@@ -11006,10 +11013,16 @@ h1, h2, h3, h4, h5 {
   flex-wrap: wrap; }
   .main-timelines__item__title {
     font-size: 2rem;
-    align-self: flex-start; }
+
+    align-self: flex-start;
+    width: 100%;
+    text-align: center; }
   .main-timelines__item__text {
     text-align: center;
-    align-self: flex-start; }
+    align-self: flex-start;
+    width: 100%;
+    text-align: center; }
+
   @media (min-width: 992px) {
     .main-timelines__item {
       padding: 2%;

@@ -56,10 +56,10 @@
 
     /*------------------------------------------------------------*/
     @media (min-width: $breakpoint-large) {
-        height: 87vh;
+        height: 45rem;
 
         .carousel-inner {
-            height: 87vh;
+            height: 45rem;
         }
     
         .carousel-indicators {
@@ -69,7 +69,7 @@
         .carousel-item {
     
             &-bg {
-                height: 87vh;
+                height: 40rem;
     
                 // à modifier
                 opacity: 0;

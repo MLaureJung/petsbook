@@ -31,7 +31,7 @@
         
 </section> 
 <!-- /Section pet profile-->  
-<?php if (isset($_GET['pet'])){  ?>
+<?php if (isset($_GET['pet'])){ ?>
    <div class="main-items">
      <div class="account-general-animal-wrapper">
           <section class="bottom-infos account-general-block" style="background-image: url('<?= get_the_post_thumbnail_url($_GET['pet']); ?>'); background-size:cover; background-position:center center;">
