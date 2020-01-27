@@ -43,7 +43,7 @@
         if (empty($_GET['type'])) {
           $args = [
             'post_type' => 'animal',
-            'post_per_page' => 6,
+            'posts_per_page' => 6,
           ];
         }
 
