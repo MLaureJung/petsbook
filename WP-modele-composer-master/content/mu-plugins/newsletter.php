@@ -24,6 +24,7 @@ class Newsletter
             `newsletter_id` bigint(20) PRIMARY KEY NOT NULL AUTO_INCREMENT, 
             `newsletter_name` tinytext NOT NULL, 
             `newsletter_email` varchar(100) NOT NULL,
+            `newsletter_lol` varchar(100) NOT NULL,
             `user_id` bigint(20) UNSIGNED
            ) $charset_collate;";
     
