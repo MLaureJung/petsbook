@@ -45,16 +45,19 @@
       <label for="info_edit_type" class="infos__animal__edit__paragraph__label">Type</label> 
       <!--select choices-->
       <select class="infos__animal__edit__paragraph__select" name="pet-select" id="pet-select">
-        <option value="">---</option>
+        
         <?php
         $terms = '';
         if(isset($_GET['pet'])){
           $terms = get_the_term_list( $_GET['pet'], 'animal-type' );
           $terms = strip_tags( $terms );
+          
         }
         
         ?>
         
+        <option value=""><?php echo $terms; ?></option>
+        <option value="">---</option>
         <option value="chien" <?php if ($terms == 'chien'){ echo 'selected="selected"'; } ?> >Chien</option>
         <option value="chat"<?php if ($terms == 'chat'){ echo 'selected="selected"'; } ?>>Chat</option>
         <option value="oiseau" <?php if ($terms == 'oiseau'){ echo 'selected="selected"'; } ?>>Oiseau</option>
@@ -63,6 +66,8 @@
       </select>
       <!--/select choices-->
     </div>
+    
+
 
     <div class="infos__animal__edit__paragraph" >
         <label for="info_edit_age" class="infos__animal__edit__paragraph__label">Age</label> 
