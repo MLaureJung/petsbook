@@ -11,10 +11,6 @@ function jal_install () {
         `newsletter_name` tinytext NOT NULL, 
         `newsletter_email` varchar(100) NOT NULL,
         `ID` bigint(20) UNSIGNED,
-        --FOREIGN KEY (ID) 
-        --REFERENCES wp_users(ID) 
-        ALTER TABLE wp_newsletter ADD COLUMN FOREIGN KEY (ID)
-        ALTER TABLE wp_newsletter ADD COLUMN REFERENCES wp_users(ID)
        ) $charset_collate;";
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
@@ -23,3 +19,23 @@ function jal_install () {
 
 add_action('after_switch_theme','jal_install');
 jal_install();
+
+function jal_version () {
+    global $wpdb;
+    $table_name = $wpdb->prefix . "newsletter";
+
+    $sql = "ALTER TABLE $table_name ADD COLUMN FOREIGN KEY (ID)
+            ALTER TABLE $table_name ADD COLUMN REFERENCES wp_users(ID);";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+};
+
+add_action('after_switch_theme','jal_version');
+jal_version();
+
+// FOREIGN KEY (ID) 
+// REFERENCES wp_users(ID) 
+
+// ALTER TABLE wp_newsletter ADD COLUMN FOREIGN KEY (ID)
+// ALTER TABLE wp_newsletter ADD COLUMN REFERENCES wp_users(ID)
