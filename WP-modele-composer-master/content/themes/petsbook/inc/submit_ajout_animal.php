@@ -9,15 +9,24 @@ function submit_ajout_animal() {
         $naime_pas=$_POST['info_edit_dislike'];
         $age=$_POST['info_edit_age'];
         $type=$_POST['pet-select'];
+        $id=$_POST['id_edition_animal'];
 
 
         if ($prenom != "") {
-            $id = wp_insert_post(array(
-            'post_title'=> $prenom,
-            'post_type'=>'animal',
-            'post_content'=> $description,
-            'post_status' => 'publish',
-            ));
+            if ($id != "") {
+                wp_update_post(array(
+                    'ID' => $id,
+                    'post_title'=> $prenom,
+                    'post_content'=> $description
+                ));
+            }else {
+                $id = wp_insert_post(array(
+                    'post_title'=> $prenom,
+                    'post_type'=>'animal',
+                    'post_content'=> $description,
+                    'post_status' => 'publish',
+                 ));
+            }
             //là j'update les champs de ACF aime, n'aime pas, et âge.
             update_field('aime', $aime, $id);
             update_field('naime_pas', $naime_pas, $id);
@@ -84,7 +93,7 @@ function submit_ajout_animal() {
             }
         
            
-            wp_redirect(get_permalink(70));
+            wp_redirect(get_permalink(70) . '?pet='. $id);
             exit;
         }
     }
