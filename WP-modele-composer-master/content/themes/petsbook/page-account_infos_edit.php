@@ -27,6 +27,7 @@
   <form action="" method='post' class="form__infos__animal__edit infos-pet-edit" enctype="multipart/form-data">
   
     <input type="hidden" name="submit_ajout_animal" value=""/>
+    <input type="hidden" name="id_edition_animal" value="<?= $_GET['pet']; ?>"/>
     
     <div class="infos__animal__edit__paragraph" > 
         <label for="file"class="infos__animal__edit__paragraph__label">Photo de l'animal</label> 
@@ -65,7 +66,7 @@
 
     <div class="infos__animal__edit__paragraph" >
         <label for="info_edit_age" class="infos__animal__edit__paragraph__label">Age</label> 
-        <input class="infos__animal__edit__paragraph__input" type="number"name="info_edit_age" 
+        <input class="infos__animal__edit__paragraph__input" type="number" name="info_edit_age" 
         <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('age',$_GET['pet']); ?>" <?php } ?>
         id="info_edit_age"></input> 
     </div>
