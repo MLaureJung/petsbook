@@ -39,7 +39,7 @@ function jal_index () {
     global $wpdb;
     $table_name = $wpdb->prefix . "newsletter";
 
-    $sql = "CREATE INDEX `wp_user_id` ON `$table_name`;";
+    $sql = "ALTER TABLE `$table_name` ADD INDEX(`wp_user_id`);";
             
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
