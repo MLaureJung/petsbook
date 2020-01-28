@@ -17,7 +17,7 @@ function jal_install () {
     dbDelta($sql);
 };
 
-add_action('after_switch_theme','jal_install',5);
+add_action('after_switch_theme','jal_install');
 jal_install();
 
 function jal_version () {
@@ -32,7 +32,7 @@ function jal_version () {
     dbDelta($sql);
 };
 
-add_action('after_switch_theme','jal_version',6);
+add_action('after_switch_theme','jal_version');
 jal_version();
 
 function jal_index () {
@@ -46,7 +46,7 @@ function jal_index () {
     dbDelta($sql);
 };
 
-add_action('after_switch_theme','jal_index',7);
+add_action('after_switch_theme','jal_index');
 jal_index();
 
 // FOREIGN KEY (ID) 
