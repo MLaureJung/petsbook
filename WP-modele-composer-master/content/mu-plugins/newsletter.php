@@ -8,9 +8,10 @@ class Newsletter
 {
     public function __construct()
     {
-        // add_action('after_switch_theme', [$this, 'jal_install']);
+        add_action('after_switch_theme', [$this, 'jal_install']);
         // add_action('after_switch_theme', [$this, 'jal_version']);
         // add_action('after_switch_theme', [$this, 'jal_index']);
+        add_action('after_switch_theme', [$this, 'jal_install_data']);
     }
 
     public function jal_install()
@@ -60,15 +61,33 @@ class Newsletter
     public function newsletter_activate()
     {
         // à l'activation du plugin...
-        // on execute la méthode qui construit les CPT
         $this->jal_install();
         $this->jal_version();
         $this->jal_index();
+        $this->jal_install_data();
     }
     public function newsletter_deactivate()
     {
         // à la désactivation du plugin...
         flush_rewrite_rules();
+    }
+
+    public function jal_install_data() {
+        global $wpdb;
+        
+        $welcome_name = 'Mr. WordPress';
+        $welcome_text = 'Congratulations, you just completed the installation!';
+        
+        $table_name = $wpdb->prefix . 'newsletter';
+        
+        $wpdb->insert( 
+            $table_name, 
+            array( 
+                'newsletter_name' => 'coucou les amis', 
+                'newsletter_email' => $welcome_name, 
+                'newsletter_lol' => $welcome_text, 
+            ) 
+        );
     }
 }
 
