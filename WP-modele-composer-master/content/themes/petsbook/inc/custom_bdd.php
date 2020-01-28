@@ -10,7 +10,7 @@ function jal_install () {
         `newsletter_id` bigint(20) PRIMARY KEY NOT NULL AUTO_INCREMENT, 
         `newsletter_name` tinytext NOT NULL, 
         `newsletter_email` varchar(100) NOT NULL,
-        `ID` bigint(20) UNSIGNED
+        `wp_user_id` bigint(20) UNSIGNED
        ) $charset_collate;";
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
@@ -24,7 +24,7 @@ function jal_version () {
     global $wpdb;
     $table_name = $wpdb->prefix . "newsletter";
 
-    $sql = "ALTER TABLE `$table_name` ADD COLUMN FOREIGN KEY (ID)
+    $sql = "ALTER TABLE `$table_name` ADD COLUMN FOREIGN KEY (wp_user_id)
             ALTER TABLE `$table_name` ADD COLUMN REFERENCES wp_users(ID);";
             
 
