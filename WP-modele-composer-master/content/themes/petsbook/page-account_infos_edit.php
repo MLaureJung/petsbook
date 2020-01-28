@@ -27,7 +27,8 @@
   <form action="" method='post' class="form__infos__animal__edit infos-pet-edit" enctype="multipart/form-data">
   
     <input type="hidden" name="submit_ajout_animal" value=""/>
-    <input type="hidden" name="id_edition_animal" value="<?= $_GET['pet']; ?>"/>
+
+    <input type="hidden" name="id_edition_animal" value="<?php if(isset($_GET['pet'])) { echo $_GET['pet'];} ?>"/>
     
     <div class="infos__animal__edit__paragraph" > 
         <label for="file"class="infos__animal__edit__paragraph__label">Photo de l'animal</label> 

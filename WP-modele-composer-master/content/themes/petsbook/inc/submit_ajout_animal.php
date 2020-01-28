@@ -11,6 +11,7 @@ function submit_ajout_animal() {
         $type=$_POST['pet-select'];
         $id=$_POST['id_edition_animal'];
 
+        
 
         if ($prenom != "") {
             if ($id != "") {
@@ -93,11 +94,11 @@ function submit_ajout_animal() {
             }
         
            
-            wp_redirect(get_permalink(70) . '?pet='. $id);
-            exit;
+             wp_redirect(get_permalink(70) . '?pet='. $id);
+             exit;
         }
     }
-}
+} 
 
 add_action('init', 'submit_ajout_animal', 20);
 ?>
