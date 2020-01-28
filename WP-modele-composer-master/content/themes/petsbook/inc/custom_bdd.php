@@ -34,18 +34,14 @@ function jal_install () {
     $table_name = $wpdb->prefix . "newsletter";
  
     $charset_collate = $wpdb->get_charset_collate();
+
     $sql = "CREATE TABLE $table_name (
-         id mediumint(9) NOT NULL AUTO_INCREMENT,
-        name tinytext NOT NULL,
-        email varchar(100) NOT NULL,
-
+        id mediumint(9) PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+        name tinytext NOT NULL, 
         PRIMARY KEY  (id),
-        
+        FOREIGN KEY  (wp_users) REFERENCES 
+        user_email varchar(100) NOT NULL) $charset_collate;";
 
-    
-    
-   
-    ) $charset_collate;";
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($sql);
 };
