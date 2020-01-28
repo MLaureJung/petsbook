@@ -25,8 +25,7 @@ function jal_version () {
     $table_name = $wpdb->prefix . "newsletter";
 
     $sql = "ALTER TABLE `$table_name` ADD COLUMN FOREIGN KEY (wp_user_id)
-            ALTER TABLE `$table_name` ADD COLUMN REFERENCES wp_users(ID)
-            ALTER TABLE `$table_name` ADD INDEX (`wp_user_id`);";
+            ALTER TABLE `$table_name` ADD COLUMN REFERENCES wp_users(ID);";
             
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
