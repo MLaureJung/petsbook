@@ -17,7 +17,7 @@ class Newsletter
         add_action('plugins_loaded', [$this, 'newsletter_install']);
         // add_action('after_switch_theme', [$this, 'newsletter_version']);
         // add_action('after_switch_theme', [$this, 'newsletter_index']);
-        add_action('plugins_loaded', [$this, 'newsletter_install_data']);
+        //add_action('plugins_loaded', [$this, 'newsletter_install_data']);
         add_action('plugins_loaded', [$this, 'newsletter_update_db_check']);
     }
 
@@ -80,8 +80,8 @@ class Newsletter
         global $wpdb;
         // global $newsletter_db_version;
         
-        $welcome_name = 'Mr. Wapilou';
-        $welcome_text = 'Congratulations, you just completed the Levelou!';
+        $welcome_name = 'Mr. Wapiloute';
+        $welcome_text = 'Congratulations, you just completed the Leveloute!';
         // $installed_ver = get_option( "newsletter_db_version" );
         // $newsletter_db_version = '1.0';
         
