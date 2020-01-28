@@ -35,12 +35,12 @@ $current_user = wp_get_current_user(); ?>
 
     <div class="form__pet__infos__animal">
             <h4 class="form__pet__infos__animal__title">Sexe</h4>
-            <p class="form__pet__infos__animal__user"><?php get_field('sexe', 'user_' . $current_user->ID); ?></p>
+            <p class="form__pet__infos__animal__user"><?php echo get_field('sexe', 'user_' . $current_user->ID); ?></p>
     </div>
 
     <div class="form__pet__infos__animal">
             <h4 class="form__pet__infos__animal__title">Age</h4>
-            <p class="form__pet__infos__animal__user"><?php get_field('age', 'user_' . $current_user->ID); ?></p>
+            <p class="form__pet__infos__animal__user"><?php echo get_field('age', 'user_' . $current_user->ID); ?></p>
     </div>
 
     <div class="form__pet__infos__animal">
@@ -50,7 +50,7 @@ $current_user = wp_get_current_user(); ?>
 
     <div class="form__pet__infos__animal">
             <h4 class="form__pet__infos__animal__title">Adresse</h4>
-            <p class="form__pet__infos__animal__user"><?php get_field('adresse', 'user_' . $current_user->ID); ?></p>
+            <p class="form__pet__infos__animal__user"><?php echo get_field('adresse', 'user_' . $current_user->ID); ?></p>
     </div>
 </div>
 
