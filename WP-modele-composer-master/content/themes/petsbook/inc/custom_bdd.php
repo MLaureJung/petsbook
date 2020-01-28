@@ -24,8 +24,11 @@ function jal_version () {
     global $wpdb;
     $table_name = $wpdb->prefix . "newsletter";
 
-    $sql = "ALTER TABLE $table_name ADD COLUMN FOREIGN KEY (ID)
-            ALTER TABLE $table_name ADD COLUMN REFERENCES wp_users(ID);";
+    $sql = "ALTER TABLE $table_name ADD COLUMN 
+            CONSTRAINT FK_wp_user_id 
+            FOREIGN KEY (ID) 
+            REFERENCES wp_users(ID);";
+            
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($sql);
@@ -36,6 +39,7 @@ jal_version();
 
 // FOREIGN KEY (ID) 
 // REFERENCES wp_users(ID) 
+// ALTER TABLE $table_name ADD COLUMN REFERENCES wp_users(ID);";
 
 // ALTER TABLE wp_newsletter ADD COLUMN FOREIGN KEY (ID)
 // ALTER TABLE wp_newsletter ADD COLUMN REFERENCES wp_users(ID)
