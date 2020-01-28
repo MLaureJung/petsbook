@@ -1,5 +1,14 @@
 <?php
 
+if (isset($_POST['submit_ajout_animal'])) {
+    // Je récup les données du formulaire en POST
+    $prenom=$_POST['book__edit__name'];
+    $description=$_POST['info_edit_description'];
+    $aime=$_POST['info_edit_like'];
+    $naime_pas=$_POST['info_edit_dislike'];
+    $age=$_POST['info_edit_age'];
+    $type=$_POST['pet-select'];
+
 function submit_ajout_animal() {
     if (isset($_POST['submit_ajout_animal'])) {
         // Je récup les données du formulaire en POST
