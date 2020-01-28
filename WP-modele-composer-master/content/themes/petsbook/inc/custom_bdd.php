@@ -11,8 +11,10 @@ function jal_install () {
         `newsletter_name` tinytext NOT NULL, 
         `newsletter_email` varchar(100) NOT NULL,
         `ID` bigint(20) UNSIGNED,
-        FOREIGN KEY (ID) 
-        REFERENCES wp_users(ID) 
+        --FOREIGN KEY (ID) 
+        --REFERENCES wp_users(ID) 
+        ALTER TABLE wp_newsletter ADD COLUMN FOREIGN KEY (ID)
+        ALTER TABLE wp_newsletter ADD COLUMN REFERENCES wp_users(ID)
        ) $charset_collate;";
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
