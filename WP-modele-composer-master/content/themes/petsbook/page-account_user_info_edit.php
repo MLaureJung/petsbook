@@ -1,4 +1,5 @@
-<?php get_header();?>
+<?php get_header();
+$current_user = wp_get_current_user(); ?>
 <section class="photos_profiles">
 
 <div class="human__profiles_elements">
@@ -7,7 +8,7 @@
             <a href="#"><img class='human__profiles__image'
             src="https://source.unsplash.com/700x700/?faces" alt=""></a> 
         </div>
-        <h4 class='human__profiles__name'>Prénom</h4>
+        <h4 class='human__profiles__name'><?php echo $current_user->first_name;?></h4>
         <a href="#" class="top-info__user__edit-profile">Modifier ma photo de profil</a> 
 </div>
 
@@ -17,18 +18,18 @@
 <div class="main-items-l">
 <div class="info-animal-wrapper">
 <section class="form__infos__animal">
-  <h1 class="form__infos__animal__title" >Titre</h1>
+  <h1 class="form__infos__animal__title" >Vos informations</h1>
   
   <form action="#" method='post' class="form__infos__animal__edit infos-pet-edit">
 
     <div class="infos__animal__edit__paragraph" > 
         <label for="book__edit__name"class="infos__animal__edit__paragraph__label">Nom</label> 
-        <input class="infos__animal__edit__paragraph__input" type='text' name="book__edit__name" id="book__edit__name" rows="2"  cols="50"></input> 
+        <input class="infos__animal__edit__paragraph__input" type='text' name="book__edit__name" value="<?= $current_user->last_name; ?>" id="book__edit__name" rows="2"  cols="50"></input> 
     </div>
 
     <div class="infos__animal__edit__paragraph" > 
       <label for="book__edit__name"class="infos__animal__edit__paragraph__label">Prénom</label> 
-      <input class="infos__animal__edit__paragraph__input" type='text' name="book__edit__name" id="book__edit__name" rows="2"  cols="50"></input> 
+      <input class="infos__animal__edit__paragraph__input" type='text' name="book__edit__name" value="<?= $current_user->first_name; ?>" id="book__edit__name" rows="2"  cols="50"></input> 
   </div>
 
     <div class="infos__animal__edit__paragraph" >
@@ -36,9 +37,9 @@
       <!--select choices-->
       <select class="infos__animal__edit__paragraph__select" name="pet-select" id="pet-select">
         <option value="">---</option>
-        <option value="dog">Homme</option>
-        <option value="cat">Femme</option>
-        <option value="cat">Autre</option>
+        <option value="homme" <?php if (get_field('sexe', 'user_' . $current_user->ID) == 'homme'){ echo 'selected="selected"'; } ?>>Homme</option>
+        <option value="femme" <?php if (get_field('sexe', 'user_' . $current_user->ID) == 'femme'){ echo 'selected="selected"'; } ?>>Femme</option>
+        <option value="autre" <?php if (get_field('sexe', 'user_' . $current_user->ID) == 'autre'){ echo 'selected="selected"'; } ?>>Autre</option>
         
       </select>
       <!--/select choices-->
@@ -46,17 +47,17 @@
 
     <div class="infos__animal__edit__paragraph" >
         <label for="info_edit_age" class="infos__animal__edit__paragraph__label">Age</label> 
-        <input class="infos__animal__edit__paragraph__input" type="number"name="info_edit_age" id="info_edit_age"></input> 
+        <input class="infos__animal__edit__paragraph__input" type="number"name="info_edit_age" value='<?php echo get_field('age', 'user_' . $current_user->ID); ?>' id="info_edit_age"></input> 
     </div>
     
     <div class="infos__animal__edit__paragraph" >
       <label for="info_edit_like" class="infos__animal__edit__paragraph__label">E-mail</label> 
-      <input class="infos__animal__edit__paragraph__input" type="email" name="info_edit_like" id="info_edit_like"></input> 
+      <input class="infos__animal__edit__paragraph__input" type="email" name="info_edit_like" value='<?php echo $current_user->user_email;?>' id="info_edit_like"></input> 
     </div>
 
     <div class="infos__animal__edit__paragraph" >
       <label for="info_edit_address" class="infos__animal__edit__paragraph__label" >Adresse</label> 
-      <textarea class="infos__animal__edit__paragraph__textarea" name="info_edit_address" id="info_edit_address"></textarea> 
+      <textarea class="infos__animal__edit__paragraph__textarea" name="info_edit_address"  id="info_edit_address"><?php echo get_field('adresse', 'user_' . $current_user->ID); ?></textarea> 
     </div>
   </form>
 
