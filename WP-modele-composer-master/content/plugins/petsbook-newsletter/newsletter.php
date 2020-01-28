@@ -80,8 +80,8 @@ class Newsletter
         global $wpdb;
         // global $newsletter_db_version;
         
-        $welcome_name = 'Mr. Wapiloute';
-        $welcome_text = 'Congratulations, you just completed the Leveloute!';
+        $welcome_name = 'Mr. Kapiloute';
+        $welcome_text = 'Congratulations, you just completed the LeveliKoute!';
         // $installed_ver = get_option( "newsletter_db_version" );
         // $newsletter_db_version = '1.0';
         
@@ -105,6 +105,7 @@ class Newsletter
         global $newsletter_db_version;
         if ( get_site_option( 'newsletter_db_version' ) != $newsletter_db_version ) {
             $this->newsletter_install();
+            $this->newsletter_install_data();
         }
     }
 
@@ -112,10 +113,8 @@ class Newsletter
     public function newsletters_activate()
     {
         // à l'activation du plugin...
-        $this->newsletter_install();
         $this->newsletter_version();
         $this->newsletter_index();
-        $this->newsletter_install_data();
         $this->newsletter_update_db_check();
     }
 
