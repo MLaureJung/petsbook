@@ -36,11 +36,13 @@ function jal_install () {
     $charset_collate = $wpdb->get_charset_collate();
 
     $sql = "CREATE TABLE $table_name (
-        id mediumint(9) PRIMARY KEY NOT NULL AUTO_INCREMENT, 
-        name tinytext NOT NULL, 
-        PRIMARY KEY  (id),
-        FOREIGN KEY  (wp_users) REFERENCES 
-        user_email varchar(100) NOT NULL) $charset_collate;";
+        `test_id` bigint(20) PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+        `test_name` tinytext NOT NULL, 
+        `test_email` varchar(100) NOT NULL,
+        `ID` bigint(20) UNSIGNED,
+        FOREIGN KEY (ID) 
+        REFERENCES wp_users(ID) 
+       ) $charset_collate;";
 
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($sql);
