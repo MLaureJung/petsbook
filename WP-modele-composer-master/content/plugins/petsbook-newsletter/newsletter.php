@@ -14,24 +14,25 @@ class Newsletter
 {
     public function __construct()
     {
-        add_action('plugins_loaded', [$this, 'jal_install']);
-        // add_action('after_switch_theme', [$this, 'jal_version']);
-        // add_action('after_switch_theme', [$this, 'jal_index']);
-        // add_action('plugins_loaded', [$this, 'jal_install_data']);
+        add_action('plugins_loaded', [$this, 'newsletter_install']);
+        // add_action('after_switch_theme', [$this, 'newsletter_version']);
+        // add_action('after_switch_theme', [$this, 'newsletter_index']);
+        add_action('plugins_loaded', [$this, 'newsletter_install_data']);
+        add_action('plugins_loaded', [$this, 'newsletter_update_db_check']);
     }
 
     /*-------------------------------------------------------*/
-    public function jal_install()
+    public function newsletter_install()
     {
         global $wpdb;
-        global $jal_db_version;
+        global $newsletter_db_version;
 
-        $jal_db_version = '1.0';
+        $newsletter_db_version = '1.0';
         $table_name = $wpdb->prefix . "newsletters";
         $charset_collate = $wpdb->get_charset_collate();
-        $installed_ver = get_option( "jal_db_version" );
+        $installed_ver = get_option( "newsletter_db_version" );
     
-        if ( $installed_ver != $jal_db_version ) 
+        if ( $installed_ver != $newsletter_db_version ) 
         {
             $sql = "CREATE TABLE IF NOT EXISTS `$table_name` (
                 `newsletters_id` bigint(20) PRIMARY KEY NOT NULL AUTO_INCREMENT, 
@@ -43,12 +44,12 @@ class Newsletter
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             dbDelta($sql);
 
-            update_option( "jal_db_version", $jal_db_version );
+            update_option( "newsletter_db_version", $newsletter_db_version );
         } 
     }
 
     /*-------------------------------------------------------*/
-    public function jal_version()
+    public function newsletter_version()
     {
         global $wpdb;
         $table_name = $wpdb->prefix . "newsletters";
@@ -62,7 +63,7 @@ class Newsletter
     }
 
     /*-------------------------------------------------------*/
-    public function jal_index()
+    public function newsletter_index()
     {
         global $wpdb;
         $table_name = $wpdb->prefix . "newsletters";
@@ -75,28 +76,35 @@ class Newsletter
     }
 
     /*-------------------------------------------------------*/
-    public function jal_install_data() {
+    public function newsletter_install_data() {
         global $wpdb;
+        // global $newsletter_db_version;
         
-        $welcome_name = 'Mr. WordPress';
-        $welcome_text = 'Congratulations, you just completed the installation!';
+        $welcome_name = 'Mr. Wapilou';
+        $welcome_text = 'Congratulations, you just completed the Levelou!';
+        // $installed_ver = get_option( "newsletter_db_version" );
+        // $newsletter_db_version = '1.0';
         
-        $table_name = $wpdb->prefix . 'newsletters';
+        // if ( $installed_ver != $newsletter_db_version)
+        // {
+            $table_name = $wpdb->prefix . 'newsletters';
         
-        $wpdb->insert( 
-            $table_name, 
-            array( 
-                'newsletters_name' => $welcome_text, 
-                'newsletters_email' => $welcome_name, 
-            ) 
-        );
+            $wpdb->insert( 
+                $table_name, 
+                array( 
+                    'newsletters_name' => $welcome_text, 
+                    'newsletters_email' => $welcome_name, 
+                ) 
+            );
+        // }
+        // update_option( "newsletter_db_version", $newsletter_db_version);
     }
 
     /*-------------------------------------------------------*/
-    public function myplugin_update_db_check() {
-        global $jal_db_version;
-        if ( get_site_option( 'jal_db_version' ) != $jal_db_version ) {
-            $this->jal_install();
+    public function newsletter_update_db_check() {
+        global $newsletter_db_version;
+        if ( get_site_option( 'newsletter_db_version' ) != $newsletter_db_version ) {
+            $this->newsletter_install();
         }
     }
 
@@ -104,10 +112,11 @@ class Newsletter
     public function newsletters_activate()
     {
         // à l'activation du plugin...
-        $this->jal_install();
-        $this->jal_version();
-        $this->jal_index();
-        $this->jal_install_data();
+        $this->newsletter_install();
+        $this->newsletter_version();
+        $this->newsletter_index();
+        $this->newsletter_install_data();
+        $this->newsletter_update_db_check();
     }
 
     public function newsletters_deactivate()
