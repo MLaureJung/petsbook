@@ -15,7 +15,7 @@
         <div class="carousel-item-content">
 
           <div class="carousel-item-content-part">
-            <img class="carousel-item-content-part__illu" src="<?= wp_get_attachment_url(get_theme_mod('petsbook_carousel_slide1_Illu'))?>" class="d-block w-100" alt="...">
+            <img class="carousel-item-content-part__illu" src="<?= wp_get_attachment_url(get_theme_mod('petsbook_carousel_slide1_Illu')); ?>" class="d-block w-100" alt="...">
           </div>
 
           <div class="carousel-item-content-part__description">

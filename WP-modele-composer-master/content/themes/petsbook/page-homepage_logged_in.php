@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
 <?php if(get_theme_mod('petsbook_carousel_login_active')) : ?>
-  <?php get_template_part('template-parts/carousel-index'); ?>
+  <?php get_template_part('template-parts/carousel/carousel_login'); ?>
 <?php endif; ?>
 
 <div class="main-items-l">
   <!--Pet Icons-->
   <section class="main-pet-icons">
    
-    <?php
+    <?php var_dump(get_theme_mod('petsbook_carousel_login_slide1_Illu'));
       // Définition de la taxonomie ciblée
       $tax = 'animal-type';
       // Récupération de la liste des termes de la taxonomie 'animal-type' | 'hide_empty' => false, permet de visualiser tous les termes même s'ils ont un total de post de 0
