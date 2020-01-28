@@ -8,7 +8,7 @@
   <!--Pet Icons-->
   <section class="main-pet-icons">
    
-    <?php var_dump(get_theme_mod('petsbook_carousel_login_slide1_Illu'));
+    <?php
       // Définition de la taxonomie ciblée
       $tax = 'animal-type';
       // Récupération de la liste des termes de la taxonomie 'animal-type' | 'hide_empty' => false, permet de visualiser tous les termes même s'ils ont un total de post de 0
