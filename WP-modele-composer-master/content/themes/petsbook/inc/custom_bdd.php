@@ -24,7 +24,7 @@ function jal_version () {
     global $wpdb;
     $table_name = $wpdb->prefix . "newsletter";
 
-    $sql = "ALTER TABLE `wp_user_id` ADD COLUMN FOREIGN KEY (wp_user_id)
+    $sql = "ALTER TABLE `$table_name` ADD COLUMN FOREIGN KEY (wp_user_id)
             ALTER TABLE `$table_name` ADD COLUMN REFERENCES wp_users(ID);";
             
 
