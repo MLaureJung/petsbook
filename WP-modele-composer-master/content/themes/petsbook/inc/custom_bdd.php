@@ -51,10 +51,3 @@
 
 
 /*----------------------------------------------------------------------*/
-// FOREIGN KEY (ID) 
-// REFERENCES wp_users(ID) 
-// ALTER TABLE $table_name ADD COLUMN REFERENCES wp_users(ID);";
-// ALTER TABLE `$table_name` ADD INDEX(`wp_user_id`)
-
-// ALTER TABLE wp_newsletter ADD COLUMN FOREIGN KEY (ID)
-// ALTER TABLE wp_newsletter ADD COLUMN REFERENCES wp_users(ID)

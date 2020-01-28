@@ -8,9 +8,9 @@ class Newsletter
 {
     public function __construct()
     {
-        add_action('after_switch_theme', [$this, 'jal_install']);
-        add_action('after_switch_theme', [$this, 'jal_version']);
-        add_action('after_switch_theme', [$this, 'jal_index']);
+        // add_action('after_switch_theme', [$this, 'jal_install']);
+        // add_action('after_switch_theme', [$this, 'jal_version']);
+        // add_action('after_switch_theme', [$this, 'jal_index']);
     }
 
     public function jal_install()
