@@ -18,3 +18,5 @@ require ('inc/update_data_user.php');
 
 require ('inc/custom_bdd.php');
 
+require ('inc/customizer.php');
+
