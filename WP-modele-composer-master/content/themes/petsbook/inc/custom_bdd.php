@@ -35,10 +35,10 @@ function jal_install () {
  
     $charset_collate = $wpdb->get_charset_collate();
 
-    $sql = "CREATE TABLE $table_name (
-        `test_id` bigint(20) PRIMARY KEY NOT NULL AUTO_INCREMENT, 
-        `test_name` tinytext NOT NULL, 
-        `test_email` varchar(100) NOT NULL,
+    $sql = "CREATE TABLE `$table_name` (
+        `newsletter_id` bigint(20) PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+        `newsletter_name` tinytext NOT NULL, 
+        `newsletter_email` varchar(100) NOT NULL,
         `ID` bigint(20) UNSIGNED,
         FOREIGN KEY (ID) 
         REFERENCES wp_users(ID) 
