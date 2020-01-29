@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<?php if(get_theme_mod('petsbook_carousel_login_active')) : ?>
+  <?php get_template_part('template-parts/carousel/carousel_login'); ?>
+<?php endif; ?>
 
 <div class="main-items-l">
   <!--Pet Icons-->
@@ -63,8 +66,8 @@ if (empty($_GET['type'])) {
 else {
   $args = [
     'post_type' => 'animal',
-    'posts_status' => 'publish',
-    'post_per_page' => 6,
+    'post_status' => 'publish',
+    'posts_per_page' => 6,
     'orderby' => 'rand',
     'tax_query' => 
     [

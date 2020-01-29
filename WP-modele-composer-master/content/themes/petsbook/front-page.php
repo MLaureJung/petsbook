@@ -1,6 +1,8 @@
 <?php get_header(); ?>
     <!--Carousel-->
-    <?php get_template_part('template-parts/carousel-index'); ?>
+    <?php if(get_theme_mod('petsbook_carousel_active')) : ?>
+      <?php get_template_part('template-parts/carousel/carousel-index'); ?>
+    <?php endif; ?>
 
     <div class="main-items">
       <!--Pet Icons-->
