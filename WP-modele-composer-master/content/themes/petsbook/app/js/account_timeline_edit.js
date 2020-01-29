@@ -3,7 +3,7 @@ var app = {
       console.log('init');
 
     // fonction pour le bouton qui permettra d'aller en haut de la page à tout moment
-    $('.main-items-l').append('<div id="returnOnTop" title="Revenir en haut">&nbsp;</div>');
+    $('.arrow-top-edit-timeline').append('<div id="returnOnTop" title="Revenir en haut">&nbsp;</div>');
     
     // au click on revient en haut en mode 'slow'
     $('#returnOnTop').click( function() {

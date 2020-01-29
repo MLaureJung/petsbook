@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-    <div class="main-items-l">
+    <div class="main-items-l arrow-top-edit-timeline">
       <div class="timeline-edit-wrapper">
         <div class="timeline-edit__header">
           <p class="timeline-edit__header__text">Ajoutez des photos à votre timeline !</p>
