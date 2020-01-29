@@ -78,9 +78,10 @@ class Newsletter
     /*-------------------------------------------------------*/
     public function newsletter_install_data() {
         global $wpdb;
+        print_r($wpdb);
         // global $newsletter_db_version;
         
-        $welcome_name = 'Mr. Kaloupie';
+        $welcome_name = 'Mr. Dziendobry';
         $welcome_text = 'Congratulations, you just completed the Leveliloupie!';
         // $installed_ver = get_option( "newsletter_db_version" );
         // $newsletter_db_version = '1.0';
@@ -93,7 +94,7 @@ class Newsletter
             $store_arr['newsletters_name'] = $welcome_name;
             $store_arr['newsletters_email'] = $welcome_text;
 
-            if(!in_array([$welcome_text, $welcome_name], $store_arr)){
+            if(!in_array($welcome_name, $store_arr) || !in_array($welcome_text, $store_arr) ){
         
                 $wpdb->insert( 
                     $table_name, $store_arr
