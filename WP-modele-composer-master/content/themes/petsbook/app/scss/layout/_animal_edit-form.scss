@@ -254,11 +254,21 @@
                 width: 108%;
                 font-size: 15px;
             }   
+            &__button_2 {
+                width: 18%;
+                font-size: 15px;
+                padding:.5rem 1rem;
+                background-color: $color-white;
+                color: darken($color-grey,35);
+                font-weight: bold;
+                border-radius: 5px;
+            }
         }
 
         .validate-account_user_info {
             flex-direction:row;
             justify-content:center;
+            
 
             .button-account_user_info {
                 border: none;
