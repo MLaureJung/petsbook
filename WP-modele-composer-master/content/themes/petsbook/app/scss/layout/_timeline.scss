@@ -5,23 +5,7 @@
     overflow-x: hidden;
     width :100vw;
     /* Return on top */
-    #returnOnTop {
-        background: url('../assets/images/return_on_top3.png') no-repeat;
-        background-size: cover;
-        position: absolute;
-        bottom: 290px;
-        right: 1%;
-        width: 60px;
-        height: 60px ;
-        animation: bounce 2s infinite;
-        cursor: pointer;
-        display: none;
-        filter: brightness(150%);
-        height: 48px;
-        position: fixed;
-        right: 1%;
-        width: 48px;
-    }
+    
 }
 .timeline-glimpse {
     background-color: $color-green;
@@ -132,6 +116,23 @@
     }
 }
 
+#returnOnTop {
+    background: url('../assets/images/return_on_top3.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 290px;
+    right: 1%;
+    width: 60px;
+    height: 60px ;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    display: none;
+    filter: brightness(150%);
+    height: 48px;
+    position: fixed;
+    right: 1%;
+    width: 48px;
+}
 #timeline-glimpse__overview {
     position: absolute;
     top: 0;
