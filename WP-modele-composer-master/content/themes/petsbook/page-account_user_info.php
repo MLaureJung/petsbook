@@ -8,10 +8,9 @@ $current_user = wp_get_current_user(); ?>
 
       <div class='human__profiles'>
           <a href="#"><img class='human__profiles__image'
-          src="https://source.unsplash.com/700x700/?faces" alt=""></a> 
+          src="<?= get_field('photo_de_profil', 'user_' . $current_user->ID); ?>" alt=""></a> 
       </div>
       <h4 class='human__profiles__name'><?php echo $current_user->first_name;?></h4>
-      <a href="#" class="top-info__user__edit-profile">Modifier ma photo de profil</a> 
 </div>
 
 </section>   
