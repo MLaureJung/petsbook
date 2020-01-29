@@ -12,15 +12,15 @@ if (!defined('WPINC')) {
 
 class Newsletter 
 {
-    public function __construct()
-    {
-         add_action('plugins_loaded', [$this, 'newsletter_install'],1);
-        // add_action('after_switch_theme', [$this, 'newsletter_version']);
-        // add_action('after_switch_theme', [$this, 'newsletter_index']);
-        // add_action('plugins_loaded', [$this, 'newsletter_install_data'],2);
-        // add_action('plugins_loaded', [$this, 'newsletter_update_db_check']);
-        register_activation_hook(__FILE__, [$this, 'newsletter_install_data']);
-    }
+    // public function __construct()
+    // {
+    //     add_action('plugins_loaded', [$this, 'newsletter_install'],1);
+    //     add_action('after_switch_theme', [$this, 'newsletter_version']);
+    //     add_action('after_switch_theme', [$this, 'newsletter_index']);
+    //     add_action('plugins_loaded', [$this, 'newsletter_install_data'],2);
+    //     add_action('plugins_loaded', [$this, 'newsletter_update_db_check']);
+    //     register_activation_hook(__FILE__, [$this, 'newsletter_install_data']);
+    // }
 
     /*-------------------------------------------------------*/
     public function newsletter_install()
