@@ -14,10 +14,10 @@ class Newsletter
 {
     public function __construct()
     {
-        add_action('plugins_loaded', [$this, 'newsletter_install']);
+        add_action('plugins_loaded', [$this, 'newsletter_install'],1);
         // add_action('after_switch_theme', [$this, 'newsletter_version']);
         // add_action('after_switch_theme', [$this, 'newsletter_index']);
-        add_action('plugins_loaded', [$this, 'newsletter_install_data']);
+        add_action('plugins_loaded', [$this, 'newsletter_install_data'],2);
         add_action('plugins_loaded', [$this, 'newsletter_update_db_check']);
     }
 
@@ -78,11 +78,11 @@ class Newsletter
     /*-------------------------------------------------------*/
     public function newsletter_install_data() {
         global $wpdb;
-        print_r($wpdb);
+        
         // global $newsletter_db_version;
         
-        $welcome_name = 'Mr. Dziendobry';
-        $welcome_text = 'Congratulations, you just completed the Leveliloupie!';
+        // $welcome_name = 'Mr. Dziendobry';
+        // $welcome_text = 'Congratulations, you just completed the Leveliloupie!';
         // $installed_ver = get_option( "newsletter_db_version" );
         // $newsletter_db_version = '1.0';
         
@@ -90,20 +90,37 @@ class Newsletter
         // {
             $table_name = $wpdb->prefix . 'newsletters';
 
-            $store_arr = [];
-            $store_arr['newsletters_name'] = $welcome_name;
-            $store_arr['newsletters_email'] = $welcome_text;
+            $welcome_name = 'Mr. Dziendobry';
+            $welcome_text = 'Congratulations, you just completed the Leveliloupie!';
 
-            if(!in_array($welcome_name, $store_arr) || !in_array($welcome_text, $store_arr) ){
+            //$store_arr = [];
+            //$store_arr['newsletters_name'] = $welcome_name;
+            //$store_arr['newsletters_email'] = $welcome_text; var_dump(in_array($welcome_name, $store_arr));
+                //il est la le probleme lol :)je suis d'acc ;) 
+            // if(in_array($welcome_name, $store_arr) == false && in_array($welcome_text, $store_arr) == false ){
         
-                $wpdb->insert( 
-                    $table_name, $store_arr
-                    // array( 
-                    //     'newsletters_name' => $welcome_text, 
-                    //     'newsletters_email' => $welcome_name, 
-                    // ) 
-                );
-            }
+            //     $toto = $wpdb->insert( 
+            //         $table_name, $store_arr
+            //         // array( 
+            //         //     'newsletters_name' => $welcome_text, 
+            //         //     'newsletters_email' => $welcome_name, 
+            //         // ) 
+            //     ); 
+            // }
+
+            $datum = $wpdb->get_results("SELECT * FROM $table_name WHERE newsletters_email = '".$welcome_name."'");
+            print_r($datum);
+
+            $newdata = array(
+                'newsletters_email'=>$welcome_name,
+                'newsletters_name'=>$welcome_text,
+            );
+            //inserting a record to the database
+            $wpdb->insert(
+                $table_name,
+                $newdata
+            );
+
         // }
         // update_option( "newsletter_db_version", $newsletter_db_version);
     }
