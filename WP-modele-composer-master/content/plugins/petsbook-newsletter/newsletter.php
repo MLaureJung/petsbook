@@ -14,11 +14,12 @@ class Newsletter
 {
     public function __construct()
     {
-        // add_action('plugins_loaded', [$this, 'newsletter_install'],1);
+         add_action('plugins_loaded', [$this, 'newsletter_install'],1);
         // add_action('after_switch_theme', [$this, 'newsletter_version']);
         // add_action('after_switch_theme', [$this, 'newsletter_index']);
-        // add_action('plugins_loaded', [$this, 'newsletter_install_data'],2);
+         add_action('plugins_loaded', [$this, 'newsletter_install_data'],2);
         // add_action('plugins_loaded', [$this, 'newsletter_update_db_check']);
+        //register_activation_hook(__FILE__, [$this, 'newsletter_install_data']);
     }
 
     /*-------------------------------------------------------*/
@@ -136,7 +137,7 @@ class Newsletter
         global $newsletter_db_version;
         if ( get_site_option( 'newsletter_db_version' ) != $newsletter_db_version ) {
             $this->newsletter_install();
-            //$this->newsletter_install_data();
+            $this->newsletter_install_data();
         }
     }
 
