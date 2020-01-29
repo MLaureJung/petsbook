@@ -14,11 +14,11 @@ class Newsletter
 {
     public function __construct()
     {
-        add_action('plugins_loaded', [$this, 'newsletter_install'],1);
+        // add_action('plugins_loaded', [$this, 'newsletter_install'],1);
         // add_action('after_switch_theme', [$this, 'newsletter_version']);
         // add_action('after_switch_theme', [$this, 'newsletter_index']);
-        add_action('plugins_loaded', [$this, 'newsletter_install_data'],2);
-        add_action('plugins_loaded', [$this, 'newsletter_update_db_check']);
+        // add_action('plugins_loaded', [$this, 'newsletter_install_data'],2);
+        // add_action('plugins_loaded', [$this, 'newsletter_update_db_check']);
     }
 
     /*-------------------------------------------------------*/
@@ -111,6 +111,12 @@ class Newsletter
             $datum = $wpdb->get_results("SELECT * FROM $table_name WHERE newsletters_email = '".$welcome_name."'");
             print_r($datum);
 
+            if($wpdb->num_rows > 0) {
+                //Display duplicate entry error message and exit
+                echo 'nope';
+                //return or exit
+            }
+
             $newdata = array(
                 'newsletters_email'=>$welcome_name,
                 'newsletters_name'=>$welcome_text,
@@ -138,6 +144,8 @@ class Newsletter
     public function newsletters_activate()
     {
         // à l'activation du plugin...
+        $this->newsletter_install();
+        $this->newsletter_install_data();
         $this->newsletter_version();
         $this->newsletter_index();
         $this->newsletter_update_db_check();
