@@ -72,8 +72,11 @@
                 <h3>Carnet de santé</h3></label>
                     <ul>
                         <li>Dernière vaccination</li>
-                        <li>Contact vétérinaire</li>
+                        <li><?= get_field('dernier_vaccin', $_GET['pet']); ?></li>
+                        <li>Coordonnees vétérinaire</li>
+                        <li><?= get_field('coordonnees_du_veterinaire', $_GET['pet']); ?></li>
                         <li>Antécedants medicaux</li>
+                        <li><?= get_field('antecedents_medicaux', $_GET['pet']); ?></li>
                         
                     </ul>
 
