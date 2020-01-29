@@ -85,7 +85,7 @@ function update_data_user() {
             // }
         
            
-            // wp_redirect(get_permalink(70));
+            // wp_redirect(get_permalink(77));
             // exit;
         }
     }
