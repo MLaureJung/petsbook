@@ -7,7 +7,7 @@
     <div class="human__profiles_elements">  
     <div class='human__profiles'>
         <a href="#"><img class='human__profiles__image'
-        src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt=""></a> 
+        src="<?= get_field('photo_de_profil', 'user_' . $current_user->ID); ?>" alt=""></a> 
     </div>
         <h4 class='human__profiles__name'><?php $current_user = wp_get_current_user(); echo $current_user->first_name . " " . $current_user->last_name; ?></h4>  
         <a href="<?php echo site_url('/account_user_info/')?>" class="top-info__user__edit-profile">Modifier mon profil</a>          
