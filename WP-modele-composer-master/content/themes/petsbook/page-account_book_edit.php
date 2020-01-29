@@ -64,7 +64,7 @@
           </div>
         </div>
         <div class="infos__animal__edit__paragraph" >
-                <label for="book__edit__poids"class="infos__animal__edit__paragraph__label" >Poids</label> 
+                <label for="book__edit__poids"class="infos__animal__edit__paragraph__label" >Poids(kg)</label> 
                 <input class="infos__animal__edit__paragraph__input" type="number"name="book__edit__poids" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('poids',$_GET['pet']); ?>" <?php } ?> id="book_edit_poids"></input> 
             </div>
         <div class="infos__animal__edit__paragraph" >
@@ -78,36 +78,40 @@
               <div class="radio">
                 <input type="radio" class="infos__animal__edit__paragraph__radio" name="book_edit_castre" 
                 <?php if(isset($_GET['pet'])){ 
-                if(get_field('castre',$_GET['pet']) == 'oui'){ echo 'checked="checked'; } }?> id="book_edit_castre" value="male">id="book_edit_castre" value="femelle">
+                if(get_field('castre',$_GET['pet']) == 'oui'){ echo 'checked="checked'; } }?> id="book_edit_castre" value="oui" >
                 <label for="femelle">Oui</label>
               </div>
 
               <div class="radio">
                 <input type="radio" class="infos__animal__edit__paragraph__radio" name="book_edit_castre" 
                 <?php if(isset($_GET['pet'])){ 
-                if(get_field('castre',$_GET['pet']) == 'non'){ echo 'checked="checked'; } }?> id="book_edit_castre" value="male">
+                if(get_field('castre',$_GET['pet']) == 'non'){ echo 'checked="checked'; } }?> id="book_edit_castre" value="non">
                 <label for="male">Non</label>
               </div>
             </div>
         </div>
         <div class="infos__animal__edit__paragraph" >
             <label for="book_edit_color"class="infos__animal__edit__paragraph__label">Couleur de la robe</label> 
-            <input class="infos__animal__edit__paragraph__input" type="number"name="book_edit_color" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('couleur_de_la_robe',$_GET['pet']); ?>" <?php } ?>id="book_edit_color"></input> 
+            <input class="infos__animal__edit__paragraph__input" type="text "name="book_edit_color" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('couleur_de_la_robe',$_GET['pet']); ?>" <?php } ?>id="book_edit_color"></input> 
         </div>
         <div class="infos__animal__edit__paragraph" >
-            <label for="book_edit_signes"class="infos__animal__edit__paragraph__label" >Signes particulier</label> 
-            <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_signes" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('signes_particuliers',$_GET['pet']); ?>" <?php } ?> id="book_edit_signes"></textarea> 
+            <label for="book_edit_signes" class="infos__animal__edit__paragraph__label" >Signes particulier</label> 
+                <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_signes"  id="book_edit_signes"><?php if(isset($_GET['pet'])){
+                    echo get_field('signes_particuliers', $_GET['pet']);
+                }?></textarea> 
         </div>
       </div>
       <!------------------------------------------------>
       <div class="book-edit__medical">
         <div class="infos__animal__edit__paragraph" >
                 <label for="book_edit_antecedents"class="infos__animal__edit__paragraph__label" >Antécédents médicaux</label> 
-                <input class="infos__animal__edit__paragraph__input" type="number"name="book_edit_antecedents" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('antecedents_medicaux',$_GET['pet']); ?>" <?php } ?> id="book_edit_antecedents"></input> 
+                <input class="infos__animal__edit__paragraph__input" type="text" name="book_edit_antecedents" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('antecedents_medicaux',$_GET['pet']); ?>" <?php } ?> id="book_edit_antecedents"></input> 
             </div>
         <div class="infos__animal__edit__paragraph" >
             <label for="book_edit_medocs" class="infos__animal__edit__paragraph__label">Prise de médicaments</label> 
-            <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_medocs" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('prise_de_medicaments',$_GET['pet']); ?>" <?php } ?> id="book_edit_medocs" rows="2"  cols="50"></textarea> 
+            <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_medocs"  id="book_edit_medocs" rows="2"  cols="50"><?php if(isset($_GET['pet'])){
+                    echo get_field('prise_de_medicaments', $_GET['pet']);
+                }?></textarea> 
         </div>
         <div class="infos__animal__edit__paragraph" >
             <label for="book_edit_last_traitement"class="infos__animal__edit__paragraph__label" >Dernier traitement anti-parasitaire</label> 
@@ -119,18 +123,22 @@
             </div>
         <div class="infos__animal__edit__paragraph" >
             <label for="book_edit_info_veto"class="infos__animal__edit__paragraph__label" >Coordonnées du vétérinaire</label> 
-            <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_info_veto" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('coordonnees_du_veterinaire',$_GET['pet']); ?>" <?php } ?> id="book_edit_info_veto"></textarea> 
+            <textarea class="infos__animal__edit__paragraph__textarea" name="book_edit_info_veto"  id="book_edit_info_veto"><?php if(isset($_GET['pet'])){
+                    echo get_field('coordonnees_du_veterinaire', $_GET['pet']);
+                }?></textarea> 
         </div>
         <div class="infos__animal__edit__paragraph" >
             <label for="book_edit_rdv"class="infos__animal__edit__paragraph__label" >Prochain rendez-vous vétérinaire</label> 
             <input type="date" class="infos__animal__edit__paragraph__textarea" name="book_edit_rdv" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('prochain_rendez_vous_veterinaire',$_GET['pet']); ?>" <?php } ?> id="book_edit_rdv"></textarea> 
-        </div>
+        
+          </div>
+          <input type="submit" class="validate__button" value="Enregistrer">
+          
       </div>
     </form>
     <div class="validate">
       
         <a href="<?= get_permalink(72);?>?pet=<?= $_GET['pet']; ?>"class="validate__button">Voir carnet de santé</a>
-        <input type="submit" class="validate__button" value="Enregistrer">
         <a href="<?= get_permalink(69);?>?pet=<?= $_GET['pet']; ?>" class="validate__button">Infos générales</a>
       
     </div>

@@ -28,7 +28,7 @@
             <div class="info-glimpse__general-infos">
               <div class="form__pet__infos__animal">
                   <h4 class="form__pet__infos__animal__title">Prénom</h4>
-                  <p class="form__pet__infos__animal__user">Lorem impsum</p>
+                  <p class="form__pet__infos__animal__user"><?= get_the_title($_GET['pet']); ?></p>
               </div>
 
               <div class="form__pet__infos__animal">
@@ -47,7 +47,7 @@
               </div>
 
               <div class="form__pet__infos__animal">
-                      <h4 class="form__pet__infos__animal__title">Poids</h4>
+                      <h4 class="form__pet__infos__animal__title">Poids(kg)</h4>
                       <p class="form__pet__infos__animal__user"><?= get_field('poids', $_GET['pet']); ?></p>
               </div>
 
