@@ -51,7 +51,7 @@
               <input type="radio" class="infos__animal__edit__paragraph__radio" name="book_edit_sexe" 
               <?php if(isset($_GET['pet'])){ 
                 if(get_field('sexe',$_GET['pet']) == 'femelle'){ echo 'checked="checked'; } }?>
-              id="book_edit_castre" value="femelle">
+              id="book_edit_castre" value="femelle" checked>
               <label for="femelle">Femelle</label>
             </div>
 
@@ -78,7 +78,7 @@
               <div class="radio">
                 <input type="radio" class="infos__animal__edit__paragraph__radio" name="book_edit_castre" 
                 <?php if(isset($_GET['pet'])){ 
-                if(get_field('castre',$_GET['pet']) == 'oui'){ echo 'checked="checked'; } }?> id="book_edit_castre" value="oui" >
+                if(get_field('castre',$_GET['pet']) == 'oui'){ echo 'checked="checked'; } }?> id="book_edit_castre" value="oui" checked>
                 <label for="femelle">Oui</label>
               </div>
 
