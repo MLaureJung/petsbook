@@ -33,11 +33,6 @@
                 <?php endwhile; 
                 endif; ?>
 
-            
-            
-            <a href="#" class="timeline-edit__item add-icon">
-              <i class="fa fa-plus-circle " aria-hidden="true"></i>
-            </a>
         </div>
         <!--/Items-->
       </div>
