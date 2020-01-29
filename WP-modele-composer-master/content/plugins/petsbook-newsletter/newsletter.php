@@ -80,8 +80,8 @@ class Newsletter
         global $wpdb;
         // global $newsletter_db_version;
         
-        $welcome_name = 'Mr. Kapiloute';
-        $welcome_text = 'Congratulations, you just completed the LeveliKoute!';
+        $welcome_name = 'Mr. Kaloupie';
+        $welcome_text = 'Congratulations, you just completed the Leveliloupie!';
         // $installed_ver = get_option( "newsletter_db_version" );
         // $newsletter_db_version = '1.0';
         
