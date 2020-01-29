@@ -89,7 +89,7 @@
             </section>
 
             <section class="timeline-management account-general-block">
-                <div style="background-image: url('<?= get_the_post_thumbnail_url($_GET['pet']); ?>'); background-size:cover; background-position:center center; width: 200px; height: 200px;" class="timeline-management__pic"></div>
+                <div style="background-image: url('<?= get_theme_file_uri('public/images/Illu-1-2.png'); ?>'); background-size:cover; background-position:center center; width: 200px; height: 200px;" class="timeline-management__pic"></div>
 
               <div class="account-general__buttons">
                 <div class="btn-edit">

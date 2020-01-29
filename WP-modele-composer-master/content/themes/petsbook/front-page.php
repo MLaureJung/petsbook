@@ -46,6 +46,7 @@
           $args = [
             'post_type' => 'animal',
             'posts_per_page' => 6,
+            'orderby' => 'rand',
           ];
         }
 
@@ -54,6 +55,7 @@
             'post_type' => 'animal',
             'post_status' => 'publish',
             'post_per_page' => 6,
+            'orderby' => 'rand',
             'tax_query' => 
             [
               [
