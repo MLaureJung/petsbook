@@ -32,7 +32,7 @@
                         </div>
                 <?php endwhile; 
                 endif; ?>
-
+ 
         </div>
         <!--/Items-->
       </div>
