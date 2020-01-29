@@ -17,7 +17,7 @@ class Newsletter
         add_action('plugins_loaded', [$this, 'newsletter_install']);
         // add_action('after_switch_theme', [$this, 'newsletter_version']);
         // add_action('after_switch_theme', [$this, 'newsletter_index']);
-        //add_action('plugins_loaded', [$this, 'newsletter_install_data']);
+        add_action('plugins_loaded', [$this, 'newsletter_install_data']);
         add_action('plugins_loaded', [$this, 'newsletter_update_db_check']);
     }
 
@@ -88,13 +88,16 @@ class Newsletter
         // if ( $installed_ver != $newsletter_db_version)
         // {
             $table_name = $wpdb->prefix . 'newsletters';
+
+            $store_arr['newsletters_name'] = $welcome_name;
+            $store_arr['newsletters_email'] = $welcome_text;
         
             $wpdb->insert( 
-                $table_name, 
-                array( 
-                    'newsletters_name' => $welcome_text, 
-                    'newsletters_email' => $welcome_name, 
-                ) 
+                $table_name, $store_arr
+                // array( 
+                //     'newsletters_name' => $welcome_text, 
+                //     'newsletters_email' => $welcome_name, 
+                // ) 
             );
         // }
         // update_option( "newsletter_db_version", $newsletter_db_version);
@@ -105,7 +108,7 @@ class Newsletter
         global $newsletter_db_version;
         if ( get_site_option( 'newsletter_db_version' ) != $newsletter_db_version ) {
             $this->newsletter_install();
-            $this->newsletter_install_data();
+            //$this->newsletter_install_data();
         }
     }
 
