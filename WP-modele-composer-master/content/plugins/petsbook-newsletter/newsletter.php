@@ -89,16 +89,20 @@ class Newsletter
         // {
             $table_name = $wpdb->prefix . 'newsletters';
 
+            $store_arr = [];
             $store_arr['newsletters_name'] = $welcome_name;
             $store_arr['newsletters_email'] = $welcome_text;
+
+            if(!in_array([$welcome_text, $welcome_name], $store_arr)){
         
-            $wpdb->insert( 
-                $table_name, $store_arr
-                // array( 
-                //     'newsletters_name' => $welcome_text, 
-                //     'newsletters_email' => $welcome_name, 
-                // ) 
-            );
+                $wpdb->insert( 
+                    $table_name, $store_arr
+                    // array( 
+                    //     'newsletters_name' => $welcome_text, 
+                    //     'newsletters_email' => $welcome_name, 
+                    // ) 
+                );
+            }
         // }
         // update_option( "newsletter_db_version", $newsletter_db_version);
     }
@@ -125,9 +129,10 @@ class Newsletter
     {
         // à la désactivation du plugin...
         flush_rewrite_rules();
-    }
+    } 
 }
 
-$newsletters = new Newsletter();
+
+$newsletters = new Newsletter(); 
 register_activation_hook(__FILE__, [$newsletters, 'newsletters_activate']);
 register_deactivation_hook(__FILE__, [$newsletters, 'newsletters_deactivate']);
