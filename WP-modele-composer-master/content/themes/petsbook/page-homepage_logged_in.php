@@ -66,8 +66,8 @@ if (empty($_GET['type'])) {
 else {
   $args = [
     'post_type' => 'animal',
-    'posts_status' => 'publish',
-    'post_per_page' => 6,
+    'post_status' => 'publish',
+    'posts_per_page' => 6,
     'orderby' => 'rand',
     'tax_query' => 
     [
