@@ -27,7 +27,7 @@
                       <input type="hidden" name="submit_timeline_edit" value="<?php if(isset($_GET['pet'])) { echo $_GET['pet'];} ?>"/>
                       <input type="hidden" name="count_row" value="<?= $row;?>"/>
                       <div>
-                          <input type="text" placeholder="Date" class="timeline-edit__item__links__link" name="timeline_edit_date" value=<?="$date"; ?>></input>
+                          <input type="date" placeholder="Date" class="timeline-edit__item__links__link" name="timeline_edit_date" value=<?="$date"; ?>></input>
                       </div>  
                       <div>
                         <textarea name="timeline-edit__item__text" cols="30" rows="10" class="timeline-edit__item__textarea" placeholder="Description ..."><?= $texte; ?></textarea>
