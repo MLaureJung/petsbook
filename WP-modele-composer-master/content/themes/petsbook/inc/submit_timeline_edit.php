@@ -6,14 +6,13 @@ function submit_timeline_edit() {
         $date=$_POST['timeline_edit_date'];
         $description=$_POST['timeline-edit__item__text'];
         $id=$_POST['submit_timeline_edit'];
+        $row =$_POST['count_row'];
 
-
-
-        
-            //là j'update les champs de ACF 
-            update_sub_field('date', $date, $id);
-            update_sub_field('texte', $description, $id);
-
+        if($date != '' && $description != ''){
+            
+            update_sub_field( array('une_section', $row, 'date'), $date, $id );
+            update_sub_field( array('une_section', $row, 'texte'), $description, $id);
+        }
         
            
              wp_redirect(get_permalink(76) . '?pet='. $id);
