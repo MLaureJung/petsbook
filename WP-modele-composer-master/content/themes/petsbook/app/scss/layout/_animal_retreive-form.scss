@@ -38,6 +38,9 @@
                 margin-bottom: 3%;
 
                 color: darken($color-grey, 40);
+            }
+            p{
+                text-align: center;
             }           
         }
     }
@@ -102,6 +105,9 @@
                     justify-content: flex-start;
                     margin: 0;
                 }
+                p{
+                    text-align: left;
+                }
                
             }
         }
@@ -139,6 +145,7 @@
                     justify-content: center;
                     margin: 0;
                 }
+                  
             }
         }
     }  
