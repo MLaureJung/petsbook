@@ -12,6 +12,13 @@ if (!defined('WPINC')) {
 
 class Newsletter 
 {
+    public $accept_newsletter;
+
+    public function __construct()
+    {
+        add_action( 'newsletter_hook_install_newdata', 'newsletter_install_newdata' );
+    }
+
     /*-------------------------------------------------------*/
     public function newsletter_install()
     {
@@ -66,6 +73,71 @@ class Newsletter
         dbDelta($sql);
     }
 
+    /*--------------------HOOK-----------------------------------*/
+    public function newsletter_hook_install_newdata() 
+    {      
+        $this->newsletter_install_newdata();
+    }    
+       //do_action('thierry_action_hook');
+
+    // function pour ajouter les nouvelles données
+    public function newsletter_install_newdata()
+    {
+        global $wpdb;
+
+        $mail=$_POST['user__email'];
+
+        if ($mail != "" && email_exists($mail) == false) {
+            $table_name = $wpdb->prefix . 'newsletters';
+            echo 'yay';
+            // $insert_mail = "INSERT INTO $table_name (newsletters_email)
+            //                 SELECT * FROM $table_name
+            //                 WHERE NOT EXISTS (SELECT * FROM $table_name WHERE newsletters_email = $mail);";
+    
+            // $datum = $wpdb->get_results("SELECT * FROM $table_name WHERE newsletters_email = '".$welcome_name."'");
+            // print_r($datum);
+    
+            // if($wpdb->num_rows > 0) {
+            //     //Display duplicate entry error message and exit
+            //     echo 'nope';
+            //     //return or exit
+            // }
+    
+            $newdata = array(
+                'newsletters_email'=>$mail,
+            );
+
+            // On insère les données dans la DB
+            $wpdb->insert(
+                $table_name,
+                $newdata
+            );
+        }
+    }
+    
+    /*-------------------------------------------------------*/
+       //function qui recupere le mail par le footer 
+    public function newsletter_footer()
+    {
+        global $wpdb;
+        if(isset($_POST['submit_newsletter'])) {
+            //On récup les données du formulaire d'newsletter en POST
+            $footer_mail=$_POST['footer_field'];
+        }
+
+        if ($footer_mail != "" && email_exists($footer_mail) == false ) {
+            $table_name = $wpdb->prefix . 'newsletters';
+
+            $newdata = array(
+                'newsletters_email'=>$footer_mail,
+            );
+
+            $wpdb->insert(
+                $table_name,
+                $newdata
+            );
+        }
+    }
     /*-------------------------------------------------------*/
     public function newsletter_install_data() 
     {
@@ -73,7 +145,7 @@ class Newsletter
         
         if(isset($_POST['submit_inscription'])) {
             //On récup les données du formulaire d'inscription en POST
-            $mail=$_POST['user__email'];;
+            $mail=$_POST['user__email'];
 
             if(isset($_POST['user__newsletter'])) {
                 $accept_newsletter = true;
@@ -141,13 +213,13 @@ class Newsletter
             //$this->newsletter_install_data();
         }
     }
-
+    
     /*-------------------------------------------------------*/
     public function newsletters_activate()
     {
         // à l'activation du plugin...
         $this->newsletter_install();
-        $this->newsletter_install_data();
+        $this->newsletter_install_newdata();
         $this->newsletter_version();
         $this->newsletter_index();
         $this->newsletter_update_db_check();
