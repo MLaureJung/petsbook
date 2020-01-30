@@ -67,33 +67,70 @@ class Newsletter
     }
 
     /*-------------------------------------------------------*/
-    public function newsletter_install_data() {
+    public function newsletter_install_data() 
+    {
         global $wpdb;
         
+        if(isset($_POST['submit_inscription'])) {
+            //On récup les données du formulaire d'inscription en POST
+            $mail=$_POST['user__email'];;
 
-        $table_name = $wpdb->prefix . 'newsletters';
+            if(isset($_POST['user__newsletter'])) {
+                $accept_newsletter = true;
+            } else {
+                $accept_newsletter = false;
+            }
 
-        $welcome_name = 'Mr. Dziendobry';
-        $welcome_text = 'Congratulations, you just completed the Leveliloupie!';
+            if ($mail != "" && email_exists($mail) == false && $_POST['user__newsletter'] == true) {
+                $table_name = $wpdb->prefix . 'newsletters';
 
-        $datum = $wpdb->get_results("SELECT * FROM $table_name WHERE newsletters_email = '".$welcome_name."'");
-        print_r($datum);
-
-        if($wpdb->num_rows > 0) {
-            //Display duplicate entry error message and exit
-            echo 'nope';
-            //return or exit
+                $insert_mail = "INSERT INTO $table_name (newsletters_email)
+                                SELECT * FROM $table_name
+                                WHERE NOT EXISTS (SELECT * FROM $table_name WHERE newsletters_email = $mail);";
+        
+                // $datum = $wpdb->get_results("SELECT * FROM $table_name WHERE newsletters_email = '".$welcome_name."'");
+                // print_r($datum);
+        
+                // if($wpdb->num_rows > 0) {
+                //     //Display duplicate entry error message and exit
+                //     echo 'nope';
+                //     //return or exit
+                // }
+        
+                $newdata = array(
+                    'newsletters_email'=>$insert_mail,
+                );
+                //inserting a record to the database
+                $wpdb->insert(
+                    $table_name,
+                    $newdata
+                );
+            }
         }
 
-        $newdata = array(
-            'newsletters_email'=>$welcome_name,
-            'newsletters_name'=>$welcome_text,
-        );
-        //inserting a record to the database
-        $wpdb->insert(
-            $table_name,
-            $newdata
-        );
+        // $table_name = $wpdb->prefix . 'newsletters';
+
+        // $welcome_name = 'Mr. Dziendobry';
+        // $welcome_text = 'Congratulations, you just completed the Leveliloupie!';
+
+        // $datum = $wpdb->get_results("SELECT * FROM $table_name WHERE newsletters_email = '".$welcome_name."'");
+        // print_r($datum);
+
+        // if($wpdb->num_rows > 0) {
+        //     //Display duplicate entry error message and exit
+        //     echo 'nope';
+        //     //return or exit
+        // }
+
+        // $newdata = array(
+        //     'newsletters_email'=>$welcome_name,
+        //     'newsletters_name'=>$welcome_text,
+        // );
+        // //inserting a record to the database
+        // $wpdb->insert(
+        //     $table_name,
+        //     $newdata
+        // );
     }
 
     /*-------------------------------------------------------*/
