@@ -12,14 +12,14 @@ if (!defined('WPINC')) {
 
 class Newsletter 
 {
-    public $accept_newsletter;
-
     public function __construct()
     {
-        add_action( 'newsletter_hook_install_newdata', 'newsletter_install_newdata' );
+        // add_action( 'newsletter_hook_install_newdata', [$this,'newsletter_install_newdata'],1 );
+        // add_action( 'newsletter_hook_install_newdata', [$this,'newsletter_footer'],2 );
+        add_action( 'plugins_loaded', [$this,'newsletter_install']);
     }
 
-    /*-------------------------------------------------------*/
+    /*----------------------Création de la table---------------------------------*/
     public function newsletter_install()
     {
         global $wpdb;
@@ -46,7 +46,7 @@ class Newsletter
         } 
     }
 
-    /*-------------------------------------------------------*/
+    /*-------------------------Accorder les versions ------------------------------*/
     public function newsletter_version()
     {
         global $wpdb;
@@ -76,7 +76,7 @@ class Newsletter
     /*--------------------HOOK-----------------------------------*/
     public function newsletter_hook_install_newdata() 
     {      
-        $this->newsletter_install_newdata();
+        // $this->newsletter_install_newdata();
     }    
        //do_action('thierry_action_hook');
 
@@ -113,12 +113,14 @@ class Newsletter
                 $newdata
             );
         }
+        exit;
     }
     
     /*-------------------------------------------------------*/
-       //function qui recupere le mail par le footer 
+    //function qui recupere le mail par le footer 
     public function newsletter_footer()
     {
+        //do_action('newsletter_hook_install_newdata');
         global $wpdb;
         if(isset($_POST['submit_newsletter'])) {
             //On récup les données du formulaire d'newsletter en POST
@@ -137,6 +139,8 @@ class Newsletter
                 $newdata
             );
         }
+        exit;
+        
     }
     /*-------------------------------------------------------*/
     public function newsletter_install_data() 
@@ -219,7 +223,7 @@ class Newsletter
     {
         // à l'activation du plugin...
         $this->newsletter_install();
-        $this->newsletter_install_newdata();
+        //$this->newsletter_hook_install_newdata();
         $this->newsletter_version();
         $this->newsletter_index();
         $this->newsletter_update_db_check();
