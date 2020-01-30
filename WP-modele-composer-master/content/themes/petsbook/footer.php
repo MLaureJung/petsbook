@@ -5,7 +5,7 @@
   <footer class="footer">
     <!--newsletter-->
     <div class="footer-wrapper">
-      <form class="footer-newsletter">
+      <form method="POST" class="footer-newsletter">
       <input type="hidden" name="submit_newsletter" value=""/>
         <div class="footer-newsletter-wrapper">
           <h5 class="footer-newsletter__title">S'inscrire à la newsletter</h5>

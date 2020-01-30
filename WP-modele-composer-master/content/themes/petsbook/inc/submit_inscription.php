@@ -17,7 +17,8 @@ if(isset($_POST['submit_inscription'])) {
     // ici, PAS géré avec ACF :  je rajoute la mêem condition du dessus pour vérifier que la case a été cochée, par contre il faudra ajouter la connexion à la table custom avec wpdb
     if(isset($_POST['user__newsletter'])) {
         $accept_newsletter = true;
-        //do_action('newsletter_hook_install_newdata');
+        // On accroche le custom hook ici (càd seulement si la checkbox user_newsletter est cochée)
+        do_action('newsletter_hook_install_newdata');
     } else {
         $accept_newsletter = false;
     }
@@ -53,6 +54,7 @@ function auto_login($user,$pass,$redirect) {
         if ( is_wp_error($user) ){
             echo $user->get_error_message();
         }else{
+           
             wp_redirect($redirect);
             exit;
         }

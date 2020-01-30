@@ -14,8 +14,9 @@ class Newsletter
 {
     public function __construct()
     {
-        // add_action( 'newsletter_hook_install_newdata', [$this,'newsletter_install_newdata'],1 );
-        // add_action( 'newsletter_hook_install_newdata', [$this,'newsletter_footer'],2 );
+        add_action( 'newsletter_hook_install_newdata', [$this,'newsletter_install_newdata'] );
+        add_action( 'newsletter_hook_footer_newdata', [$this,'newsletter_footer_insert_newdata'] );
+        add_action( 'init', [$this, 'newsletter_footer']);
     }
 
     /*----------------------Création de la table---------------------------------*/
@@ -75,11 +76,17 @@ class Newsletter
     /*--------------------HOOK-----------------------------------*/
     public function newsletter_hook_install_newdata() 
     {      
-        // $this->newsletter_install_newdata();
+        // Vide parce qu'on s'en sert juste pour accrocher une fonction à un moment donné
     }    
-       //do_action('thierry_action_hook');
 
-    // function pour ajouter les nouvelles données
+    /*-------------------------------------------------------*/
+    public function newsletter_hook_footer_newdata()
+    {
+        // Vide parce qu'on s'en sert juste pour accrocher une fonction à un moment donné
+    }
+
+    /*-------------------------------------------------------*/
+    // Function pour ajouter les nouvelles données
     public function newsletter_install_newdata()
     {
         global $wpdb;
@@ -88,19 +95,6 @@ class Newsletter
 
         if ($mail != "" && email_exists($mail) == false) {
             $table_name = $wpdb->prefix . 'newsletters';
-            echo 'yay';
-            // $insert_mail = "INSERT INTO $table_name (newsletters_email)
-            //                 SELECT * FROM $table_name
-            //                 WHERE NOT EXISTS (SELECT * FROM $table_name WHERE newsletters_email = $mail);";
-    
-            // $datum = $wpdb->get_results("SELECT * FROM $table_name WHERE newsletters_email = '".$welcome_name."'");
-            // print_r($datum);
-    
-            // if($wpdb->num_rows > 0) {
-            //     //Display duplicate entry error message and exit
-            //     echo 'nope';
-            //     //return or exit
-            // }
     
             $newdata = array(
                 'newsletters_email'=>$mail,
@@ -112,37 +106,59 @@ class Newsletter
                 $newdata
             );
         }
-        exit;
     }
     
     /*-------------------------------------------------------*/
-    //function qui recupere le mail par le footer 
+    // Function qui recupere le mail par le footer 
     public function newsletter_footer()
-    {
-        //do_action('newsletter_hook_install_newdata');
-        global $wpdb;
+    {     
         if(isset($_POST['submit_newsletter'])) {
+            
             //On récup les données du formulaire d'newsletter en POST
-            $footer_mail=$_POST['footer_field'];
+            $footer_mail=$_POST['footer_field']; 
+
+            if ($footer_mail != "" && email_exists($footer_mail) == false) {
+
+                do_action('newsletter_hook_footer_newdata');
+            }      
         }
+    }
 
-        if ($footer_mail != "" && email_exists($footer_mail) == false ) {
-            $table_name = $wpdb->prefix . 'newsletters';
+    public function newsletter_footer_insert_newdata()
+    {
+        global $wpdb;
 
-            $newdata = array(
-                'newsletters_email'=>$footer_mail,
-            );
+        // On définit quelques variables forts pratiques
+        $footer_mail=$_POST['footer_field'];
+        $table_name = $wpdb->prefix . 'newsletters';
 
-            $wpdb->insert(
-                $table_name,
-                $newdata
-            );
-        }
-        exit;
-        
+        // verifying if the email existes in our BD with SQL demand
+        $request = $wpdb->query("SELECT `newsletters_email` FROM `$table_name` WHERE newsletters_email='". $footer_mail ."'");
+
+        // Si un mail existe déjà, redirige vers la home | Sinon insère les données dans la custom table
+        if ($request != 0) {
+            wp_redirect(home_url());
+            exit;
+        } 
+        else 
+        {
+            // On vérifie que l'input du footer ne soit pas vide
+            // S'il n'est pas vide on insère les données
+            if ($footer_mail != "") 
+            {
+                $newdata = array(
+                    'newsletters_email'=>$footer_mail,
+                );
+
+                $wpdb->insert(
+                    $table_name,
+                    $newdata
+                );
+            }
+        } 
     }
     /*-------------------------------------------------------*/
-    public function newsletter_install_data() 
+    /*public function newsletter_install_data() 
     {
         global $wpdb;
         
@@ -206,7 +222,7 @@ class Newsletter
         //     $table_name,
         //     $newdata
         // );
-    }
+    }*/
 
     /*-------------------------------------------------------*/
     public function newsletter_update_db_check() {
@@ -220,17 +236,19 @@ class Newsletter
     /*-------------------------------------------------------*/
     public function newsletters_activate()
     {
-        // à l'activation du plugin...
+        // à l'activation du plugin on exécute :
         $this->newsletter_install();
         $this->newsletter_hook_install_newdata();
+        $this->newsletter_hook_footer_newdata();
         $this->newsletter_version();
         $this->newsletter_index();
         $this->newsletter_update_db_check();
+        $this->newsletter_footer();
     }
 
     public function newsletters_deactivate()
     {
-        // à la désactivation du plugin...
+        // à la désactivation du plugin
         flush_rewrite_rules();
     } 
 }
