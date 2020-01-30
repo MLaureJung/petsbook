@@ -22,14 +22,20 @@
                       $texte = get_sub_field('texte'); ?>
                         <div class="timeline-edit__item">
                             <img src="<?= $url_img; ?>" alt="" class="timeline-edit__item__img">
+                            
+                            <form action="#" method='post' enctype="multipart/form-data">
 
-                            <div class="timeline-edit__item__links">
-                                <a href="#" class="timeline-edit__item__links__link"><?= $date; ?></a>
-                                <a href="#" class="timeline-edit__item__links__link">Supprimer</a>
-                            </div>
+                            <input type="hidden" name="submit_timeline_edit" value="<?php if(isset($_GET['pet'])) { echo $_GET['pet'];} ?>"/>
 
-                            <textarea name="timeline-edit__item__text" id="timeline-edit__item__text" cols="30" rows="10" class="timeline-edit__item__text" placeholder="Description ..."><?= $texte; ?></textarea>
-                        </div>
+                              <div class="timeline-edit__item__links">
+                                  <input type="date" class="timeline-edit__item__text" name="timeline_edit_date" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_sub_field('date',$_GET['pet']); ?>" <?php } ?> id="timeline_edit_date" ></input>
+                                  
+                                  <a href="#" class="timeline-edit__item__links__link">Supprimer</a>
+                              </div>
+                              <textarea name="timeline-edit__item__text" id="timeline_edit_text" cols="30" rows="10" class="timeline-edit__item__text" placeholder="Description ..." <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_sub_field('texte',$_GET['pet']); ?>" <?php } ?>></textarea>
+                              <input type="submit" class="validate__button" value="Enregistrer">
+                              </div>                             
+                            <form>
                 <?php endwhile; 
                 endif; ?>
  

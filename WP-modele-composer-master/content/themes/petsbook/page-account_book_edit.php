@@ -129,7 +129,7 @@
         </div>
         <div class="infos__animal__edit__paragraph" >
             <label for="book_edit_rdv"class="infos__animal__edit__paragraph__label" >Prochain rendez-vous vétérinaire</label> 
-            <input type="date" class="infos__animal__edit__paragraph__textarea" name="book_edit_rdv" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('prochain_rendez_vous_veterinaire',$_GET['pet']); ?>" <?php } ?> id="book_edit_rdv"></textarea> 
+            <input type="date" class="infos__animal__edit__paragraph__textarea" name="book_edit_rdv" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('prochain_rendez_vous_veterinaire',$_GET['pet']); ?>" <?php } ?> id="book_edit_rdv"></input> 
         
           </div>
           <input type="submit" class="validate__button" value="Enregistrer">
