@@ -143,13 +143,24 @@
 
         .button-account_user_info {
             border: none;
+        }
+
+        .validate__button_2 {
+            width: 18%;
+            font-size: 15px;
+            padding:.5rem 1rem;
+            background-color: $color-white;
+            color: darken($color-grey,35);
+            font-weight: bold;
+            border-radius: 5px;
+        }
 
             &:focus {
                 outline: none;
             }
         }
     }
-}
+
     
 
 @media (min-width: $breakpoint-large){

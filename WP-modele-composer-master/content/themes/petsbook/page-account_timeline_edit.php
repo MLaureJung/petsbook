@@ -22,6 +22,7 @@
                       $texte = get_sub_field('texte'); ?>
                         <div class="timeline-edit__item">
                             <img src="<?= $url_img; ?>" alt="" class="timeline-edit__item__img">
+                            
 
                             <form action="" method='post' enctype="multipart/form-data">
                               <input type="hidden" name="submit_timeline_edit_text_date" value="<?php if(isset($_GET['pet'])) { echo $_GET['pet'];} ?>"/>

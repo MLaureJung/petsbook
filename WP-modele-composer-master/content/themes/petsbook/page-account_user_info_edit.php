@@ -25,7 +25,7 @@ $current_user = wp_get_current_user(); ?>
   <input type="hidden" name="update_data_user" value=""/>
 
   <div class="infos__animal__edit__paragraph" > 
-        <label for="file"class="infos__animal__edit__paragraph__label">Photo de profile</label> 
+        <label for="file"class="infos__animal__edit__paragraph__label">Photo de profil</label> 
         <input id="file" name="update_data_user" class="input-file" type="file"> 
     </div>
 
