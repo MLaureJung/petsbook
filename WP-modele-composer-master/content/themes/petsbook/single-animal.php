@@ -1,5 +1,8 @@
 <?php get_header(); ?>
-<!-- Ici je créé 4 sections qui correspondent à une étape (une photo) . Ces sections seront répétées à l'infini (autant de fois qu'il y aura de photos) -->
+<!-- Ici je créé 4 sections qui correspondent à une étape (une photo) . Ces sections seront répétées à l'infini (autant de fois qu'il y aura de photos) 
+Pour cela j'utilise la fonction repeater de ACF. Chaque section est donc un repeater et chaque section comprend 3 subfield (photo, date, texte).
+
+L'apparition des éléments se gère grâce aux différentes class par exemple scroll_fallen_objects : avec scrollex on addClass scroll_fallen_objects_animate quand la div entre dans l'écran ce qui la fait apparaitre et tomber puis on removeClass scroll_fallen_objects_animate quand la div sort de l'écran ce qui la fait disparaitre (voir js et css)-->
     
 <div id="timeline-glimpse__container">  
        <div class="timeline-glimpse">
@@ -46,12 +49,10 @@
           </section>
 
           <?php 
+          //On va incrémenter $i de 0 à 4 en boucle afin d'alterner les sections
               $i=0;
               if( have_rows('une_section') ): //https://www.advancedcustomfields.com/resources/have_rows/
-                while ( have_rows('une_section') ) : the_row();
-                  $url_img = get_sub_field('photo');
-                  $date = get_sub_field('date');
-                  $texte = get_sub_field('texte'); ?>
+                while ( have_rows('une_section') ) : the_row();?>
 
                   <!--Section une -->   
                   <?php if ($i == 0) { ?>
@@ -61,13 +62,14 @@
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__tree__3"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__tree__4"></div>
                       <div class="timeline-glimpse__section__element scroll_right_side_objects" data-speed="10" id="element__hedgehog__1"></div>
+                      <!--data-speed correspond au coefficient de vitesse de déplacement de l'élement par rapport à la valeur retournée par scrollex (voir progress dans le js)  -->
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__1"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__2"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__3"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__tree__5"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__4"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__5"></div>
-                      <div class="timeline-glimpse__section__element" id="element__flower__6"></div>
+                      <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__6"></div>
                       <div class="timeline-glimpse__section__element scroll_expand_objects" id="element__pond__1"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__7"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__8"></div>
@@ -113,7 +115,11 @@
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__37"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__38"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__tree__8"></div>
-                      <div class="timeline-glimpse__section__element scroll_fallen_objects sequence_png" data-height="74" data-step="7" data-animation_speed="150" id="element__fox__1"></div>
+                      <div class="timeline-glimpse__section__element scroll_fallen_objects sequence_png" data-height="74" data-step="7" data-animation_speed="150" id="element__fox__1"></div> 
+                      <!-- l'animation se fait grâce à des sprite sheets (une seule image avec toutes les étapes de l'animation l'une en dessous de l'autre: https://s3-us-west-2.amazonaws.com/s.cdpn.io/29123/preloader2.png) le principe est donc de faire défiler cette image en background-position-y dans une div qui a pour dimension la hauteur et largeur d'une étape.
+                      data-height correspond à la hauteur d'une étape de l'animation (par exemple l'abeille a 2 étapes, une étape avec les ailes vers le haut et une étape avec les ailes vers le bas) 
+                      data-step correspond au nombre d'étapes
+                      data-animation-speed correspond à la vitesse d'animation (durée de chaque étape en ms)-->
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__39"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__40"></div>
                       <div class="timeline-glimpse__section__element scroll_fallen_objects" id="element__flower__41"></div>
