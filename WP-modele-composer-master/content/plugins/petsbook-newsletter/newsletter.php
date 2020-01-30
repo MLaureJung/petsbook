@@ -26,7 +26,7 @@ class Newsletter
         //global $newsletter_db_version;
 
         //$newsletter_db_version = '1.0';
-        $table_name = $wpdb->prefix . "newsletters";
+        $table_name = $wpdb->prefix . "newsletters"; // = wp_newsletters
         $charset_collate = $wpdb->get_charset_collate();
         //$installed_ver = get_option( "newsletter_db_version" );
     
@@ -122,7 +122,7 @@ class Newsletter
                 do_action('newsletter_hook_footer_newdata');
             }      
         }
-    }
+    } 
 
     public function newsletter_footer_insert_newdata()
     {
