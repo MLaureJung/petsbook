@@ -6,7 +6,7 @@
 
           <div class='human__profiles'>
               <a href="#"><img class='human__profiles__image'
-              src="https://source.unsplash.com/700x700/?faces" alt=""></a> 
+              src="<?= get_field('photo_de_profil', 'user_' . $current_user->ID); ?>" alt=""></a> 
           </div>
           <h4 class='human__profiles__name'><?php $current_user = wp_get_current_user(); echo $current_user->first_name . " " . $current_user->last_name; ?></h4>
   </div>
@@ -19,7 +19,7 @@
 <!-- /Section pet profile-->
 
 <div class="main-items-l">
-<div class="info-animal-wrapper">
+<div class="info-animal-wrapper ">
 <section class="form__infos__animal">
   <h1 class="form__infos__animal__title" >Informations sur l'animal</h1>
   

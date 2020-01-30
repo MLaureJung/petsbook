@@ -5,23 +5,7 @@
     overflow-x: hidden;
     width :100vw;
     /* Return on top */
-    #returnOnTop {
-        background: url('../assets/images/return_on_top3.png') no-repeat;
-        background-size: cover;
-        position: absolute;
-        bottom: 290px;
-        right: 1%;
-        width: 60px;
-        height: 60px ;
-        animation: bounce 2s infinite;
-        cursor: pointer;
-        display: none;
-        filter: brightness(150%);
-        height: 48px;
-        position: fixed;
-        right: 1%;
-        width: 48px;
-    }
+    
 }
 .timeline-glimpse {
     background-color: $color-green;
@@ -91,16 +75,21 @@
         top: calc(50% - 55px);
         left: calc(50% - 35px);
     }
+    //---------------------------------------------------------------------------------------------------------------------------------
+    //class pour les objets tombant du ciel (en mode non encore apparu)
     .scroll_fallen_objects {
         opacity: 0;
         transform: translate3d(0, -100px, 0);
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; //ici on joue sur la transition de l'opacity et du transform
 
     }
+    //class pour les objets tombant du ciel (en mode apparu)
     .scroll_fallen_objects_animate {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+    //-----------------------------------------------------------------------------------------------------------------------------------
+    //ici c'est pareil qu'au dessus, sauf que les éléments apparaissent d'en dessous. 
     .timeline-glimpse__section__pic {
         opacity: 0;
         transform: translate3d(0, 100px, 0);
@@ -111,7 +100,8 @@
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
-
+    //----------------------------------------------------------------------------------------------------------------------------------------
+    //class pour les éléments de type mare. On veut que les mares apparaissent en grandissant. Comme une goutte d'eau qui se transforment en mare. Dans le fichier js on joue sur addClass et removeClass 
     .scroll_expand_objects {
         opacity: 0;
         transform : scale(0.5, 0.5);
@@ -121,7 +111,8 @@
         opacity: 1;
         transform: scale(1,1);
     }
-
+    //---------------------------------------------------------------------------------------------------------------------------------------------------
+    //ici on veut que la porte se ferme après le passage du raccoon. On joue également sur addClass et removeClass dans js. 
     .scroll_door_open {
         margin-left: 60px!important;
         transition: all 0.5s ease-in-out; 
@@ -132,6 +123,23 @@
     }
 }
 
+#returnOnTop {
+    background: url('../assets/images/return_on_top3.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 290px;
+    right: 1%;
+    width: 60px;
+    height: 60px ;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    display: none;
+    filter: brightness(150%);
+    height: 48px;
+    position: fixed;
+    right: 1%;
+    width: 48px;
+}
 #timeline-glimpse__overview {
     position: absolute;
     top: 0;
@@ -142,6 +150,7 @@
     }
 }
 
+//on utilise pas de scroll pour l'arrivée du raccoon donc pas besoin de js , on utilise les règles keyframes from --> to pour l'animation puisque le raccoon sera lancé directement au chargement de la page. 
 @keyframes raccoon_appear {
     from {
       opacity: 0; 
@@ -171,5 +180,11 @@
             right: -100%;
         }
     }
+    .arrow-top-edit-timeline {
+        #returnOnTop {
+            right: -100%;
+        }
+    }    
+    
 }
   
