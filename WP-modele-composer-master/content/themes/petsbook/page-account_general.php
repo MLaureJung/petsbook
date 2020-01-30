@@ -7,7 +7,7 @@
     <div class="human__profiles_elements">  
     <div class='human__profiles'>
         <a href="#"><img class='human__profiles__image'
-        src="https://source.unsplash.com/user/jayceexie/aH9Uskj8XTU/200x200" alt=""></a> 
+        src="<?= get_field('photo_de_profil', 'user_' . $current_user->ID); ?>" alt=""></a> 
     </div>
         <h4 class='human__profiles__name'><?php $current_user = wp_get_current_user(); echo $current_user->first_name . " " . $current_user->last_name; ?></h4>  
         <a href="<?php echo site_url('/account_user_info/')?>" class="top-info__user__edit-profile">Modifier mon profil</a>          
@@ -72,8 +72,11 @@
                 <h3>Carnet de santé</h3></label>
                     <ul>
                         <li>Dernière vaccination</li>
-                        <li>Contact vétérinaire</li>
+                        <li><?= get_field('dernier_vaccin', $_GET['pet']); ?></li>
+                        <li>Coordonnees vétérinaire</li>
+                        <li><?= get_field('coordonnees_du_veterinaire', $_GET['pet']); ?></li>
                         <li>Antécedants medicaux</li>
+                        <li><?= get_field('antecedents_medicaux', $_GET['pet']); ?></li>
                         
                     </ul>
 

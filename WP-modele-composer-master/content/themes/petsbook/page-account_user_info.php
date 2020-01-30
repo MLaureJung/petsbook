@@ -8,10 +8,9 @@ $current_user = wp_get_current_user(); ?>
 
       <div class='human__profiles'>
           <a href="#"><img class='human__profiles__image'
-          src="https://source.unsplash.com/700x700/?faces" alt=""></a> 
+          src="<?= get_field('photo_de_profil', 'user_' . $current_user->ID); ?>" alt=""></a> 
       </div>
       <h4 class='human__profiles__name'><?php echo $current_user->first_name;?></h4>
-      <a href="#" class="top-info__user__edit-profile">Modifier ma photo de profil</a> 
 </div>
 
 </section>   
@@ -20,7 +19,7 @@ $current_user = wp_get_current_user(); ?>
 <div class="main-items-l">
 <div class="info-animal-wrapper user_infos-wrapper">
 <section class="form__infos__animal">
-  <h1 class="form__infos__animal__title" >Titre</h1>
+  <h1 class="form__infos__animal__title" >Vos Informations</h1>
   
   <div class="form__pet__infos__edit infos-pet-edit user_infos">
     <div class="form__pet__infos__animal">
@@ -55,7 +54,7 @@ $current_user = wp_get_current_user(); ?>
 </div>
 
   <div class="validate validate-account_user_info">     
-      <a href="<?php echo site_url('/account_user_info_edit/')?>" class="validate__button button-account_user_info">Modifier</a>   
+      <a href="<?php echo site_url('/account_user_info_edit/')?>" class="validate__button_2 button-account_user_info">Modifier</a>   
   </div>
 </section>
 </div>
