@@ -245,4 +245,16 @@
             font-size: 2rem;
         } 
     }
+    .navbar-collapse {
+        background-color: $color-grey;
+        margin: 0 -5.499%;
+        height: 22rem;
+
+        @media(min-width : $breakpoint-large) {
+            background-color: transparent;
+            margin: 0;
+            height: initial;
+
+        }
+    }
 }
