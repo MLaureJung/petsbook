@@ -394,7 +394,7 @@
     }
    
 }
-
+// ici on gère tous les keyframes from --> to des éléments de la section d'intro, c'est à dire tous les élements qui apparaissent dès le chargement de la page. Pas besoin donc de scrollex.
 @keyframes mountains_appear {
     from {
       opacity: 0; 
