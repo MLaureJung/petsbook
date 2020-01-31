@@ -44,6 +44,7 @@
                 border: none;
                 background-color: $color-white;
                 color: darken($color-grey, 40);
+                text-align: center;
 
                 &:focus {
                     outline: none;
@@ -60,7 +61,6 @@
 
                 border: none;
                 background-color: $color-white;
-                resize: none;
                 color: darken($color-grey, 40);
 
                 &:focus {
@@ -220,7 +220,6 @@
                     width: 100%;
                     margin-bottom: 8%;
 
-                    resize: none;
                     background-color: darken($color-green, 10);
                     background-color: $color-white;
 
@@ -303,7 +302,20 @@
                 }
             }
         }
-    }     
+    }  
+    
+    
+    .spec-bookedit {
+
+        &__wrap {
+            
+            .infos__animal__edit__paragraph {   
+                input {
+                    text-align: left;
+                }
+            }
+        }
+    }
     
     .book-edit__general-infos {
         width: 50%;
@@ -317,3 +329,4 @@
         border-left: 1px solid $color-beige;
     }
 }
+
