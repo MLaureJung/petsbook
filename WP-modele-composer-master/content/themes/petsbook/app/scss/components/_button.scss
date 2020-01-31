@@ -18,38 +18,47 @@
 .form-connection__button{
        
     border-style: none;
-    border: 2px solid;
+    border: none;
     border-radius: 5px;
-    font-size: $font-size-text-m;
     background-color :darken($color-grey, 25);
     margin: 1rem 0;
-    padding:0.5rem 0.5rem;
+    padding:0.5rem 1rem;
     color: $color-white;
-}
-@media (min-width: $breakpoint-large) {
-    .form-contact__button{
+    font-weight: bold;
 
-    }
+    &:hover {
+        transform: scale(1.1);
+        transition: all .2s ease-in-out; 
+    }  
 }
+// @media (min-width: $breakpoint-large) {
+//     .form-contact__button{
+
+//     }
+// }
 
 //inscription
 .user-informations{
-&__signup{
-    display: flex;
-    flex-direction: column;
-    &__submit{
-       
-        margin:2em auto 3em auto;
-        background-color :darken($color-grey, 25);
-        border-radius: 5px;
-        font-size: $font-size-text-m;
-        padding:0.5rem 0.5rem;
-        color: $color-white;
-        border: none;
+
+    &__signup{
+        display: flex;
+        flex-direction: column;
+        &__submit{
         
-       
+            margin:2em auto 3em auto;
+            background-color :darken($color-grey, 25);
+            border-radius: 5px;
+            padding:0.5rem 1rem;
+            color: $color-white;
+            border: none;
+            font-weight: bold;
+            
+            &:hover {
+                transform: scale(1.1);
+                transition: all .2s ease-in-out; 
+            }  
+        }
     }
-  }
 }
 
 .btn-edit{

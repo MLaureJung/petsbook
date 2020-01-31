@@ -22,7 +22,7 @@
           -->
 
           <div>
-            <input class="form-connection__button" type="submit"  value="Je me connecte"/>
+            <input class="form-connection__button" type="submit"  value="Me connecter"/>
           </div>
         </form>
       </div>
