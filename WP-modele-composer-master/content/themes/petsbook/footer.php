@@ -26,7 +26,7 @@
       
     </div>
 
-    <div class="footer-copyrights">Copyright @2020</div> 
+    <div class="footer-copyrights">Copyright @<?= date('Y'); ?></div> 
    
   </footer>
   <!--/FOOTER-->
