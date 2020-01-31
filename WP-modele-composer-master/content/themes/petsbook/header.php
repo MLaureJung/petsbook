@@ -54,7 +54,7 @@
 
       <div class="right-element">
         <?php if(is_user_logged_in()): ?>
-          <a href="#" class="header-nav__items__right__part__link"><i class="fa fa-bell" aria-hidden="true"></i></a>
+          <!-- <a href="#" class="header-nav__items__right__part__link"><i class="fa fa-bell" aria-hidden="true"></i></a> -->
         <?php endif; ?>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars" aria-hidden="true"></i>
