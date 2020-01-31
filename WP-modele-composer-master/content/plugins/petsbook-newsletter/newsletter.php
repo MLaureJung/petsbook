@@ -93,7 +93,7 @@ class Newsletter
 
         $mail=$_POST['user__email'];
 
-        if ($mail != "" && email_exists($mail) == false) {
+        if ($mail != "" && email_exists($mail) == false && is_email($mail)) {
             $table_name = $wpdb->prefix . 'newsletters';
     
             $newdata = array(
@@ -144,7 +144,7 @@ class Newsletter
         {
             // On vérifie que l'input du footer ne soit pas vide
             // S'il n'est pas vide on insère les données
-            if ($footer_mail != "") 
+            if ($footer_mail != "" && is_email($footer_mail)) 
             {
                 $newdata = array(
                     'newsletters_email'=>$footer_mail,
