@@ -24,6 +24,7 @@
 
     &__edit{
         padding-bottom: 3%;
+        flex-wrap: wrap;
 
         .infos__animal__edit__paragraph{
 
@@ -116,11 +117,12 @@
         flex-direction: column;
         align-items:center;
         justify-content:center;
+        width: 100%;
 
         margin:1%;
         &__button{
             margin-bottom:2%;
-            width: 50%;
+            width: 80%;
             padding:.5rem 1rem;
             background-color: $color-white;
             color: darken($color-grey,35);
@@ -168,11 +170,16 @@
     .info-animal-wrapper {
         border-radius: 18% 37% / 44% 44%;
         padding: 0.01rem 0;
-        margin: 5% 7%;
+        margin: 0% 7%;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 5%;
         width: 60%;
         background-color: $color-green;
+    }
+
+    .user-infos-wrap {
+        margin-top: 5%;
     }
 
     .form__infos__animal{
@@ -258,10 +265,10 @@
 
         .validate{
             flex-direction:row;
-            justify-content: space-between;
+            justify-content: space-evenly;
         
             &__button{
-                width: 108%;
+                width: 35%;
                 font-size: 15px;
             }   
             &__button_2 {

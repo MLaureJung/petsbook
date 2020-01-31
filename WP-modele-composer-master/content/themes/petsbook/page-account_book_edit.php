@@ -131,17 +131,18 @@
             <label for="book_edit_rdv"class="infos__animal__edit__paragraph__label" >Prochain rendez-vous vétérinaire</label> 
             <input type="date" class="infos__animal__edit__paragraph__textarea" name="book_edit_rdv" <?php if(!isset($_GET['pet'])){ ?>value="" <?php } else { ?> value="<?= get_field('prochain_rendez_vous_veterinaire',$_GET['pet']); ?>" <?php } ?> id="book_edit_rdv"></input> 
         
-          </div>
-          <input type="submit" class="validate__button" value="Enregistrer">
-          
+        </div>           
+      </div>
+
+      <div class="validate">
+      
+        <input type="submit" class="validate__button" value="Enregistrer">
+        <a href="<?= get_permalink(69);?>?pet=<?= $_GET['pet']; ?>" class="validate__button">Infos générales</a>
+        <!--<a href="<?= get_permalink(72);?>?pet=<?= $_GET['pet']; ?>"class="validate__button">Voir carnet de santé</a>-->
+        
       </div>
     </form>
-    <div class="validate">
-      
-        <a href="<?= get_permalink(72);?>?pet=<?= $_GET['pet']; ?>"class="validate__button">Voir carnet de santé</a>
-        <a href="<?= get_permalink(69);?>?pet=<?= $_GET['pet']; ?>" class="validate__button">Infos générales</a>
-      
-    </div>
+
   </section>
   </div>
 </div>

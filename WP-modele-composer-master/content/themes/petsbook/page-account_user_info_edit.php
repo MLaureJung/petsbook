@@ -16,7 +16,7 @@ $current_user = wp_get_current_user(); ?>
 <!-- /Section pet profile-->
 
 <div class="main-items-l">
-<div class="info-animal-wrapper">
+<div class="info-animal-wrapper user-infos-wrap">
 <section class="form__infos__animal">
   <h1 class="form__infos__animal__title" >Vos informations</h1>
   
