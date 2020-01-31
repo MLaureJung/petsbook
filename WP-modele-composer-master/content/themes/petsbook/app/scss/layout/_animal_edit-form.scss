@@ -282,6 +282,14 @@
             }
         }
 
+        .three_btns {
+            justify-content: space-between;
+
+            .three_btn {
+                width: 30%;
+            }
+        }
+
         .validate-account_user_info {
             flex-direction:row;
             justify-content:center;

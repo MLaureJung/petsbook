@@ -94,14 +94,14 @@
     </div>
     
 
-  <div class="validate">
+  <div class="validate three_btns">
    
 
-      <a href="<?= get_permalink(69);?>?pet=<?= $_GET['pet']; ?>"class="validate__button">Infos générales</a>
+      <a href="<?= get_permalink(69);?>?pet=<?= $_GET['pet']; ?>"class="validate__button three_btn">Infos générales</a>
 
-      <input type="submit" value="Enregistrer" class="validate__button"/>
+      <input type="submit" value="Enregistrer" class="validate__button three_btn"/>
    
-      <a href="<?= get_permalink(72);?>?pet=<?= $_GET['pet']; ?>" class="validate__button">Carnet de santé</a>
+      <a href="<?= get_permalink(72);?>?pet=<?= $_GET['pet']; ?>" class="validate__button three_btn">Carnet de santé</a>
 
     
   </div>
