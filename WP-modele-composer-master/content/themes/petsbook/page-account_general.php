@@ -1,3 +1,5 @@
+<?php if(is_user_logged_in()) : ?>
+
 <?php get_header(); ?>
 <main class="main">
 
@@ -110,3 +112,11 @@
    
   </main>
 <?php get_footer(); ?>
+<?php else : ?>
+  <?php  
+    global $wp_query;
+    $wp_query->set_404();
+    status_header( 404 );
+    get_template_part( 404 ); exit();
+  ?>
+<?php endif; ?> 

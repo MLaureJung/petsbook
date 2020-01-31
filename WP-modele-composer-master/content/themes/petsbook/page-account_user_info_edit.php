@@ -1,3 +1,4 @@
+<?php if(is_user_logged_in()) : ?>
 <?php get_header();
 $current_user = wp_get_current_user(); ?>
 <section class="photos_profiles">
@@ -77,4 +78,12 @@ $current_user = wp_get_current_user(); ?>
 </section>
 </div>
 </div>
-    <?php get_footer();?>
+<?php get_footer();?>
+<?php else : ?>
+  <?php  
+    global $wp_query;
+    $wp_query->set_404();
+    status_header( 404 );
+    get_template_part( 404 ); exit();
+  ?>
+<?php endif; ?> 
