@@ -39,7 +39,6 @@
               
               <div class="user-informations__signup">
                  <input type="submit" value="Je m'inscris" class="user-informations__signup__submit"/>
-
               </div> 
 
             </form>

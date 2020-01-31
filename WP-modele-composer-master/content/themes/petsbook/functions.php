@@ -16,10 +16,9 @@ require ('inc/submit_ajout_animal.php');
 
 require ('inc/update_data_user.php');
 
-require ('inc/custom_bdd.php');
-
 require ('inc/customizer.php');
 
 require ('inc/submit_book_animal.php');
 
 require ('inc/submit_timeline_edit.php');
+
