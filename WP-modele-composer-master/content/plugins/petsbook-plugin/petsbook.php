@@ -51,7 +51,8 @@ public function petsbook_register_cpt_animal()
             'editor',
             'excerpt',
             'thumbnail',
-            'custom-fields'
+            'custom-fields',
+            'author'
         ],
         'show_in_rest' => true
         
