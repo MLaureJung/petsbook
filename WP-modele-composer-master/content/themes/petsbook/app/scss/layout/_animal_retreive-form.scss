@@ -105,12 +105,14 @@
                     justify-content: flex-start;
                     margin: 0;
                 }
-                p{
+
+                p {
                     text-align: left;
-                }
-               
+                } 
             }
+            
         }
+        
 
         .validate{
             flex-direction:row;
@@ -149,6 +151,15 @@
             }
         }
     }  
+    .user_infos {
+
+        .form__pet__infos__animal{
+    
+            p {
+                text-align: center;
+            }
+        }
+    }
     
     .info-glimpse__general-infos {
         width: 50%;
@@ -184,9 +195,16 @@
 
 .user_infos {
 
-    .form__pet__infos__animal__title {
-        display: flex;
-        justify-content: center;
+    .form__pet__infos__animal{
+
+        &__title {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__user {
+            text-align: center;
+        }
     }
 }
 

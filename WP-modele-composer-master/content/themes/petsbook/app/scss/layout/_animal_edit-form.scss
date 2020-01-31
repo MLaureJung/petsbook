@@ -155,13 +155,14 @@
             color: darken($color-grey,35);
             font-weight: bold;
             border-radius: 5px;
-        }
 
-            &:focus {
-                outline: none;
-            }
+            &:hover {
+                transform: scale(1.1);
+                transition: all .2s ease-in-out; 
+            }  
         }
     }
+}
 
     
 
