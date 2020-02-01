@@ -23,8 +23,12 @@ if(isset($_POST['submit_inscription'])) {
         $accept_newsletter = false;
     }
 
+    // On nettoie le mail pour éviter les charactères "illégaux" (ex : (), /, *, etc ...)
+    //https://www.w3schools.com/php/filter_validate_email.asp
+    $mail = filter_var($mail, FILTER_SANITIZE_EMAIL);
+
     //On vérifie que les champs ne sont pas vides et que le mai  n'existe pas déjà
-	if ($mail != "" && $mot_de_passe != "" && $prenom != "" && $nom != "" &&   email_exists($mail) == false && is_email($mail)){
+	if ($mail != "" && $mot_de_passe != "" && $prenom != "" && $nom != "" &&   email_exists($mail) == false && is_email($mail) && filter_var($mail, FILTER_VALIDATE_EMAIL)){
 		$user_id = wp_create_user($mail , $mot_de_passe, $mail); //On créé l'utilisateur
 
         //On ajoute les données de l'utilisateur
