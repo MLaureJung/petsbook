@@ -17,6 +17,9 @@ class petsbook
         add_action('init', [$this, 'petsbook_register_taxonomies']);
         add_action('init', [$this, 'petsbook_register_cpt_team']);
         add_action('init', [$this, 'petsbook_register_team_taxonomy']);
+
+        // On l'accroche au hook du menu
+        add_action('admin_menu', [$this, 'petsbook_remove_capability']);
     }
 
     /*----------------------CPT ANIMAL---------------------------*/
@@ -154,6 +157,7 @@ class petsbook
         register_post_type('team', $args);
     }
 
+    /*---------------------------------------------------*/
     public function petsbook_register_team_taxonomy()
     {
             $labels=[
@@ -193,6 +197,17 @@ class petsbook
         
     }
 
+    /*---------------------------------------------------*/
+    public function petsbook_remove_capability()
+    {
+        // Si l'utilisateur n'est pas administrateur, on enlève de la barre de menu notre post_type 'team'
+        // edit.php?post_type = nom-du-cpt est le lien obtenu en bas à gauche du Back Office 
+        // https://wordpress.stackexchange.com/questions/28782/possible-to-hide-custom-post-type-ui-menu-from-specific-user-roles
+        if( !current_user_can( 'administrator' ) ):
+            remove_menu_page( 'edit.php?post_type=team' );
+        endif;
+    }
+
     /*----------------------PLUG ACTIV/DEACTIV---------------------------*/
     public function petsbook_activate()
     {
@@ -202,6 +217,7 @@ class petsbook
         $this->petsbook_register_taxonomies();
         $this->petsbook_register_cpt_team();
         $this->petsbook_register_team_taxonomy();
+        $this->petsbook_remove_capability();
     }
     public function petsbook_deactivate()
     {
