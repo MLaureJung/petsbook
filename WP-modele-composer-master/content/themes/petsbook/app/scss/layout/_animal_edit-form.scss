@@ -24,6 +24,7 @@
 
     &__edit{
         padding-bottom: 3%;
+        flex-wrap: wrap;
 
         .infos__animal__edit__paragraph{
 
@@ -43,6 +44,7 @@
                 border: none;
                 background-color: $color-white;
                 color: darken($color-grey, 40);
+                text-align: center;
 
                 &:focus {
                     outline: none;
@@ -59,7 +61,6 @@
 
                 border: none;
                 background-color: $color-white;
-                resize: none;
                 color: darken($color-grey, 40);
 
                 &:focus {
@@ -116,11 +117,12 @@
         flex-direction: column;
         align-items:center;
         justify-content:center;
+        width: 100%;
 
         margin:1%;
         &__button{
             margin-bottom:2%;
-            width: 50%;
+            width: 80%;
             padding:.5rem 1rem;
             background-color: $color-white;
             color: darken($color-grey,35);
@@ -153,13 +155,14 @@
             color: darken($color-grey,35);
             font-weight: bold;
             border-radius: 5px;
-        }
 
-            &:focus {
-                outline: none;
-            }
+            &:hover {
+                transform: scale(1.1);
+                transition: all .2s ease-in-out; 
+            }  
         }
     }
+}
 
     
 
@@ -168,12 +171,16 @@
     .info-animal-wrapper {
         border-radius: 18% 37% / 44% 44%;
         padding: 0.01rem 0;
-        margin: 0 7%;
+        margin: 0% 7%;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 5%;
         width: 60%;
         background-color: $color-green;
+    }
+
+    .user-infos-wrap {
+        margin-top: 5%;
     }
 
     .form__infos__animal{
@@ -214,7 +221,6 @@
                     width: 100%;
                     margin-bottom: 8%;
 
-                    resize: none;
                     background-color: darken($color-green, 10);
                     background-color: $color-white;
 
@@ -259,10 +265,10 @@
 
         .validate{
             flex-direction:row;
-            justify-content: space-between;
+            justify-content: space-evenly;
         
             &__button{
-                width: 108%;
+                width: 35%;
                 font-size: 15px;
             }   
             &__button_2 {
@@ -273,6 +279,14 @@
                 color: darken($color-grey,35);
                 font-weight: bold;
                 border-radius: 5px;
+            }
+        }
+
+        .three_btns {
+            justify-content: space-between;
+
+            .three_btn {
+                width: 30%;
             }
         }
 
@@ -289,7 +303,20 @@
                 }
             }
         }
-    }     
+    }  
+    
+    
+    .spec-bookedit {
+
+        &__wrap {
+            
+            .infos__animal__edit__paragraph {   
+                input {
+                    text-align: left;
+                }
+            }
+        }
+    }
     
     .book-edit__general-infos {
         width: 50%;
@@ -303,3 +330,4 @@
         border-left: 1px solid $color-beige;
     }
 }
+

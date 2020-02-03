@@ -9574,7 +9574,8 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     margin-bottom: 4%; }
   .form__infos__animal__edit {
-    padding-bottom: 3%; }
+    padding-bottom: 3%;
+    flex-wrap: wrap; }
     .form__infos__animal__edit .infos__animal__edit__paragraph label {
       margin-top: 1%;
       font-weight: 600; }
@@ -9586,7 +9587,8 @@ h1, h2, h3, h4, h5 {
       margin-bottom: 3%;
       border: none;
       background-color: #ffffff;
-      color: #877d82; }
+      color: #877d82;
+      text-align: center; }
       .form__infos__animal__edit .infos__animal__edit__paragraph input:focus {
         outline: none; }
     .form__infos__animal__edit .infos__animal__edit__paragraph textarea {
@@ -9596,7 +9598,6 @@ h1, h2, h3, h4, h5 {
       margin-right: auto;
       border: none;
       background-color: #ffffff;
-      resize: none;
       color: #877d82; }
       .form__infos__animal__edit .infos__animal__edit__paragraph textarea:focus {
         outline: none; }
@@ -9631,10 +9632,11 @@ h1, h2, h3, h4, h5 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     margin: 1%; }
     .form__infos__animal .validate__button {
       margin-bottom: 2%;
-      width: 50%;
+      width: 80%;
       padding: .5rem 1rem;
       background-color: #ffffff;
       color: #948a8f;
@@ -9657,19 +9659,22 @@ h1, h2, h3, h4, h5 {
       color: #948a8f;
       font-weight: bold;
       border-radius: 5px; }
-    .form__infos__animal .validate-account_user_info:focus {
-      outline: none; }
+      .form__infos__animal .validate-account_user_info .validate__button_2:hover {
+        transform: scale(1.1);
+        transition: all .2s ease-in-out; }
 
 @media (min-width: 992px) {
   .info-animal-wrapper {
     border-radius: 18% 37% / 44% 44%;
     padding: 0.01rem 0;
-    margin: 0 7%;
+    margin: 0% 7%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
     width: 60%;
     background-color: #7db995; }
+  .user-infos-wrap {
+    margin-top: 5%; }
   .form__infos__animal {
     margin: 1.3% 2.5%;
     padding: 3% 10%;
@@ -9696,7 +9701,6 @@ h1, h2, h3, h4, h5 {
         margin: 0;
         width: 100%;
         margin-bottom: 8%;
-        resize: none;
         background-color: #5ca77a;
         background-color: #ffffff; }
         .form__infos__animal__edit .infos__animal__edit__paragraph textarea:focus {
@@ -9723,9 +9727,9 @@ h1, h2, h3, h4, h5 {
           margin-bottom: 8%; }
     .form__infos__animal .validate {
       flex-direction: row;
-      justify-content: space-between; }
+      justify-content: space-evenly; }
       .form__infos__animal .validate__button {
-        width: 108%;
+        width: 35%;
         font-size: 15px; }
       .form__infos__animal .validate__button_2 {
         width: 18%;
@@ -9735,6 +9739,10 @@ h1, h2, h3, h4, h5 {
         color: #948a8f;
         font-weight: bold;
         border-radius: 5px; }
+    .form__infos__animal .three_btns {
+      justify-content: space-between; }
+      .form__infos__animal .three_btns .three_btn {
+        width: 30%; }
     .form__infos__animal .validate-account_user_info {
       flex-direction: row;
       justify-content: center; }
@@ -9742,6 +9750,8 @@ h1, h2, h3, h4, h5 {
         border: none; }
         .form__infos__animal .validate-account_user_info .button-account_user_info:focus {
           outline: none; }
+  .spec-bookedit__wrap .infos__animal__edit__paragraph input {
+    text-align: left; }
   .book-edit__general-infos {
     width: 50%;
     padding-right: 8%; }
@@ -9811,8 +9821,7 @@ h1, h2, h3, h4, h5 {
     .form__pet__infos__edit {
       font-size: 1.3rem;
       display: flex;
-      margin-top: 4%;
-      align-items: center; }
+      margin-top: 4%; }
       .form__pet__infos__edit .form__pet__infos__animal__title {
         display: flex;
         justify-content: flex-start;
@@ -9823,7 +9832,7 @@ h1, h2, h3, h4, h5 {
         justify-content: flex-start;
         margin: 0; }
       .form__pet__infos__edit .form__pet__infos__animal p {
-        text-align: center; }
+        text-align: left; }
     .form__pet__infos .validate {
       flex-direction: row;
       justify-content: space-between; }
@@ -9846,6 +9855,8 @@ h1, h2, h3, h4, h5 {
           display: flex;
           justify-content: center;
           margin: 0; }
+  .user_infos .form__pet__infos__animal p {
+    text-align: center; }
   .info-glimpse__general-infos {
     width: 50%;
     padding-right: 8%; }
@@ -9871,8 +9882,16 @@ h1, h2, h3, h4, h5 {
   display: flex;
   justify-content: center; }
 
+.user_infos .form__pet__infos__animal__user {
+  text-align: center; }
+
 .user_infos-wrapper {
   margin-top: 5%; }
+
+input {
+  border: none; }
+  input:focus {
+    outline: none; }
 
 .footer {
   width: 100vw;
@@ -10490,13 +10509,16 @@ h1, h2, h3, h4, h5 {
 
 .form-connection__button {
   border-style: none;
-  border: 2px solid;
+  border: none;
   border-radius: 5px;
-  font-size: 1.3rem;
   background-color: #aca4a8;
   margin: 1rem 0;
-  padding: 0.5rem 0.5rem;
-  color: #ffffff; }
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  font-weight: bold; }
+  .form-connection__button:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out; }
 
 .user-informations__signup {
   display: flex;
@@ -10505,10 +10527,13 @@ h1, h2, h3, h4, h5 {
     margin: 2em auto 3em auto;
     background-color: #aca4a8;
     border-radius: 5px;
-    font-size: 1.3rem;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
     color: #ffffff;
-    border: none; }
+    border: none;
+    font-weight: bold; }
+    .user-informations__signup__submit:hover {
+      transform: scale(1.1);
+      transition: all .2s ease-in-out; }
 
 .btn-edit {
   margin: 1rem 0; }
@@ -10636,12 +10661,11 @@ h1, h2, h3, h4, h5 {
     font-size: 1rem;
     margin-top: 0.5rem; }
   .form-connection-fields__input {
-    border-style: none;
-    border: 2px solid;
+    border: none;
     border-radius: 0.3rem;
-    border-color: #e9e7e8;
     background-color: #fae9db;
     width: 15rem;
+    text-align: center;
     margin-bottom: 1.5; }
 
 @media (min-width: 992px) {
@@ -11155,7 +11179,8 @@ h1, h2, h3, h4, h5 {
     background-color: #fae9db;
     margin: auto;
     border-radius: 5px;
-    border: none; }
+    border: none;
+    text-align: center; }
 
 .user-informations__password {
   flex-direction: column;
@@ -12951,6 +12976,58 @@ h1, h2, h3, h4, h5 {
       margin-top: 0; }
     .error__title {
       font-size: 3rem; } }
+
+.legal-mentions {
+  text-align: center;
+  margin: 10% 0; }
+  .legal-mentions-wrap {
+    background-color: #ffffff;
+    border-top: solid 1rem #fdc689;
+    border-bottom: solid 1rem #fdc689; }
+    .legal-mentions-wrap__border {
+      padding-top: 8%;
+      padding-bottom: 8%; }
+      .legal-mentions-wrap__border__content h1,
+      .legal-mentions-wrap__border__content h2,
+      .legal-mentions-wrap__border__content h3,
+      .legal-mentions-wrap__border__content h4,
+      .legal-mentions-wrap__border__content h5,
+      .legal-mentions-wrap__border__content h6 {
+        color: #4c4c4c; }
+  @media (min-width: 992px) {
+    .legal-mentions {
+      margin: 5% 0; }
+      .legal-mentions-wrap {
+        background-color: #fdc689;
+        border: none; }
+        .legal-mentions-wrap__border {
+          border: 1px solid #fdc689;
+          background-color: #ffffff; } }
+
+.team__title {
+  margin: 10% 0;
+  text-align: center;
+  text-transform: uppercase; }
+
+.team-items {
+  background-color: #7accc8; }
+  .team-items__item {
+    background-color: #ffffff;
+    border: 1px solid #7accc8; }
+    .team-items__item__text {
+      color: #877d82; }
+    .team-items__item h1,
+    .team-items__item h2,
+    .team-items__item h3,
+    .team-items__item h4,
+    .team-items__item h5,
+    .team-items__item h6 {
+      color: #4c4c4c; }
+
+@media (min-width: 992px) {
+  .team__title {
+    margin: 5% 0;
+    font-size: 3rem; } }
 
 
 /*# sourceMappingURL=style.css.map*/

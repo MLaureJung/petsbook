@@ -1,3 +1,5 @@
+<?php if(is_user_logged_in()) : ?>
+
 <?php get_header(); ?>
 <main class="main">
 
@@ -10,7 +12,7 @@
         src="<?= get_field('photo_de_profil', 'user_' . $current_user->ID); ?>" alt=""></a> 
     </div>
         <h4 class='human__profiles__name'><?php $current_user = wp_get_current_user(); echo $current_user->first_name . " " . $current_user->last_name; ?></h4>  
-        <a href="<?php echo site_url('/account_user_info/')?>" class="top-info__user__edit-profile">Modifier mon profil</a>          
+        <a href="<?php echo site_url('/account_user_info_edit/')?>" class="top-info__user__edit-profile">Modifier mon profil</a>          
     </div>
 
     
@@ -110,3 +112,11 @@
    
   </main>
 <?php get_footer(); ?>
+<?php else : ?>
+  <?php  
+    global $wp_query;
+    $wp_query->set_404();
+    status_header( 404 );
+    get_template_part( 404 ); exit();
+  ?>
+<?php endif; ?> 

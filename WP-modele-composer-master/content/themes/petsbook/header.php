@@ -7,9 +7,10 @@
   <?php wp_head(); ?>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper">  
   <!--HEADER-->
-  <?php if(is_page([67,69,70,76,77,156,72,73,7]) || is_404()) : ?>
+  <?php if(is_page([67,69,70,76,77,156,72,73]) || is_404() || is_page(7) && is_user_logged_in()==false) : ?>
+
   <header class="header">
 
     <nav class="header-nav navbar navbar-expand-lg navbar-light">
@@ -47,6 +48,7 @@
   </header>
 
   <?php else : ?>
+    
   <header class="header second-header">
 
     <nav class="header-nav navbar navbar-expand-lg navbar-light">
@@ -54,7 +56,7 @@
 
       <div class="right-element">
         <?php if(is_user_logged_in()): ?>
-          <a href="#" class="header-nav__items__right__part__link"><i class="fa fa-bell" aria-hidden="true"></i></a>
+          <!-- <a href="#" class="header-nav__items__right__part__link"><i class="fa fa-bell" aria-hidden="true"></i></a> -->
         <?php endif; ?>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars" aria-hidden="true"></i>

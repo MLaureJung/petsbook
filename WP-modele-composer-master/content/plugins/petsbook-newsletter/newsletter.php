@@ -19,7 +19,7 @@ class Newsletter
         add_action( 'init', [$this, 'newsletter_footer']);
     }
 
-    /*----------------------Création de la table---------------------------------*/
+    /*----------------------CREATE TABLE--------------------------*/
     public function newsletter_install()
     {
         global $wpdb;
@@ -46,8 +46,8 @@ class Newsletter
         // } 
     }
 
-    /*-------------------------Accorder les versions ------------------------------*/
-    public function newsletter_version()
+    /*-------------------------ADD FOREIGN KEY------------------------------*/
+    public function newsletter_foreignKey()
     {
         global $wpdb;
         $table_name = $wpdb->prefix . "newsletters";
@@ -60,7 +60,7 @@ class Newsletter
         dbDelta($sql);
     }
 
-    /*-------------------------------------------------------*/
+    /*--------------------------ADD INDEX-----------------------------*/
     public function newsletter_index()
     {
         global $wpdb;
@@ -73,7 +73,7 @@ class Newsletter
         dbDelta($sql);
     }
 
-    /*--------------------HOOK-----------------------------------*/
+    /*--------------------------HOOKS-----------------------------*/
     public function newsletter_hook_install_newdata() 
     {      
         // Vide parce qu'on s'en sert juste pour accrocher une fonction à un moment donné
@@ -85,7 +85,7 @@ class Newsletter
         // Vide parce qu'on s'en sert juste pour accrocher une fonction à un moment donné
     }
 
-    /*-------------------------------------------------------*/
+    /*--------------------ADD NEW DATAS for inscription's form---------------------*/
     // Function pour ajouter les nouvelles données
     public function newsletter_install_newdata()
     {
@@ -93,7 +93,7 @@ class Newsletter
 
         $mail=$_POST['user__email'];
 
-        if ($mail != "" && email_exists($mail) == false) {
+        if ($mail != "" && email_exists($mail) == false && is_email($mail)) {
             $table_name = $wpdb->prefix . 'newsletters';
     
             $newdata = array(
@@ -108,28 +108,36 @@ class Newsletter
         }
     }
     
-    /*-------------------------------------------------------*/
+    /*--------------------------GET FOOTER DATAS-----------------------------*/
     // Function qui recupere le mail par le footer 
     public function newsletter_footer()
     {     
         if(isset($_POST['submit_newsletter'])) {
             
             //On récup les données du formulaire d'newsletter en POST
-            $footer_mail=$_POST['footer_field']; 
+            $footer_mail_notClean=$_POST['footer_field']; 
 
-            if ($footer_mail != "" && email_exists($footer_mail) == false) {
+            // On nettoie le mail pour éviter les charactères "illégaux" (ex : (), /, *, etc ...)
+            //https://www.w3schools.com/php/filter_validate_email.asp
+            $footer_mail = filter_var($footer_mail_notClean, FILTER_SANITIZE_EMAIL);
+
+            // Si le mail n'est pas vide, qu'il n'existe pas, et qu'il est 'valide' on exécute la fonction accrochée au hook 'newsletter_hook_footer_newdata'
+            // La fonction accrochée au hook est : "newsletter_footer_insert_newdata", elle insère les données dans la table custom
+            if ($footer_mail != "" && email_exists($footer_mail) == false && filter_var($footer_mail, FILTER_VALIDATE_EMAIL)) {
 
                 do_action('newsletter_hook_footer_newdata');
             }      
         }
     } 
 
+    /*-------------------------ADD NEW DATAS for footer's form------------------------------*/
     public function newsletter_footer_insert_newdata()
     {
         global $wpdb;
 
-        // On définit quelques variables forts pratiques
-        $footer_mail=$_POST['footer_field'];
+        $footer_mail_notClean=$_POST['footer_field']; 
+        $footer_mail = filter_var($footer_mail_notClean, FILTER_SANITIZE_EMAIL);
+
         $table_name = $wpdb->prefix . 'newsletters';
 
         // verifying if the email existes in our BD with SQL demand
@@ -144,7 +152,7 @@ class Newsletter
         {
             // On vérifie que l'input du footer ne soit pas vide
             // S'il n'est pas vide on insère les données
-            if ($footer_mail != "") 
+            if ($footer_mail != "" && is_email($footer_mail)) 
             {
                 $newdata = array(
                     'newsletters_email'=>$footer_mail,
@@ -240,7 +248,7 @@ class Newsletter
         $this->newsletter_install();
         $this->newsletter_hook_install_newdata();
         $this->newsletter_hook_footer_newdata();
-        $this->newsletter_version();
+        $this->newsletter_foreignKey();
         $this->newsletter_index();
         $this->newsletter_update_db_check();
         $this->newsletter_footer();

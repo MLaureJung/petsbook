@@ -9,26 +9,20 @@ if (have_posts()) :
  
   // If there are posts matching the query then start the loop
   while ( have_posts() ) : the_post(); ?>
-
-  <div class="info-animal-wrapper"> 
-        <section class="form__pet__infos">
+  <h1 class="legal-mentions"><?php the_title(); ?></h1>
+  <div class="info-animal-wrapper legal-mentions-wrap"> 
+        <section class="form__pet__infos legal-mentions-wrap__border">
              
-                <div class="form__pet__infos__animal">
-                <h4 class="form__pet__infos__animal__title"><?php the_title(); ?></h4>
-                  <p><?php the_content(); ?></p>
+                <div class="form__pet__infos__animal legal-mentions-wrap__border__content">
+                <?php the_content(); ?>
                 </div>
         </section>
 
     </div>
  
-    <?php
- 
- endwhile;
-?>
-
-<?php
-endif;
-?>
+<?php 
+  endwhile; 
+endif;?>
 
 
 <?php get_footer(); ?>

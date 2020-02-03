@@ -1,3 +1,4 @@
+<?php if(is_user_logged_in()) : ?>
 <?php get_header();
 $current_user = wp_get_current_user(); ?>
 <section class="photos_profiles">
@@ -16,7 +17,7 @@ $current_user = wp_get_current_user(); ?>
 <!-- /Section pet profile-->
 
 <div class="main-items-l">
-<div class="info-animal-wrapper">
+<div class="info-animal-wrapper user-infos-wrap">
 <section class="form__infos__animal">
   <h1 class="form__infos__animal__title" >Vos informations</h1>
   
@@ -77,4 +78,12 @@ $current_user = wp_get_current_user(); ?>
 </section>
 </div>
 </div>
-    <?php get_footer();?>
+<?php get_footer();?>
+<?php else : ?>
+  <?php  
+    global $wp_query;
+    $wp_query->set_404();
+    status_header( 404 );
+    get_template_part( 404 ); exit();
+  ?>
+<?php endif; ?> 

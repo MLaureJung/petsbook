@@ -1,3 +1,4 @@
+<?php if(is_user_logged_in()) : ?>
 <?php get_header(); 
 
 $current_user = wp_get_current_user(); ?>
@@ -61,3 +62,11 @@ $current_user = wp_get_current_user(); ?>
 </div>
 
 <?php get_footer(); ?>
+<?php else : ?>
+  <?php  
+    global $wp_query;
+    $wp_query->set_404();
+    status_header( 404 );
+    get_template_part( 404 ); exit();
+  ?>
+<?php endif; ?> 

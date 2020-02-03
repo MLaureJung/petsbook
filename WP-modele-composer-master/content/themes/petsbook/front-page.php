@@ -1,4 +1,5 @@
-<?php get_header(); ?>
+<?php if(is_user_logged_in()==false) : ?>
+  <?php get_header(); ?>
     <!--Carousel-->
     <?php if(get_theme_mod('petsbook_carousel_active')) : ?>
       <?php get_template_part('template-parts/carousel/carousel-index'); ?>
@@ -76,3 +77,10 @@
       </section>
     </div>
 <?php get_footer(); ?>
+
+<?php else : ?>
+  <?php 
+    wp_redirect(get_page_link(65));
+    exit;
+  ?>
+<?php endif; ?> 

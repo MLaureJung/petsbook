@@ -1,3 +1,4 @@
+<?php if(is_user_logged_in()) : ?>
 <?php get_header(); ?>
 <!-- Section pet profile-->
 <section class="photos_profiles">
@@ -21,7 +22,7 @@
 <div class="main-items-l">
 <div class="info-animal-wrapper ">
 <section class="form__infos__animal">
-  <h1 class="form__infos__animal__title" >Informations sur l'animal</h1>
+  <h1 class="user_infos-wrapper" >Informations sur l'animal</h1>
   
 
   <form action="" method='post' class="form__infos__animal__edit infos-pet-edit" enctype="multipart/form-data">
@@ -94,14 +95,14 @@
     </div>
     
 
-  <div class="validate">
+  <div class="validate three_btns">
    
 
-      <a href="<?= get_permalink(69);?>?pet=<?= $_GET['pet']; ?>"class="validate__button">Infos générales</a>
+      <a href="<?= get_permalink(69);?>?pet=<?= $_GET['pet']; ?>"class="validate__button three_btn">Infos générales</a>
 
-      <input type="submit" value="Enregistrer" class="validate__button"/>
+      <input type="submit" value="Enregistrer" class="validate__button three_btn"/>
    
-      <a href="<?= get_permalink(72);?>?pet=<?= $_GET['pet']; ?>" class="validate__button">Carnet de santé</a>
+      <a href="<?= get_permalink(72);?>?pet=<?= $_GET['pet']; ?>" class="validate__button three_btn">Carnet de santé</a>
 
     
   </div>
@@ -113,3 +114,11 @@
 <?php // var_dump(wp_set_object_terms(275, 'Toto', 'animal-type')); ?>
 
 <?php get_footer(); ?>
+<?php else : ?>
+  <?php  
+    global $wp_query;
+    $wp_query->set_404();
+    status_header( 404 );
+    get_template_part( 404 ); exit();
+  ?>
+<?php endif; ?> 

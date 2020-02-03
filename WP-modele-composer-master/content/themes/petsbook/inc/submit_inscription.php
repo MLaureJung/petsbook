@@ -23,8 +23,12 @@ if(isset($_POST['submit_inscription'])) {
         $accept_newsletter = false;
     }
 
+    // On nettoie le mail pour éviter les charactères "illégaux" (ex : (), /, *, etc ...)
+    //https://www.w3schools.com/php/filter_validate_email.asp
+    $mail = filter_var($mail, FILTER_SANITIZE_EMAIL);
+
     //On vérifie que les champs ne sont pas vides et que le mai  n'existe pas déjà
-	if ($mail != "" && $mot_de_passe != "" && $prenom != "" && $nom != "" &&   email_exists($mail) == false){
+	if ($mail != "" && $mot_de_passe != "" && $prenom != "" && $nom != "" &&   email_exists($mail) == false && is_email($mail) && filter_var($mail, FILTER_VALIDATE_EMAIL)){
 		$user_id = wp_create_user($mail , $mot_de_passe, $mail); //On créé l'utilisateur
 
         //On ajoute les données de l'utilisateur
@@ -40,7 +44,12 @@ if(isset($_POST['submit_inscription'])) {
 
 		//Connexion automatique de l'utilisateur. Le troisième paramètre et le permalien de la page où on veut le rediriger après connexion (notre page_account a l'ID 69)		
 		auto_login($mail,$mot_de_passe,get_permalink(69));
-	}
+    } 
+    else 
+    {
+        wp_redirect(home_url()); 
+        exit;
+    }
 	exit(); //lui, je l'ai enlevé et ça marchait plus. Alors je le remets (c'est comme pour wp_redirect en dessous en  fait, faut mettre le exit)
 }
 
