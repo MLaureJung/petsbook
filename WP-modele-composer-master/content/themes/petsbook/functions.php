@@ -22,3 +22,5 @@ require ('inc/submit_book_animal.php');
 
 require ('inc/submit_timeline_edit.php');
 
+require ('inc/admin-bar.php');
+
