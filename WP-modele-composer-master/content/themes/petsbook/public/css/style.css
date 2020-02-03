@@ -10333,8 +10333,10 @@ input {
         margin-top: 3rem; }
         .main-slide .carousel-item-content-part {
           width: 50%;
+          height: 35rem;
           display: flex;
-          justify-content: center; }
+          justify-content: center;
+          align-items: center; }
           .main-slide .carousel-item-content-part__description {
             text-align: left;
             width: 50%;
@@ -10347,8 +10349,8 @@ input {
             .main-slide .carousel-item-content-part__description__text {
               font-size: 1.3rem; }
           .main-slide .carousel-item-content-part__illu {
-            width: 40rem;
-            height: 40rem;
+            width: 35rem;
+            height: 35rem;
             border-radius: 50%; } }
 
 #timeline-glimpse__container {
