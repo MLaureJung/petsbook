@@ -8,7 +8,7 @@ function submit_timeline_edit() {
         $id=$_POST['submit_timeline_edit'];
         $row =$_POST['count_row'];
 
-        if($date != '' && $description != ''){
+        if($date != '' || $description != ''){
             
             update_sub_field( array('une_section', $row, 'date'), $date, $id );
             update_sub_field( array('une_section', $row, 'texte'), $description, $id);
