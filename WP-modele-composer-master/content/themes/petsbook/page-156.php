@@ -1,3 +1,4 @@
+<!--ACCOUNT USER INFOS EDIT-->
 <?php if(is_user_logged_in()) : ?>
 <?php get_header();
 $current_user = wp_get_current_user(); ?>
