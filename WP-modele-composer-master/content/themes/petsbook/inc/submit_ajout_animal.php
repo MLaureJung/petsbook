@@ -94,7 +94,7 @@ function submit_ajout_animal() {
             }
         
            
-             wp_redirect(get_permalink(70) . '?pet='. $id);
+             wp_redirect(get_permalink(69) . '?pet='. $id);
              exit;
         }
     }
