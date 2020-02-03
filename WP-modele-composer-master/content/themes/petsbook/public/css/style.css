@@ -10329,7 +10329,8 @@ input {
         margin-left: auto;
         margin-right: auto;
         height: 100%;
-        padding: 10%;
+        width: 100%;
+        padding: 0 10%;
         margin-top: 3rem; }
         .main-slide .carousel-item-content-part {
           width: 50%;
