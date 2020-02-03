@@ -22,7 +22,7 @@
 <div class="main-items-l">
 <div class="info-animal-wrapper ">
 <section class="form__infos__animal">
-  <h1 class="form__infos__animal__title" >Informations sur l'animal</h1>
+  <h1 class="user_infos-wrapper" >Informations sur l'animal</h1>
   
 
   <form action="" method='post' class="form__infos__animal__edit infos-pet-edit" enctype="multipart/form-data">
