@@ -1,3 +1,4 @@
+<!--HOMEPAGE LOGIN-->
 <?php if(is_user_logged_in()) : ?>
 <?php get_header(); ?>
 
@@ -44,7 +45,7 @@
   </div>
   
   <div class="public-private__private">
-    <a href="<?php echo site_url('/account_general/')?>" class="public-private__private__title">Chez moi</a>
+    <a href="<?php echo site_url('/tous-mes-animaux/')?>" class="public-private__private__title">Chez moi</a>
   </div>
 </section>-->
 <!--/Public_Private-->

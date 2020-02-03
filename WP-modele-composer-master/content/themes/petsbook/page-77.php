@@ -1,3 +1,4 @@
+<!--ACCOUNT USER INFOS-->
 <?php if(is_user_logged_in()) : ?>
 <?php get_header(); 
 
@@ -55,7 +56,7 @@ $current_user = wp_get_current_user(); ?>
 </div>
 
   <div class="validate validate-account_user_info">     
-      <a href="<?php echo site_url('/account_user_info_edit/')?>" class="validate__button_2 button-account_user_info">Modifier</a>   
+      <a href="<?php echo site_url('/modifier-mon-compte/')?>" class="validate__button_2 button-account_user_info">Modifier</a>   
   </div>
 </section>
 </div>
