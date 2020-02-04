@@ -24,3 +24,5 @@ require ('inc/submit_timeline_edit.php');
 
 require ('inc/admin-bar.php');
 
+require ('inc/delete-attachment.php');
+

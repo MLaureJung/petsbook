@@ -22,7 +22,8 @@
                 while ( have_rows('une_section', $_GET['pet']) ) : the_row();
                   $url_img = get_sub_field('photo');
                   $date = get_sub_field('date');
-                  $texte = get_sub_field('texte'); ?>
+                  $texte = get_sub_field('texte'); 
+                  ?>
                   <div class="timeline-edit__item">
                     <img src="<?= $url_img; ?>" alt="" class="timeline-edit__item__img">
                     <form action="" method='post' enctype="multipart/form-data">
@@ -35,8 +36,8 @@
                         <textarea name="timeline-edit__item__text" cols="30" rows="10" class="timeline-edit__item__textarea" placeholder="Description ..."><?= $texte; ?></textarea>
                       </div>
                       <div style="display:flex; justify-content:space-between; width:90%; margin:0 auto; ">
-                        <button class="timeline-edit__item__links__buttons">Supprimer</button>
-                        <input type="submit" value="Enregistrer" class="timeline-edit__item__links__buttons"/>
+                        <input type="submit" name="delete-attachment" value="Supprimer" class="timeline-edit__item__links__buttons"/>
+                        <input type="submit" name="save-timeline-edit" value="Enregistrer" class="timeline-edit__item__links__buttons"/>
                       </div>
                     </form>
                   </div>
