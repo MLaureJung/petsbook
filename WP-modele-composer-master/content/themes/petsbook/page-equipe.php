@@ -11,6 +11,7 @@
         ];
     
         $teamQuery = new WP_Query($args);
+
       ?>
 
       <?php if($teamQuery->have_posts()) : while($teamQuery->have_posts()) : $teamQuery->the_post(); ?>
